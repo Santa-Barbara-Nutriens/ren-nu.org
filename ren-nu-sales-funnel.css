@@ -1,6 +1,7 @@
 :root {
     --orange: #f5845c;
     --orange-dk: #d8663f;
+    --orange-lt: #FFD9BF;
     --ink: #1e2624;
     --ink-soft: #55625d;
     --paper: #ffffff;
@@ -314,6 +315,7 @@ header {
 .stop {
     padding: 96px 0;
     position: relative;
+    background: var(--orange-lt);
 }
 
 .stop.alt {
