@@ -38,6 +38,11 @@ img {
     border-radius: 10px;
 }
 
+.section-transition {
+    height: 100px;
+    background: linear-gradient(to bottom, var(--orange-lt) 0%, var(--paper-alt) 100%);
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -975,6 +980,43 @@ header {
 
 .price-note {
     font-size: 14px;
+}
+
+.price-list-dropdown {
+    margin: 24px 0;
+    padding: 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-align: left;
+    background: var(--paper-alt);
+}
+
+.price-list-dropdown summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-list-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.price-list-dropdown .icon {
+    color: var(--orange-dk);
+    font-weight: 400;
+    transition: transform .2s ease;
+}
+
+.price-list-dropdown[open] .icon {
+    transform: rotate(45deg);
+}
+
+.price-list-dropdown .price-list {
+    margin: 14px 0 0;
 }
 
 .price-list {
