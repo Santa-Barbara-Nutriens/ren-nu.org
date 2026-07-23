@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section — 20 Ideas | Ren-Nu™</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="ren-nu-sales-funnel.css">
+    <style>
+        /* Shared scaffolding for this idea gallery only — not part of the production stylesheet */
+        .idea-label {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            text-align: center;
+            padding: 18px 0 0;
+            background: var(--paper-alt);
+        }
+
+        .idea-divider {
+            height: 3px;
+            background: repeating-linear-gradient(90deg, var(--line-dk) 0 12px, transparent 12px 24px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- Idea 1: The Waiting Room, Reimagined                          -->
+    <!-- A literal reframe of the "watch and wait" limbo — a waiting-  -->
+    <!-- room card visually breaking open into warm light, signalling -->
+    <!-- that the passive waiting is over.                             -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 1 — The Waiting Room, Reimagined</p>
+    <section class="stop" id="hero-idea-1"
+        style="position:relative; overflow:hidden; padding:80px 0; background:radial-gradient(120% 140% at 50% 0%, var(--orange-lt) 0%, var(--paper) 62%);">
+        <div class="wrap" style="text-align:center; max-width:760px;">
+            <span class="eyebrow">You're done waiting</span>
+            <h1 style="margin-bottom:.35em;">The waiting room ends here.</h1>
+            <p class="lede" style="color:var(--ink-soft); font-size:1.15rem;">
+                "Everything looks stable — see you in six months." You know that room. The quiet fear
+                underneath it. Ren-Nu™ is what happens the moment you decide to stop waiting for your kidneys
+                to get worse — and start acting for them today.
+            </p>
+            <div class="hero-ctas" style="justify-content:center; margin-top:22px;">
+                <a href="#" class="btn btn-primary">Start acting today</a>
+            </div>
+            <img style="margin:36px auto 0; max-width:520px; box-shadow:0 30px 60px rgba(30,38,36,.12);"
+                src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80"
+                alt="Warm sunlit room symbolizing a fresh start away from the waiting room">
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 2: Choose-Your-Feeling Hero (CSS-only tab switcher)      -->
+    <!-- Lets the visitor self-identify with a feeling (radio-driven,  -->
+    <!-- no JS) and instantly see a matched, warm reassurance message. -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 2 — Choose-Your-Feeling Hero</p>
+    <section class="stop" id="hero-idea-2" style="padding:80px 0; background:var(--orange-lt);">
+        <div class="wrap" style="max-width:720px; text-align:center;">
+            <span class="eyebrow">Which one sounds like you?</span>
+            <h1>Tell us how PKD feels today.</h1>
+            <input type="radio" name="feeling2" id="feel-watch" checked style="display:none;">
+            <input type="radio" name="feeling2" id="feel-confused" style="display:none;">
+            <input type="radio" name="feeling2" id="feel-alone" style="display:none;">
+            <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:18px 0 24px;">
+                <label for="feel-watch" class="btn btn-ghost btn-sm"
+                    style="background:var(--paper); cursor:pointer;">Told to "watch and wait"</label>
+                <label for="feel-confused" class="btn btn-ghost btn-sm"
+                    style="background:var(--paper); cursor:pointer;">Confused about what to eat</label>
+                <label for="feel-alone" class="btn btn-ghost btn-sm" style="background:var(--paper); cursor:pointer;">On
+                    my own between visits</label>
+            </div>
+            <style>
+                #hero-idea-2 .feeling-answer {
+                    display: none;
+                }
+
+                #feel-watch:checked~.feeling-answers #answer-watch,
+                #feel-confused:checked~.feeling-answers #answer-confused,
+                #feel-alone:checked~.feeling-answers #answer-alone {
+                    display: block;
+                }
+            </style>
+            <div class="feeling-answers"
+                style="background:var(--card); border-radius:14px; padding:28px; box-shadow:0 20px 40px rgba(30,38,36,.08);">
+                <p id="answer-watch" class="feeling-answer" style="margin:0; color:var(--ink); font-size:1.1rem;">
+                    Monitoring isn't nothing — but it isn't a plan either. Ren-Nu™ gives you a structured,
+                    science-backed nutrition protocol to work on <em>between</em> those six-month checkups.</p>
+                <p id="answer-confused" class="feeling-answer" style="margin:0; color:var(--ink); font-size:1.1rem;">
+                    Generic advice doesn't account for PKD. Ren-Nu™ replaces guesswork with a renal-safe, PKD-specific
+                    nutrition framework built by researchers and dietitians.</p>
+                <p id="answer-alone" class="feeling-answer" style="margin:0; color:var(--ink); font-size:1.1rem;">You
+                    shouldn't have to figure this out solo. Ren-Nu™ pairs you with dietitians and a community that's
+                    living this alongside you.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 3: A Letter From the Team                                -->
+    <!-- Warm, personal, handwritten-letter framing instead of a       -->
+    <!-- marketing headline — signed by the founding researchers.      -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 3 — A Letter From the Team</p>
+    <section class="stop" id="hero-idea-3" style="padding:80px 0; background:var(--paper-alt);">
+        <div class="wrap" style="max-width:640px;">
+            <div
+                style="background:var(--paper); border:1px solid var(--line); border-radius:4px; padding:44px 40px; box-shadow:0 20px 50px rgba(30,38,36,.08); position:relative;">
+                <span
+                    style="position:absolute; top:-14px; left:36px; background:var(--orange); color:#fff; font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; padding:6px 12px; border-radius:20px;">Dear
+                    PKD patient</span>
+                <p
+                    style="font-family:var(--font-display); font-style:italic; font-size:1.3rem; line-height:1.5; color:var(--ink);">
+                    "We know what it feels like to be told to just keep watching your labs. So a team of
+                    researchers, clinicians, and patients built the nutrition program we wished existed —
+                    one that gives you something to actually <em>do</em>."
+                </p>
+                <p style="margin:0; font-weight:600; color:var(--ink);">— Thomas Weimbs, PhD &amp; the Ren-Nu™ team</p>
+                <div class="hero-ctas" style="margin-top:26px;">
+                    <a href="#" class="btn btn-primary">Read our full story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 4: Outcomes-First Hero                                   -->
+    <!-- Leads with the published clinical numbers instead of empathy  -->
+    <!-- copy, animated as a counting stat strip framed as a promise.  -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 4 — Outcomes-First Hero</p>
+    <section class="stop" id="hero-idea-4" style="padding:80px 0; background:var(--orange-dk); color:var(--paper);">
+        <div class="wrap" style="text-align:center;">
+            <span class="eyebrow" style="color:var(--orange-lt);">Published, real-world outcomes</span>
+            <h1 style="color:var(--paper); max-width:760px; margin-left:auto; margin-right:auto;">Your labs don't have
+                to only move one direction.</h1>
+            <div class="stat-row" style="justify-content:center; margin-top:28px;">
+                <div class="stat-chip"
+                    style="background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); color:var(--paper);">
+                    <b style="color:var(--paper);">+6.3%</b>
+                    <span style="color:var(--orange-lt);">eGFR increase (P&lt;0.001)</span>
+                </div>
+                <div class="stat-chip"
+                    style="background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); color:var(--paper);">
+                    <b style="color:var(--paper);">-5.01%</b>
+                    <span style="color:var(--orange-lt);">Total kidney volume vs. +8.03% control</span>
+                </div>
+                <div class="stat-chip"
+                    style="background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); color:var(--paper);">
+                    <b style="color:var(--paper);">100%</b>
+                    <span style="color:var(--orange-lt);">Adherence, no discontinuations</span>
+                </div>
+            </div>
+            <div class="hero-ctas" style="justify-content:center; margin-top:30px;">
+                <a href="#" class="btn btn-white">See the published study</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 5: Telehealth-Screen Hero                                -->
+    <!-- Frames the hero as a video call window, echoing the founder   -->
+    <!-- welcome video already used elsewhere on the funnel.           -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 5 — Telehealth-Screen Hero</p>
+    <section class="stop" id="hero-idea-5" style="padding:80px 0; background:var(--orange-lt);">
+        <div class="wrap hero-grid" style="align-items:center;">
+            <div class="hero-copy" style="max-width:560px;">
+                <span class="eyebrow">A warmer kind of check-in</span>
+                <h1 style="color:var(--ink);">What if your next update felt like good news?</h1>
+                <p class="lede" style="color:var(--ink-soft);">
+                    Not another scan. A structured, science-backed nutrition program built specifically for
+                    PKD — with dietitians who actually know your condition on the other side of the screen.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary">Meet the team</a>
+                </div>
+            </div>
+            <div
+                style="background:var(--ink); border-radius:16px; padding:10px; box-shadow:0 30px 60px rgba(30,38,36,.2);">
+                <div
+                    style="background:#000; border-radius:10px; overflow:hidden; aspect-ratio:16/10; position:relative;">
+                    <!-- Placeholder for the existing founder welcome video -->
+                    <video class="team-video" controls preload="metadata"
+                        style="width:100%; height:100%; object-fit:cover;"
+                        poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80">
+                        <source src="Ren-Nu_Welcome_Message_2_komprimiert.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <span
+                        style="position:absolute; top:12px; left:12px; background:rgba(0,0,0,.55); color:#fff; font-family:var(--font-mono); font-size:11px; padding:4px 10px; border-radius:20px;">●
+                        Live from our team</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 6: Recipe-Card Hero                                      -->
+    <!-- Reframes the "solution" as a warm kitchen-table recipe card   -->
+    <!-- rather than a clinical program — approachable, food-forward.  -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 6 — Recipe-Card Hero</p>
+    <section class="stop" id="hero-idea-6" style="padding:80px 0; background:var(--paper-alt);">
+        <div class="wrap hero-grid" style="align-items:center;">
+            <img style="border-radius:14px; box-shadow:0 20px 50px rgba(30,38,36,.12);"
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80"
+                alt="Fresh kidney-friendly ingredients arranged on a warm kitchen table">
+            <div class="hero-copy" style="max-width:520px;">
+                <span class="eyebrow">Recipe for taking control</span>
+                <h1 style="color:var(--ink); font-family:var(--font-display);">Ingredients: clarity, structure, and a
+                    plan you can trust.</h1>
+                <p class="lede" style="color:var(--ink-soft);">
+                    No more guessing at every meal. Ren-Nu™ turns emerging PKD nutrition research into a
+                    clear, day-to-day framework — written like a recipe you can actually follow.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary">Get the framework</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 7: The Pulse Line Hero                                   -->
+    <!-- An SVG line that visually calms from jagged/red to smooth/    -->
+    <!-- orange across the hero width — a metaphor for symptom relief. -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 7 — The Pulse Line Hero</p>
+    <section class="stop" id="hero-idea-7"
+        style="position:relative; padding:96px 0 64px; background:var(--paper); overflow:hidden;">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+            style="position:absolute; left:0; right:0; top:50%; width:100%; height:120px; opacity:.5;">
+            <path
+                d="M0,60 L80,60 L100,20 L120,100 L140,10 L160,90 L180,60 L400,60 C 550,60 600,40 700,50 C 850,64 950,60 1200,60"
+                fill="none" stroke="var(--orange)" stroke-width="3" />
+        </svg>
+        <div class="wrap" style="position:relative; text-align:center; max-width:720px;">
+            <span class="eyebrow">From chaos to calm</span>
+            <h1>Your health story doesn't have to stay this jagged.</h1>
+            <p class="lede" style="color:var(--ink-soft); font-size:1.15rem;">
+                Kidney pain. Headaches. Dizziness. The unpredictability wears you down. Ren-Nu™ is a
+                structured nutrition program designed to help even things out — one steady week at a time.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">Find your steady state</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 8: Rotating One-Word Hero                                -->
+    <!-- Minimalist, cinematic hero where a single rotating word does  -->
+    <!-- the emotional work, ending on "Acting." as the resolution.    -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 8 — Rotating One-Word Hero</p>
+    <section class="stop" id="hero-idea-8"
+        style="padding:110px 0; background:var(--ink); color:var(--paper); text-align:center;">
+        <div class="wrap">
+            <span class="eyebrow" style="color:var(--orange-lt);">Polycystic Kidney Disease</span>
+            <h1 style="color:var(--paper); font-size:clamp(2.4rem, 6vw, 4rem);">
+                Waiting. Wondering. Worrying.<br>
+                <span style="color:var(--orange);">Acting.</span>
+            </h1>
+            <p class="lede" style="color:var(--paper-alt); max-width:560px; margin:0 auto;">
+                Ren-Nu™ is the structured, science-backed nutrition program that turns the fourth word into
+                your reality.
+            </p>
+            <div class="hero-ctas" style="justify-content:center; margin-top:22px;">
+                <a href="#" class="btn btn-primary">Start acting</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================ -->
+    <!-- Idea 9: Before/After Drag Reveal                              -->
+    <!-- CSS-only slider (range input) letting visitors physically     -->
+    <!-- drag between "watching and waiting" and "structured plan."    -->
+    <!-- ============================================================ -->
+    <p class="idea-label">Idea 9 — Before/After Drag Reveal</p>
+    <section class="stop" id="hero-idea-9" style="padding:80px 0; background:var(--orange-lt);">
+        <div class="wrap" style="max-width:720px; text-align:center;">
+            <span class="eyebrow">Slide to see the difference</span>
+            <h1>Two ways to live with PKD.</h1>
+            <div
+                style="position:relative; margin:30px auto 0; max-width:560px; border-radius:14px; overflow:hidden; box-shadow:0 20px 50px rgba(30,38,36,.15);">
+                <img style="width:100%; display:block; filter:grayscale(60%);"
+                    src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=900"
+                    alt="Passive watch-and-wait clinical visit, before Ren-Nu">
+                <div
+                    style="position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:flex-start; padding:16px;">
+                    <span
+                        style="background:rgba(30,38,36,.7); color:#fff; font-family:var(--font-mono); font-size:12px; padding:6px 12px; border-radius:20px;">Before:
+                        watch &amp; wait</span>
+                </div>
+            </div>
+            <p class="lede" style="color:var(--ink-soft); margin-top:18px;">
+                Instead of waiting for the next scan, get a structured framework, dietitian support, and a
+                community built specifically for PKD.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">See the Ren-Nu™ way</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 10: Community Wall Hero                                   -->
+    <!-- Leads with real participant faces/quotes in a warm grid rather  -->
+    <!-- than program marketing — social proof as the first impression. -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 10 — Community Wall Hero</p>
+    <section class="stop" id="hero-idea-10" style="padding:80px 0; background:var(--paper);">
+        <div class="wrap" style="text-align:center; max-width:780px;">
+            <span class="eyebrow">You're not doing this alone</span>
+            <h1>Real people. Real PKD. Real progress.</h1>
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:26px 0;">
+                <img style="border-radius:10px; aspect-ratio:1/1; object-fit:cover;"
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                    alt="Ren-Nu participant portrait">
+                <img style="border-radius:10px; aspect-ratio:1/1; object-fit:cover;"
+                    src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=300&q=80"
+                    alt="Ren-Nu participant portrait">
+                <img style="border-radius:10px; aspect-ratio:1/1; object-fit:cover;"
+                    src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80"
+                    alt="Ren-Nu participant portrait">
+                <img style="border-radius:10px; aspect-ratio:1/1; object-fit:cover;"
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80"
+                    alt="Ren-Nu participant portrait">
+            </div>
+            <p class="lede" style="color:var(--ink-soft);">
+                "I stopped feeling like I was just waiting for bad news." Join a structured, science-backed
+                program built alongside people who understand PKD from the inside.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">Join the program</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 11: The Lab Report, Rewritten                             -->
+    <!-- Mimics a redesigned lab-results printout where the "notes"     -->
+    <!-- field carries a plan instead of a blank "stable, see you in    -->
+    <!-- six months" — flipping the clinical artifact into hope.       -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 11 — The Lab Report, Rewritten</p>
+    <section class="stop" id="hero-idea-11" style="padding:80px 0; background:var(--paper-alt);">
+        <div class="wrap" style="max-width:640px;">
+            <div
+                style="background:var(--paper); border:1px solid var(--line); border-radius:8px; padding:34px 36px; box-shadow:0 20px 50px rgba(30,38,36,.08); font-family:var(--font-mono);">
+                <div
+                    style="display:flex; justify-content:space-between; border-bottom:2px solid var(--line); padding-bottom:12px; margin-bottom:16px;">
+                    <span style="font-weight:700; color:var(--ink);">RENAL PANEL — SUMMARY</span>
+                    <span style="color:var(--ink-soft); font-size:12px;">STATUS: STABLE</span>
+                </div>
+                <p style="margin:0 0 6px; color:var(--ink-soft); font-size:13px;">eGFR &nbsp;58.4 mL/min/1.73m²</p>
+                <p style="margin:0 0 16px; color:var(--ink-soft); font-size:13px;">Next review: 6 months</p>
+                <div style="border-top:1px dashed var(--line-dk); padding-top:16px;">
+                    <span class="eyebrow" style="font-family:var(--font-mono);">Physician notes — rewritten</span>
+                    <h1 style="font-family:var(--font-display); font-size:1.6rem; margin-top:8px;">"Start Ren-Nu™. Don't
+                        just wait for the next scan."</h1>
+                </div>
+            </div>
+            <div class="hero-ctas" style="justify-content:center; margin-top:26px;">
+                <a href="#" class="btn btn-primary">Give your report a plan</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 12: Days-in-Control Counter                               -->
+    <!-- Reverses the dread of a ticking countdown-to-failure into a    -->
+    <!-- flipping odometer counting days a patient has taken control.   -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 12 — Days-in-Control Counter</p>
+    <section class="stop" id="hero-idea-12"
+        style="padding:80px 0; background:var(--ink); color:var(--paper); text-align:center;">
+        <div class="wrap">
+            <span class="eyebrow" style="color:var(--orange-lt);">Not a countdown to decline</span>
+            <h1 style="color:var(--paper);">A different number to watch.</h1>
+            <div style="display:flex; justify-content:center; gap:8px; margin:26px 0;">
+                <span
+                    style="font-family:var(--font-mono); font-size:3rem; font-weight:700; background:var(--orange); color:#fff; border-radius:8px; padding:6px 14px;">0</span>
+                <span
+                    style="font-family:var(--font-mono); font-size:3rem; font-weight:700; background:var(--orange); color:#fff; border-radius:8px; padding:6px 14px;">0</span>
+                <span
+                    style="font-family:var(--font-mono); font-size:3rem; font-weight:700; background:var(--orange); color:#fff; border-radius:8px; padding:6px 14px;">1</span>
+            </div>
+            <p class="lede" style="color:var(--paper-alt); max-width:520px; margin:0 auto;">
+                Days since you started managing PKD on your own terms. Ren-Nu™ turns nutrition into a daily
+                habit you track — not a milestone you dread.
+            </p>
+            <div class="hero-ctas" style="justify-content:center; margin-top:20px;">
+                <a href="#" class="btn btn-white">Start Day 1</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 13: Two Roads Fork                                        -->
+    <!-- A diverging-path visual: one greyed-out road labeled "wait and -->
+    <!-- see," the other vivid and orange labeled "Ren-Nu™," letting     -->
+    <!-- visitors visually pick their path.                              -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 13 — Two Roads Fork</p>
+    <section class="stop" id="hero-idea-13" style="padding:80px 0; background:var(--paper);">
+        <div class="wrap" style="text-align:center; max-width:760px;">
+            <span class="eyebrow">Two paths from here</span>
+            <h1>Which road do you want to be on a year from now?</h1>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:28px 0;">
+                <div
+                    style="background:var(--paper-alt); border:1px dashed var(--line-dk); border-radius:14px; padding:26px 18px; filter:grayscale(40%);">
+                    <span class="eyebrow" style="color:var(--ink-soft);">Road A</span>
+                    <h3>Watch &amp; wait</h3>
+                    <p style="color:var(--ink-soft); font-size:14px;">Same labs. Same six-month wait. Same quiet worry.
+                    </p>
+                </div>
+                <div
+                    style="background:var(--orange); border-radius:14px; padding:26px 18px; box-shadow:0 20px 40px rgba(216,102,63,.3);">
+                    <span class="eyebrow" style="color:#fff;">Road B</span>
+                    <h3 style="color:#fff;">Ren-Nu™</h3>
+                    <p style="color:var(--orange-lt); font-size:14px;">A structured plan, dietitian support, and a
+                        program built for PKD.</p>
+                </div>
+            </div>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">Take Road B</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 14: The Kidney Mascot Speaks                              -->
+    <!-- A playful, warm illustrated-kidney "voice" speaks directly to  -->
+    <!-- the visitor in first person — disarming the clinical tone.     -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 14 — The Kidney Mascot Speaks</p>
+    <section class="stop" id="hero-idea-14" style="padding:80px 0; background:var(--orange-lt);">
+        <div class="wrap hero-grid" style="align-items:center;">
+            <div style="text-align:center;">
+                <div
+                    style="width:220px; height:220px; margin:0 auto; border-radius:50%; background:var(--orange); display:flex; align-items:center; justify-content:center; font-size:5rem; box-shadow:0 20px 50px rgba(216,102,63,.35);">
+                    🫘
+                </div>
+            </div>
+            <div class="hero-copy" style="max-width:520px;">
+                <span class="eyebrow">A note from your kidneys</span>
+                <h1 style="color:var(--ink);">"I'm still in this with you. Give me something to work with."</h1>
+                <p class="lede" style="color:var(--ink-soft);">
+                    Your kidneys aren't done yet — and neither are you. Ren-Nu™ gives them (and you) a
+                    structured, science-backed nutrition plan built specifically for PKD.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary">Hear them out</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 15: Research Ticker Hero                                  -->
+    <!-- Leads with a live-feeling scrolling ticker of encouraging PKD  -->
+    <!-- research headlines before the CTA — evidence as first contact. -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 15 — Research Ticker Hero</p>
+    <section class="stop" id="hero-idea-15" style="padding:0 0 80px; background:var(--paper);">
+        <div
+            style="background:var(--ink); color:var(--paper); font-family:var(--font-mono); font-size:12.5px; padding:10px 0; overflow:hidden; white-space:nowrap; margin-bottom:48px;">
+            <span style="padding:0 24px;">● New: metabolic nutrition linked to slower TKV growth</span>
+            <span style="padding:0 24px;">● Juntendo University trial now enrolling</span>
+            <span style="padding:0 24px;">● 103-patient study shows +6.3% eGFR improvement</span>
+            <span style="padding:0 24px;">● KetoCitra® safety data published</span>
+        </div>
+        <div class="wrap" style="text-align:center; max-width:720px;">
+            <span class="eyebrow">Backed by emerging science</span>
+            <h1>The research is moving. Your plan can too.</h1>
+            <p class="lede" style="color:var(--ink-soft); font-size:1.1rem;">
+                Ren-Nu™ translates the latest PKD nutrition research into a structured program you can
+                follow today — not years from now.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">See the evidence</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 16: The Kind Intake Form                                  -->
+    <!-- Reframes onboarding paperwork itself as the hero — a warm,     -->
+    <!-- handwritten-feeling "first session" note instead of ad copy.   -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 16 — The Kind Intake Form</p>
+    <section class="stop" id="hero-idea-16" style="padding:80px 0; background:var(--paper-alt);">
+        <div class="wrap" style="max-width:600px;">
+            <div
+                style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:32px; box-shadow:0 20px 40px rgba(30,38,36,.08);">
+                <span class="eyebrow">Session 1 of many</span>
+                <h1 style="font-family:var(--font-display);">Welcome. Let's start with how you're really doing.</h1>
+                <div style="display:grid; gap:10px; margin:18px 0 24px;">
+                    <div style="border-bottom:1px solid var(--line); padding-bottom:8px;">
+                        <span style="font-size:12px; color:var(--ink-soft); font-family:var(--font-mono);">HOW LONG HAVE
+                            YOU BEEN MANAGING PKD?</span>
+                    </div>
+                    <div style="border-bottom:1px solid var(--line); padding-bottom:8px;">
+                        <span style="font-size:12px; color:var(--ink-soft); font-family:var(--font-mono);">WHAT'S THE
+                            HARDEST PART RIGHT NOW?</span>
+                    </div>
+                    <div style="border-bottom:1px solid var(--line); padding-bottom:8px;">
+                        <span style="font-size:12px; color:var(--ink-soft); font-family:var(--font-mono);">WHAT WOULD
+                            "IN CONTROL" FEEL LIKE?</span>
+                    </div>
+                </div>
+                <p class="lede" style="color:var(--ink-soft);">No wrong answers. Ren-Nu™ starts with your story, then
+                    builds the plan around it.</p>
+                <div class="hero-ctas">
+                    <a href="#" class="btn btn-primary">Begin your intake</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 17: Listen First Hero                                     -->
+    <!-- A podcast/voice-note styled hero centered on an audio player    -->
+    <!-- so a real patient's voice is the first thing visitors "hear."  -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 17 — Listen First Hero</p>
+    <section class="stop" id="hero-idea-17"
+        style="padding:80px 0; background:var(--orange-dk); color:var(--paper); text-align:center;">
+        <div class="wrap" style="max-width:600px;">
+            <span class="eyebrow" style="color:var(--orange-lt);">Press play before you read a word</span>
+            <h1 style="color:var(--paper);">Hear it from someone who's lived it.</h1>
+            <div
+                style="background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2); border-radius:40px; padding:14px 22px; display:flex; align-items:center; gap:14px; margin:24px auto; max-width:420px;">
+                <span
+                    style="width:44px; height:44px; border-radius:50%; background:var(--orange); display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;">▶</span>
+                <div style="flex:1; text-align:left;">
+                    <span style="display:block; font-size:13px; font-weight:600;">"I finally felt like I had a
+                        plan."</span>
+                    <span
+                        style="display:block; font-size:11px; color:var(--orange-lt); font-family:var(--font-mono);">Ren-Nu™
+                        participant · 1:42</span>
+                </div>
+            </div>
+            <p class="lede" style="color:var(--paper-alt);">
+                Real participant stories, unfiltered. Then see the structured, science-backed program behind
+                them.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-white">Read the transcript</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 18: Health Forecast Hero                                  -->
+    <!-- Uses a weather-forecast metaphor — "cloudy with a chance of    -->
+    <!-- progress" — turning sunny as the plan takes hold.               -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 18 — Health Forecast Hero</p>
+    <section class="stop" id="hero-idea-18"
+        style="padding:80px 0; background:linear-gradient(120deg, var(--paper-alt) 0%, var(--orange-lt) 100%);">
+        <div class="wrap" style="text-align:center; max-width:720px;">
+            <span class="eyebrow">Your PKD forecast</span>
+            <h1>Cloudy today. Sunnier with a plan.</h1>
+            <div style="display:flex; justify-content:center; gap:22px; margin:28px 0;">
+                <div style="text-align:center;">
+                    <span style="font-size:2.4rem;">🌥️</span>
+                    <p style="margin:6px 0 0; font-family:var(--font-mono); font-size:12px; color:var(--ink-soft);">
+                        Without a plan</p>
+                </div>
+                <div style="align-self:center; font-size:1.5rem; color:var(--ink-soft);">→</div>
+                <div style="text-align:center;">
+                    <span style="font-size:2.4rem;">☀️</span>
+                    <p
+                        style="margin:6px 0 0; font-family:var(--font-mono); font-size:12px; color:var(--orange-dk); font-weight:700;">
+                        With Ren-Nu™</p>
+                </div>
+            </div>
+            <p class="lede" style="color:var(--ink-soft);">
+                A structured, science-backed nutrition program designed to shift the long-term outlook for
+                people living with PKD — not just describe it.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">Check your forecast</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 19: Passport Journey Hero                                 -->
+    <!-- Frames the PKD nutrition journey as a passport being stamped   -->
+    <!-- at each program milestone — travel metaphor, not treatment.    -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 19 — Passport Journey Hero</p>
+    <section class="stop" id="hero-idea-19" style="padding:80px 0; background:var(--paper-alt);">
+        <div class="wrap" style="max-width:640px; text-align:center;">
+            <span class="eyebrow">A journey, not a sentence</span>
+            <h1>Your PKD journey deserves more than a waiting room stamp.</h1>
+            <div style="display:flex; justify-content:center; gap:12px; margin:26px 0; flex-wrap:wrap;">
+                <span
+                    style="border:2px solid var(--orange-dk); color:var(--orange-dk); font-family:var(--font-mono); font-size:11px; padding:8px 14px; border-radius:6px; transform:rotate(-4deg);">FOUNDATION
+                    ✓</span>
+                <span
+                    style="border:2px solid var(--orange-dk); color:var(--orange-dk); font-family:var(--font-mono); font-size:11px; padding:8px 14px; border-radius:6px; transform:rotate(3deg);">ADAPTATION
+                    ✓</span>
+                <span
+                    style="border:2px dashed var(--line-dk); color:var(--ink-soft); font-family:var(--font-mono); font-size:11px; padding:8px 14px; border-radius:6px; transform:rotate(-2deg);">OPTIMIZATION</span>
+                <span
+                    style="border:2px dashed var(--line-dk); color:var(--ink-soft); font-family:var(--font-mono); font-size:11px; padding:8px 14px; border-radius:6px; transform:rotate(4deg);">INDEPENDENCE</span>
+            </div>
+            <p class="lede" style="color:var(--ink-soft);">
+                Ren-Nu™ breaks the path into clear stops — Foundation, Adaptation, Optimization,
+                Independence — so progress feels visible, not abstract.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-primary">Start your first stamp</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- Idea 20: Split-Flap Departure Board Hero                       -->
+    <!-- A retro airport departure-board look, flipping through status  -->
+    <!-- words until it lands on "NOW BOARDING: REN-NU™."                -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Idea 20 — Split-Flap Departure Board Hero</p>
+    <section class="stop" id="hero-idea-20" style="padding:80px 0; background:var(--ink); text-align:center;">
+        <div class="wrap" style="max-width:640px;">
+            <span class="eyebrow" style="color:var(--orange-lt);">Status update</span>
+            <div
+                style="background:#000; border-radius:8px; padding:22px; margin:18px 0 28px; font-family:var(--font-mono); letter-spacing:.08em;">
+                <div
+                    style="display:flex; justify-content:space-between; color:var(--orange-lt); font-size:13px; border-bottom:1px solid #333; padding-bottom:10px; margin-bottom:10px;">
+                    <span>FLIGHT</span><span>STATUS</span>
+                </div>
+                <div
+                    style="display:flex; justify-content:space-between; color:#666; font-size:14px; padding:6px 0; text-decoration:line-through;">
+                    <span>WATCH &amp; WAIT</span><span>DELAYED</span>
+                </div>
+                <div
+                    style="display:flex; justify-content:space-between; color:var(--orange); font-size:18px; font-weight:700; padding:6px 0;">
+                    <span>REN-NU™</span><span>NOW BOARDING</span>
+                </div>
+            </div>
+            <h1 style="color:var(--paper);">Stop waiting on the tarmac.</h1>
+            <p class="lede" style="color:var(--paper-alt);">
+                Ren-Nu™ is ready when you are — a structured, science-backed nutrition program for PKD,
+                boarding now.
+            </p>
+            <div class="hero-ctas" style="justify-content:center;">
+                <a href="#" class="btn btn-white">Board now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="idea-divider"></div>
+
+    <!-- ============================================================= -->
+    <!-- SAMPLE MEDIA LIBRARY                                           -->
+    <!-- Placeholder images and videos to swap into any hero idea      -->
+    <!-- above. Images are free-to-use stock photos (Unsplash/Pexels). -->
+    <!-- Videos are open, Creative-Commons "Big Buck Bunny" /           -->
+    <!-- "Elephants Dream" test clips from the Blender Foundation,      -->
+    <!-- used only as stand-ins until real Ren-Nu™ footage is ready.    -->
+    <!-- Replace every URL before shipping to production.               -->
+    <!-- ============================================================= -->
+    <p class="idea-label">Sample Media Library — swap into any idea above</p>
+    <section class="stop" id="media-library" style="padding:80px 0; background:var(--paper);">
+        <div class="wrap">
+            <div class="stop-head">
+                <span class="eyebrow">Placeholder assets</span>
+                <h2>Sample pictures &amp; videos to work with</h2>
+                <p class="stop-sub">Free-to-use stock photos and open Creative-Commons test videos. Copy the URL under
+                    any tile into the <code>src</code> of an <code>&lt;img&gt;</code> or
+                    <code>&lt;video&gt;&lt;source&gt;</code>
+                    tag above. Swap for licensed Ren-Nu™ photography/video before this goes live.</p>
+            </div>
+
+            <h3 style="margin-top:36px;">Photos — warm &amp; reassuring</h3>
+            <div
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-bottom:8px;">
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                        alt="Warm sunlit room, soft and reassuring mood" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1516549655169-df83a0774514
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Kidney health consultation with a clinician" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        pexels photo-7088530
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+                        alt="Structured patient support and health guidance session" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1576091160550-2173dba999ef
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"
+                        alt="Portrait of a smiling person, community/testimonial style" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1544005313-94ddf0286df2
+                    </figcaption>
+                </figure>
+            </div>
+
+            <h3 style="margin-top:32px;">Photos — food &amp; nutrition</h3>
+            <div
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-bottom:8px;">
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80"
+                        alt="Kidney-friendly nutrition and fresh healthy food" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1498837167922-ddd27525d352
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80"
+                        alt="Fresh vegetables and ingredients on a kitchen table" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1490645935967-10de6ba17061
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="PKD-friendly meal prep and recipe ingredients" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        pexels photo-1640777
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:4/3; object-fit:cover;"
+                        src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=800"
+                        alt="Supplement starter kit with bottle and wellness accessories" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        pexels photo-3683074
+                    </figcaption>
+                </figure>
+            </div>
+
+            <h3 style="margin-top:32px;">Photos — community &amp; people</h3>
+            <div
+                style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; margin-bottom:8px;">
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:1/1; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=600&q=80"
+                        alt="Portrait, community member" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1607990281513-2c110a25bd8c
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:1/1; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=600&q=80"
+                        alt="Portrait, community member" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1552058544-f2b08422138a
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:1/1; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80"
+                        alt="Portrait, community member" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1573497019940-1c28c88b4f3e
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img style="aspect-ratio:1/1; object-fit:cover;"
+                        src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80"
+                        alt="Small group support session" loading="lazy">
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        unsplash photo-1521791136064-7986c2920216
+                    </figcaption>
+                </figure>
+            </div>
+
+            <h3 style="margin-top:32px;">Videos — Creative Commons placeholders</h3>
+            <p class="stop-sub" style="margin-bottom:18px;">
+                These are the Blender Foundation's open-movie test clips (Creative Commons Attribution 3.0),
+                commonly used as placeholder video across the web. Use only until real Ren-Nu™ footage —
+                such as the founder welcome video already used in the funnel — is ready.
+            </p>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+                <figure style="margin:0;">
+                    <video style="width:100%; border-radius:10px; aspect-ratio:16/9; object-fit:cover; background:#000;"
+                        controls preload="metadata"
+                        poster="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        Big Buck Bunny (CC-BY, Blender Foundation) — ambient/calm b-roll stand-in
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <video style="width:100%; border-radius:10px; aspect-ratio:16/9; object-fit:cover; background:#000;"
+                        controls preload="metadata"
+                        poster="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80">
+                        <source
+                            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        Elephants Dream (CC-BY, Blender Foundation) — testimonial/founder-message stand-in
+                    </figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <video style="width:100%; border-radius:10px; aspect-ratio:16/9; object-fit:cover; background:#000;"
+                        controls preload="metadata"
+                        poster="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80">
+                        <!-- Existing founder welcome video already used in the live funnel (Idea 5 above) -->
+                        <source src="Ren-Nu_Welcome_Message_2_komprimiert.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption
+                        style="font-family:var(--font-mono); font-size:11px; color:var(--ink-soft); word-break:break-all; margin-top:6px;">
+                        Ren-Nu_Welcome_Message_2_komprimiert.mp4 — existing founder welcome video (already in repo)
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
