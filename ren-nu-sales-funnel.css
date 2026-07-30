@@ -1318,3 +1318,58 @@ footer {
         display: inline-block
     }
 }
+
+/* ---------- INTEREST FORM POPUP ---------- */
+.sgpb-main-popup-data-container-850 {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 38, 36, .55);
+    opacity: 0;
+    pointer-events: none;
+    transform: none;
+    filter: none;
+    transition: opacity .25s ease;
+}
+
+.sgpb-main-popup-data-container-850.sgpb-popup-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sg-popup-builder-content {
+    position: relative;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+    max-width: 560px;
+    width: 92%;
+    max-height: 90vh;
+    overflow: auto;
+    transform: scale(.92);
+    transition: transform .25s ease;
+}
+
+.sgpb-main-popup-data-container-850.sgpb-popup-open .sg-popup-builder-content {
+    transform: scale(1);
+}
+
+.sgpb-popup-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--ink-soft);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sgpb-popup-close-btn:hover {
+    color: var(--ink);
+}

@@ -288,6 +288,79 @@
         }
     }
 
+    /* ===================== INTEREST FORM POPUP ===================== */
+    function initInterestPopup() {
+        var popup = document.querySelector('.sgpb-main-popup-data-container-850');
+        if (!popup) return;
+
+        var box = popup.querySelector('.sg-popup-builder-content');
+        var triggers = document.querySelectorAll('.sg-popup-id-850');
+        if (!triggers.length) return;
+
+        // Popup Builder's own close button was removed along with the plugin,
+        // so add a lightweight one here.
+        var closeBtn = popup.querySelector('.sgpb-popup-close-btn');
+        if (!closeBtn && box) {
+            closeBtn = document.createElement('button');
+            closeBtn.type = 'button';
+            closeBtn.className = 'sgpb-popup-close-btn';
+            closeBtn.setAttribute('aria-label', 'Close');
+            closeBtn.innerHTML = '&times;';
+            box.insertBefore(closeBtn, box.firstChild);
+        }
+
+        function openPopup(e) {
+            if (e) e.preventDefault();
+            popup.classList.add('sgpb-popup-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup() {
+            popup.classList.remove('sgpb-popup-open');
+            document.body.style.overflow = '';
+        }
+
+        triggers.forEach(function (trigger) {
+            trigger.addEventListener('click', openPopup);
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', closePopup);
+
+        // Click on the dark backdrop (outside the popup box) closes it.
+        popup.addEventListener('click', function (e) {
+            if (e.target === popup) closePopup();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePopup();
+        });
+
+        // Prefill form -> builds the Zoho iframe URL with the captured fields.
+        var form = document.getElementById('rennu-prefill-form');
+        var iframe = document.getElementById('rennu-waitlist-iframe');
+        if (!form || !iframe) return;
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // NOTE: These keys (e.g. 'Name_First') must exactly match the field
+            // "Link Name" configured in the Zoho Form builder for each field
+            // (Form builder > field > Options > Link Name). Update them here if
+            // your Zoho form uses different link names.
+            var params = new URLSearchParams();
+            params.set('Name_First', form.first_name.value.trim());
+            params.set('Name_Last', form.last_name.value.trim());
+            params.set('Email', form.email.value.trim());
+            params.set('PhoneNumber', form.phone.value.trim());
+
+            var baseSrc = iframe.getAttribute('data-base-src');
+            iframe.src = baseSrc + '?' + params.toString();
+
+            form.style.display = 'none';
+            iframe.style.display = 'block';
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         initNewsFeed();
         initCarousels();
@@ -297,5 +370,6 @@
         initAccountMenu();
         initTeamVideoStart();
         initPlaylistRotationDelay();
+        initInterestPopup();
     });
 })();
