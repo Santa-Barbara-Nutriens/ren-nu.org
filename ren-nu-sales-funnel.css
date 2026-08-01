@@ -985,6 +985,31 @@ header {
     font-size: 14px;
 }
 
+.price-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.price-option {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 26px 22px;
+    background: var(--paper-alt);
+}
+
+.price-option--best {
+    border-color: var(--orange);
+    background: var(--paper);
+    box-shadow: 0 12px 28px rgba(245, 132, 92, .18);
+}
+
+.price-option .price-amt {
+    font-size: 2.1rem;
+}
+
 .price-list-dropdown {
     margin: 24px 0;
     padding: 14px 16px;
@@ -1291,6 +1316,10 @@ footer {
 
     .price-card {
         padding: 28px;
+    }
+
+    .price-options {
+        grid-template-columns: 1fr;
     }
 
     .et_pb_bg_layout_light.et_pb_module.et_pb_button {
