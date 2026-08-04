@@ -1536,7 +1536,7 @@ footer {
 }
 
 .hero-gh__copy {
-    max-width: 620px;
+    max-width: 420px;
     /* CHANGED: indent the copy so it starts on the same left edge as the
        .stop-head blocks in every section below (#who-we-are, #framework …).
        .stop-head is max-width:var(--head-max) and centred inside .wrap, so its
@@ -1544,7 +1544,7 @@ footer {
        100% here = .hero-gh__inner's content width = .wrap's content width,
        so this tracks the viewport without needing 100vw (scrollbar-safe).
        max(0px, …) collapses the indent once .wrap is narrower than --head-max. */
-    margin-left: max(0px, (100% - var(--head-max)) / 2);
+    margin-left: max(0px, (100% - var(--head-max))/ 50);
 }
 
 .hero-gh__title {
