@@ -1501,8 +1501,8 @@ footer {
     z-index: 2;
     pointer-events: none;
     background:
-        radial-gradient(56% 44% at 0% 94%, rgba(249, 135, 58, .82) 0%, rgba(249, 135, 58, 0) 66%),
-        linear-gradient(184deg, rgba(253, 210, 168, 0) 62%, rgba(252, 186, 133, .35) 84%, rgba(251, 167, 101, .72) 100%);
+        radial-gradient(36% 28% at 0% 94%, rgba(249, 135, 58, .58) 0%, rgba(249, 135, 58, 0) 66%),
+        linear-gradient(184deg, rgba(253, 210, 168, 0) 72%, rgba(252, 186, 133, .24) 86%, rgba(251, 167, 101, .46) 100%);
 }
 
 /* hem: blends the hero's bottom edge into the next section's top colour */
@@ -1512,10 +1512,10 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 13%;
+    height: 8%;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(180deg, rgba(255, 217, 191, 0) 0%, rgba(255, 217, 191, .5) 60%, var(--orange-lt) 100%);
+    background: linear-gradient(180deg, rgba(255, 217, 191, 0) 0%, rgba(255, 217, 191, .28) 55%, var(--orange-lt) 100%);
 }
 
 /* layer 3 — copy
