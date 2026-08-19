@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ren-Nu™ — Science-Backed Renal Nutrition for PKD</title>
+    <meta name="description"
+        content="Ren-Nu™ is a structured, science-backed nutrition and lifestyle education program for people living with Polycystic Kidney Disease (PKD).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="ren-nu-sales-funnel.css">
+</head>
+
+<body>
+
+    <!-- ============ UTILITY TOP BAR ============ -->
+    <div class="topbar">
+        <div class="wrap topbar-inner">
+            <ul class="topbar-menu">
+                <li><a href="#">The Science</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">For Clinicians</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
+            <div class="topbar-account">
+                <button class="account-toggle" id="accountToggle" aria-haspopup="true" aria-expanded="false">
+                    Account <span class="chev">▾</span>
+                </button>
+                <ul class="account-menu" id="accountMenu">
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ STICKY HEADER / JUMP NAV ============ -->
+    <header id="siteHeader">
+        <div class="wrap nav-inner">
+            <a href="#hero" class="logo">Ren<em>-Nu</em><sup>™</sup></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="jump" id="jumpNav">
+                <a href="#problem" data-jump>The Problem</a>
+                <a href="#evidence" data-jump>Evidence</a>
+                <a href="#framework" data-jump>Framework</a>
+                <a href="#pricing" data-jump>Pricing</a>
+                <a href="#faq" data-jump>FAQ</a>
+            </nav>
+            <div class="nav-ctas">
+                <a href="#" class="btn btn-outline btn-sm">Book a Call</a>
+                <a href="#" class="btn btn-primary btn-sm">Apply</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ SECTION 1 — HERO ============ -->
+
+        <section class="hero-gh" id="hero">
+
+            <!-- layer 0: peach / orange gradient field -->
+            <div class="hero-gh__wash" aria-hidden="true"></div>
+
+            <!-- layer 1: photography, feathered into the field by an alpha mask -->
+            <img class="hero-gh__photo" src="hero1.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
+
+            <!-- layer 2: orange bloom over the photo's lower edge -->
+            <div class="hero-gh__bloom" aria-hidden="true"></div>
+
+            <!-- layer 3: copy -->
+            <div class="hero-gh__inner">
+                <div class="hero-gh__copy">
+                    <h1 class="hero-gh__title">Your future<br class="hero-gh__br">
+                        with polycystic<br class="hero-gh__br">
+                        kidney disease<br class="hero-gh__br">
+                        isn&rsquo;t written yet.</h1>
+                    <div class="hero-gh__ctas">
+                        <a href="#pricing" class="hero-gh__btn">Apply to the program</a>
+                        <a href="#" class="hero-gh__link">Book a discovery call</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ============ SECTION 2 — THE PROBLEM & THE GAP ============ -->
+
+        <!-- <section class="stop" id="problem">
+            <div class="wrap">
+                <span class="section-tag">Section 02</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Sound familiar?</span>
+                    <div class="short-divider"></div>
+                    <h2>You have PKD — your health future is uncertain?</h2>
+                    <h2>You're trying to regain control?</h2>
+                    <p class="stop-sub">Labs. Blood pressure. Another scan. "Everything looks stable - see you in six
+                        months."<br>
+                        Underneath it, the quiet fear: that you're just waiting for it to get worse.<br>
+                        That waiting is exhausting. It doesn't have to be the whole story.</p>
+                </div>
+
+                <div class="icon-grid" data-reveal>
+                    <div class="icon-card">
+                        <span class="icon-badge">
+                            <img class="icon-photo"
+                                src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=640"
+                                alt="Kidney health consultation with a clinician" loading="lazy">
+                        </span>
+                        <h3>"Told to watch and wait?"</h3>
+                        <div class="short-divider"></div>
+                        <p>Montior and weit for things to get worse before anyone acts.
+                            Nothing in your own hands?.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon-badge">
+                            <img class="icon-photo"
+                                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=640&q=80"
+                                alt="Kidney-friendly nutrition and fresh healthy food" loading="lazy">
+                        </span>
+                        <h3>No answers agree?</h3>
+                        <div class="short-divider"></div>
+                        <p>Nutrition advice for PKD is vague, generic or contradictory.<br>
+                            You're left guessing at every meal, wondering if you're doing the right thing for your
+                            kidney.</p>
+                    </div>
+                    <div class="icon-card">
+                        <span class="icon-badge">
+                            <img class="icon-photo"
+                                src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=640&q=80"
+                                alt="Structured patient support and health guidance session" loading="lazy">
+                        </span>
+                        <h3>On your own between visits?</h3>
+                        <div class="short-divider"></div>
+                        <p>There is rarely a comprehensive framework that translates emerging metabolic research into
+                            daily practice.</p>
+                    </div>
+                </div>
+
+                <p class="transition-line" data-reveal>Emerging research suggests that metabolism plays an important
+                    role in PKD progression — yet structured nutrition programs specific to PKD have been limited.</p>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply the program</a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <div class="section-transition" aria-hidden="true"></div> -->
+
+        <!-- ============ SECTION 3 — WHO WE ARE - WHY WE BUILD THIS ============ -->
+
+        <section class="stop alt" id="who-we-are">
+            <div class="wrap">
+                <span class="section-tag">Section 03</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Who we are</span>
+                    <h2>Build by researchers, clinitians and patients</h2>
+                    <p class="stop-sub">PKD care often stops at diagnosis — but a team of scientists and patients came
+                        together to go further, building the nutrition support that was missing. Backed by research and
+                        lived experience, our program helps you manage PKD proactively, one meal at a time.</p>
+                </div>
+
+                <div class="team-grid" data-reveal>
+                    <div class="team-list">
+                        <article class="team-member">
+                            <h3>Thomas Weimbs, PhD</h3>
+                            <p>Founder · among the world's leading PKD researchers, UCSB professor</p>
+                        </article>
+                        <article class="team-member">
+                            <h3>Sharon Turban, MD</h3>
+                            <p>Medical director · board-certified nephrologist, ADPKD specialist</p>
+                        </article>
+                        <article class="team-member">
+                            <h3>Kathy Jensen, MS RND</h3>
+                            <p>Director of nutrition · decades in renal dietetics</p>
+                        </article>
+                        <article class="team-member">
+                            <h3>Melina Messing, PhD</h3>
+                            <p>Scientific director · scientist and PKD patient herself</p>
+                        </article>
+
+                        <div class="cta-row team-cta">
+                            <a href="https://ren-nu.org/about-us/" class="btn btn-ghost" target="_blank"
+                                rel="noopener">Meet the full team</a>
+                        </div>
+                    </div>
+
+                    <figure class="team-video-card">
+                        <video class="team-video" controls preload="metadata" data-start-time="1">
+                            <source src="Ren-Nu_Welcome_Message_2_komprimiert.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption class="team-video-caption">Why we build this</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECTION 4 — THE REN-NU FRAMEWORK ============ -->
+
+        <section class="stop" id="framework">
+            <div class="wrap">
+                <span class="section-tag">Section 04</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Your Toolkit for Taking Control</span>
+                    <h2>Everything you need to stop guessing and start acting</h2>
+                    <p class="stop-sub">A generic nutrition course tells you what to eat and leaves you to figure out
+                        the rest. Ren-Nu is a complete, structured system that gives you the knowledge, the data, and
+                        the experts to fundamentally change your metabolic health.</p>
+                </div>
+
+                <div class="panel-grid" data-reveal>
+                    <div class="panel">
+                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=600&auto=format&fit=crop"
+                            alt="Open textbook with study notes">
+                        <h3>The Science, Translated for Real Life</h3>
+                        <p>We don’t just hand you a frustrating list of "good" and "bad" foods. We teach you the core
+                            principles of renal-safe nutrition tailored specifically for PKD. When you actually
+                            understand why choices matter for your kidneys, eating well becomes second nature—not a
+                            daily struggle.</p>
+                        <!-- <a href="#" class="btn btn-ghost btn-sm">Learn more</a> -->
+                    </div>
+                    <div class="panel">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop"
+                            alt="Health tracking chart on a tablet">
+                        <h3>The Data (Because hoping isn't a strategy)</h3>
+                        <p>Replace daily anxiety with hard data. Using our structured tracking tools, you will monitor
+                            your nutrient intake, ketone levels, and biological markers. You won't have to wonder if
+                            what you're doing is working—you will see the proof in real-time.</p>
+                        <!-- <a href="#" class="btn btn-ghost btn-sm">Learn more</a> -->
+                    </div>
+                    <div class="panel">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=600&auto=format&fit=crop"
+                            alt="Small group support session">
+                        <h3>The Experts (Who actually get it) </h3>
+                        <p>3: The Experts (Who actually get it)
+                            You are never doing this alone. You get direct, personalized guidance from specialized renal
+                            dietitians trained in metabolic therapies, plus a supportive group of fellow PKD patients
+                            who know exactly what you are going through.
+                        </p>
+                        <!-- <a href="#" class="btn btn-ghost btn-sm">Learn more</a> -->
+                    </div>
+                    <div class="panel">
+                        <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?q=80&w=600&auto=format&fit=crop"
+                            alt="Supplement bottle on a clean surface">
+                        <h3>The Targeted Support (KetoCitra®)</h3>
+                        <p>The program includes integrated support with KetoCitra®, a medical food specifically
+                            formulated by leading PKD researchers to support nutritional ketosis and dietary management
+                            for polycystic kidney disease.</p>
+                        <!-- <a href="#" class="btn btn-ghost btn-sm">Learn more</a> -->
+                    </div>
+                </div>
+
+                <p class="transition-line" data-reveal>Ren-NuTM is designed to give you clarity and build sustainable,
+                    lifelong habits. This isn't a temporary dietary experiment—it's your new baseline for health.</p>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECTION 5 — HOW THE PROGRAM WORKS ============ -->
+
+        <section class="stop alt" id="how-it-works">
+            <div class="wrap">
+                <span class="section-tag">Section 05</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Step by step</span>
+                    <h2>How the Ren-Nu™ program works</h2>
+                    <p class="stop-sub">A structured progression designed to help participants build knowledge,
+                        implement metabolic ketogenic nutrition safely, and develop sustainable long-term habits.</p>
+                </div>
+
+                <div class="steps timeline" data-reveal>
+                    <article class="step timeline-step">
+                        <span class="timeline-weeks">Weeks 1-4</span>
+                        <span class="timeline-marker" aria-hidden="true"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-phase">Phase 1</span>
+                            <h3>Clarity</h3>
+                            <p>Learn the science and get your baseline.</p>
+                        </div>
+                    </article>
+                    <article class="step timeline-step">
+                        <span class="timeline-weeks">Weeks 5-8</span>
+                        <span class="timeline-marker" aria-hidden="true"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-phase">Phase 2</span>
+                            <h3>Action</h3>
+                            <p>Put the protocol into practice with our support.</p>
+                        </div>
+                    </article>
+                    <article class="step timeline-step">
+                        <span class="timeline-weeks">Weeks 9-12</span>
+                        <span class="timeline-marker" aria-hidden="true"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-phase">Phase 3</span>
+                            <h3>Vitality</h3>
+                            <p>Dial it in and feel the physical shift in your daily energy.</p>
+                        </div>
+                    </article>
+                    <article class="step timeline-step">
+                        <span class="timeline-weeks">Weeks 13-16</span>
+                        <span class="timeline-marker" aria-hidden="true"></span>
+                        <div class="timeline-card">
+                            <span class="timeline-phase">Phase 4</span>
+                            <h3>A New Normal</h3>
+                            <p>Walk away with sustainable habits for the rest of your life.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="transition-line" data-reveal>Enrollment is offered on a rolling basis — participants may begin
+                    once their application is reviewed and approved.</p>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECTION removed — WHAT'S INCLUDED ============ -->
+
+        <!-- <section class="stop" id="included">
+            <div class="wrap">
+                <span class="section-tag">Section 06</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Comprehensive support</span>
+                    <h2>What's included in the Ren-Nu™ program</h2>
+                    <p class="stop-sub">A comprehensive education and support framework — structured learning,
+                        professional guidance, digital tools, and integrated KetoCitra® support.</p>
+                </div>
+
+                <ul class="include-list" data-reveal>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=320&q=80"
+                            alt="Structured online education and learning materials" loading="lazy">
+                        <span class="include-copy"><b>Structured Online Curriculum</b> — metabolic ketogenic nutrition
+                            principles tailored for PKD, including low-oxalate strategies and practical tools.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="Supplement starter kit with bottle and wellness accessories" loading="lazy">
+                        <span class="include-copy"><b>Three Months of KetoCitra®</b> — shipped as a starter pack with
+                            a water bottle and pH meter.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="Dietitian-led one-on-one nutrition support session" loading="lazy">
+                        <span class="include-copy"><b>Dietitian-Led Support</b> — three one-on-one sessions plus
+                            structured group support.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="Weekly coaching and community call on laptop" loading="lazy">
+                        <span class="include-copy"><b>Weekly Coaching &amp; Community Calls</b> — lifetime access to
+                            live sessions and accountability.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="Digital health tracking tools and analytics dashboard" loading="lazy">
+                        <span class="include-copy"><b>Digital Tracking Tools</b> — Pro Cronometer access during the
+                            program, plus lifetime access to our HIPAA-compliant tracking platform.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="PKD-friendly meal prep and recipe ingredients" loading="lazy">
+                        <span class="include-copy"><b>PKD-Specific Meal Plans &amp; Recipes</b> — curated libraries
+                            aligned with metabolic ketogenic nutrition.</span>
+                    </li>
+                    <li>
+                        <img class="include-pic"
+                            src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=320"
+                            alt="Long-term habit building and sustainability planning" loading="lazy">
+                        <span class="include-copy"><b>Long-Term Sustainability Framework</b> — habit formation and
+                            metabolic flexibility guidance beyond the program period.</span>
+                    </li>
+                </ul>
+
+                <p class="transition-line" data-reveal>Ren-Nu™ is designed as a structured education and support program
+                    — not a short-term diet plan.</p>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ============ SECTION 6 — EVIDENCE & PUBLISHED OUTCOMES ============ -->
+
+        <section class="stop" id="evidence">
+            <div class="wrap">
+                <span class="section-tag">Section 06</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Real-world &amp; clinical evidence</span>
+                    <h2>Real results. Real hope.</h2>
+                    <p class="stop-sub">These aren't just theories. Our peer-reviewed published results show that
+                        proactive, metabolic lifestyle changes can visibly impact kidney health and reduce your symptom
+                        burden.</p>
+                </div>
+
+                <div class="stat-row" data-reveal>
+                    <div class="stat-chip">
+                        <span class="stat-icon" aria-hidden="true">🫘</span>
+                        <span class="arrow up" aria-hidden="true">▲</span>
+                        <b>+6.3%</b>
+                        <span>eGFR increase <em>(58.4 → 61.6 ml/min/1.73m², P&lt;0.001)</em></span>
+                    </div>
+                    <div class="stat-chip">
+                        <!-- <span class="stat-icon" aria-hidden="true">📉</span> -->
+                        <span class="arrow up" aria-hidden="true">▼</span>
+                        <b>5.01%</b>
+                        <span>Reduction in Total Kidney Volume (TKV) vs. +8.03% in control</span>
+                    </div>
+                    <div class="stat-chip">
+                        <!-- <span class="stat-icon" aria-hidden="true">🩹</span> -->
+                        <span class="arrow up" aria-hidden="true">▼</span>
+                        <b>Reduced</b>
+                        <span>Symptom burden — kidney pain, headaches &amp; dizziness</span>
+                    </div>
+                    <div class="stat-chip">
+                        <!-- <span class="stat-icon" aria-hidden="true">✅</span> -->
+                        <span class="arrow up" aria-hidden="true">▲</span>
+                        <b>100%</b>
+                        <span>Adherence — no discontinuations during interim phase</span>
+                    </div>
+                </div>
+
+                <!-- Rotating panel -->
+                <div class="carousel" data-carousel data-reveal>
+                    <div class="carousel-track">
+                        <div class="carousel-slide active">
+                            <span class="carousel-tag">Published Real-World Outcomes</span>
+                            <p>Findings demonstrated measurable improvements across multiple health markers while
+                                maintaining safety parameters, reported in a peer-reviewed publication (n=103).</p>
+                            <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1624639/full"
+                                class="carousel-link">Read the published study →</a>
+                        </div>
+                        <div class="carousel-slide">
+                            <span class="carousel-tag">Controlled Clinical Trial (Interim)</span>
+                            <p>An ongoing controlled trial led by Dr. Shigeo Horie at Juntendo University, Tokyo,
+                                combines the Ren-Nu™ framework with KetoCitra® supplementation.</p>
+                            <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1843178/full"
+                                class="carousel-link">Learn about the clinical trial →</a>
+                        </div>
+                        <div class="carousel-slide">
+                            <span class="carousel-tag">Safety Markers</span>
+                            <p>Lipid profiles, electrolytes, and acid-base balance remained stable throughout program
+                                participation.</p>
+                            <a href="#" class="carousel-link">View safety data →</a>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" data-prev aria-label="Previous">‹</button>
+                        <div class="carousel-dots" data-dots></div>
+                        <button class="carousel-btn" data-next aria-label="Next">›</button>
+                    </div>
+                </div>
+
+                <!-- Scientific News Feed (replaces hero video) -->
+                <!-- <div class="news-feed" data-reveal>
+                    <div class="news-feed-head">
+                        <span class="news-feed-title">Scientific News Feed</span>
+                        <span class="news-feed-sub">Curated PKD &amp; renal research updates</span>
+                    </div>
+                    <ul class="news-list" id="newsList"></ul>
+                    <div class="news-dots carousel-dots" id="newsDots"></div>
+                </div>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ============ SECTION 7 — PRICING ============ -->
+
+        <section class="stop alt" id="pricing">
+            <div class="wrap">
+                <span class="section-tag">Section 07</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">An Investment on Your Health</span>
+                    <h2>Structured to fit your life - and your budget</h2>
+                    <p class="stop-sub">For about $14 a day during your 16-week intensive, you get a complete system:
+                        prsonalized dietitan care, digital tracking, lifetime coaching and a three-month supply of
+                        KetoCitra® devliverd to your door.</p>
+                </div>
+
+                <div class="price-card" data-reveal>
+                    <div class="price-options">
+                        <div class="price-option">
+                            <span class="price-name">Flexible Payment Plan</span>
+                            <div class="price-amt">$600<span>/month for 3 months</span></div>
+                            <p class="price-note">Start your program immediately with three simple, predictable
+                                payments.</p>
+                        </div>
+                        <div class="price-option price-option--best">
+                            <span class="price-name">Pay in Full (Best Value)</span>
+                            <div class="price-amt">$1,600<span>save $200 instantly</span></div>
+                            <p class="price-note">One simple payment for complete access to the 16-week framework,
+                                included supplements, and lifetime community.</p>
+                        </div>
+                    </div>
+                    <details class="price-list-dropdown">
+                        <summary>What's included <span class="icon">＋</span></summary>
+                        <ul class="include-list" data-reveal>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=320&q=80"
+                                    alt="Structured online education and learning materials" loading="lazy">
+                                <span class="include-copy"><b>Structured Online Curriculum</b> — metabolic ketogenic
+                                    nutrition
+                                    principles tailored for PKD, including low-oxalate strategies and practical
+                                    tools.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="Supplement starter kit with bottle and wellness accessories" loading="lazy">
+                                <span class="include-copy"><b>Three Months of KetoCitra®</b> — shipped as a starter pack
+                                    with
+                                    a water bottle and pH meter.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="Dietitian-led one-on-one nutrition support session" loading="lazy">
+                                <span class="include-copy"><b>Dietitian-Led Support</b> — three one-on-one sessions plus
+                                    structured group support.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="Weekly coaching and community call on laptop" loading="lazy">
+                                <span class="include-copy"><b>Weekly Coaching &amp; Community Calls</b> — lifetime
+                                    access to
+                                    live sessions and accountability.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="Digital health tracking tools and analytics dashboard" loading="lazy">
+                                <span class="include-copy"><b>Digital Tracking Tools</b> — Pro Cronometer access during
+                                    the
+                                    program, plus lifetime access to our HIPAA-compliant tracking platform.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="PKD-friendly meal prep and recipe ingredients" loading="lazy">
+                                <span class="include-copy"><b>PKD-Specific Meal Plans &amp; Recipes</b> — curated
+                                    libraries
+                                    aligned with metabolic ketogenic nutrition.</span>
+                            </li>
+                            <li>
+                                <img class="include-pic"
+                                    src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=320"
+                                    alt="Long-term habit building and sustainability planning" loading="lazy">
+                                <span class="include-copy"><b>Long-Term Sustainability Framework</b> — habit formation
+                                    and
+                                    metabolic flexibility guidance beyond the program period.</span>
+                            </li>
+                        </ul>
+                        <!-- <ul class="price-list">
+                            <li>Structured online curriculum</li>
+                            <li>Three months of KetoCitra®</li>
+                            <li>Dietitian-led one-on-one sessions</li>
+                            <li>Weekly coaching &amp; community calls (lifetime access)</li>
+                            <li>Pro Cronometer access during program</li>
+                            <li>Lifetime access to HIPAA-compliant data platform</li>
+                            <li>PKD-specific meal plans &amp; recipe library</li>
+                            <li>Long-term sustainability framework</li>
+                        </ul> -->
+                    </details>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                    <span class="price-fine">Applications are reviewed to ensure program alignment.</span>
+                </div>
+
+                <div class="payment-plan" data-reveal>
+                    <h3>Need smaller payments?</h3>
+                    <p>Ask us about Shop Pay installment options at checkout.</p>
+                </div>
+
+                <!-- <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ============ SECTION 8 — PARTICIPANT EXPERIENCES ============ -->
+
+        <section class="stop" id="experiences">
+            <div class="wrap">
+                <span class="section-tag">Section 08</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Real people, real progress</span>
+                    <h2>Participant experiences</h2>
+                    <p class="stop-sub">Participants report meaningful changes in metabolic health, daily symptoms, and
+                        confidence managing PKD.</p>
+                </div>
+
+                <div class="carousel video-playlist" data-reveal>
+                    <iframe class="video-playlist-frame" id="participantPlaylist"
+                        src="https://www.youtube.com/shorts/TF8LfXhe7Go" data-rotate-delay="2500"
+                        src="https://www.youtube.com/shorts/fY9GFEyBIls" data-rotate-delay="2500"
+                        src="https://www.youtube.com/shorts/2Lyzt3gLS40" data-rotate-delay="2500"
+                        src="https://www.youtube.com/shorts/Si0T9xr-Frg" data-rotate-delay="2500"
+                        title="Ren-Nu participant video playlist" loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <p class="transition-line" data-reveal>Experiences vary by individual. Ren-Nu™ is an educational program
+                    designed to support informed lifestyle changes.</p>
+
+                <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SECTION 9 — COMMON QUESTIONS (FAQ) ============ -->
+
+        <section class="stop alt" id="faq">
+            <div class="wrap">
+                <span class="section-tag">Section 09</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Questions</span>
+                    <h2>Common questions</h2>
+                    <p class="stop-sub">Below are answers to common questions about the Ren-Nu™ program.</p>
+                </div>
+
+                <div class="faq-accordion" data-reveal>
+                    <details>
+                        <summary>Is Ren-Nu™ a medical treatment? <span class="icon">＋</span></summary>
+                        <p>No. Ren-Nu™ is a structured nutrition and lifestyle education program. It does not replace
+                            medical care, and participants are encouraged to work closely with their healthcare
+                            providers.</p>
+                    </details>
+                    <details>
+                        <summary>Is ketogenic nutrition safe for individuals with PKD? <span class="icon">＋</span>
+                        </summary>
+                        <p>The program provides structured guidance tailored specifically for individuals living with
+                            PKD, including renal-safe nutrient considerations. Participants should consult their
+                            physician before implementation.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need prior experience with ketogenic nutrition? <span class="icon">＋</span>
+                        </summary>
+                        <p>No prior experience is required. The program begins with foundational education and
+                            progresses in a structured, guided manner.</p>
+                    </details>
+                    <details>
+                        <summary>What stage of CKD qualifies for the program? <span class="icon">＋</span></summary>
+                        <p>Ren-Nu™ is designed for individuals with PKD who are motivated to engage in structured
+                            nutrition education. Eligibility is reviewed during the application process.</p>
+                    </details>
+                    <details>
+                        <summary>What happens after the program ends? <span class="icon">＋</span></summary>
+                        <p>Participants retain lifetime access to weekly coaching and community calls, as well as
+                            continued access to the HIPAA-compliant data platform.</p>
+                    </details>
+                </div>
+
+                <a href="#" class="faq-full-link">View Full FAQ Page →</a>
+
+                <!-- <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary">Apply</a>
+                </div> -->
+                <!-- <div
+                    class="et_pb_button_module_wrapper et_pb_button_5_wrapper et_pb_button_alignment_center et_pb_module ">
+                    <a class="et_pb_button et_pb_button_5 sg-popup-id-850 et_pb_bg_layout_light" href="">Apply</a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ============ SECTION 10 — FINAL CTA ============ -->
+
+        <section class="stop final-cta" id="cta-final">
+            <div class="wrap">
+                <div data-reveal>
+                    <h2>Take an active role in your metabolic health</h2>
+                    <p>Ren-Nu™ is designed for individuals living with PKD who are ready to engage in a structured,
+                        research-informed nutrition program. If you're prepared to commit to consistency, education, and
+                        long-term sustainability, we invite you to apply.</p>
+                    <div class="cta-row center">
+                        <a href="#" class="btn btn-white sg-popup-id-850">Apply Now</a>
+                    </div>
+                    <span class="price-fine light">Applications are reviewed to ensure program alignment.</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <div class="logo footer-logo">Ren<em>-Nu</em><sup>™</sup></div>
+            <p>Ren-Nu™ is an educational program and does not provide medical treatment. Always consult your healthcare
+                provider before making changes to your care plan.</p>
+            <p class="copyright">© 2026 Ren-Nu™. Placeholder demo content for template purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="ren-nu-sales-funnel.js"></script>
+    <script src="ren-nu-sales-funnel.ts"></script>
+
+    <!--
+        Note: server-side form submission (e.g. relaying captured data to a
+        Windmill webhook) lives in ren-nu-sales-funnel.ts. That file is a
+        Deno/Windmill script, NOT a browser script, so it must never be
+        loaded via a <script src="...ts"> tag here — browsers cannot execute
+        TypeScript directly. All in-page popup + form behavior lives in
+        ren-nu-sales-funnel.js instead.
+    -->
+
+    <!-- <div class="sgpb-main-popup-data-container-850"
+        style="position:fixed;opacity: 0;filter: opacity(0%);transform: scale(0);">
+        <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-850" data-id="850"
+            data-events="[{&quot;param&quot;:&quot;click&quot;,&quot;operator&quot;:&quot;defaultClickClassName&quot;,&quot;value&quot;:&quot;sg-popup-id-850&quot;,&quot;hiddenOption&quot;:[]}]"
+            data-options="eyJzZ3BiLXR5cGUiOiJodG1sIiwic2dwYi1pcy1wcmV2aWV3IjoiMCIsInNncGItaXMtYWN0aXZlIjoiY2hlY2tlZCIsInNncGItYmVoYXZpb3ItYWZ0ZXItc3BlY2lhbC1ldmVudHMiOltbeyJwYXJhbSI6InNlbGVjdF9ldmVudCJ9XV0sInNncGItY29udGVudC1wYWRkaW5nIjoiMTIiLCJzZ3BiLXBvcHVwLXotaW5kZXgiOiI5OTk5Iiwic2dwYi1wb3B1cC10aGVtZXMiOiJzZ3BiLXRoZW1lLTYiLCJzZ3BiLWRpc2FibGUtYm9yZGVyIjoib24iLCJzZ3BiLW92ZXJsYXktY29sb3IiOiIiLCJzZ3BiLW92ZXJsYXktb3BhY2l0eSI6IjAuNCIsInNncGItY29udGVudC1jdXN0b20tY2xhc3MiOiJzZy1wb3B1cC1jb250ZW50Iiwic2dwYi1iYWNrZ3JvdW5kLWltYWdlLW1vZGUiOiJuby1yZXBlYXQiLCJzZ3BiLWVzYy1rZXkiOiJvbiIsInNncGItZW5hYmxlLWNsb3NlLWJ1dHRvbiI6Im9uIiwic2dwYi1jbG9zZS1idXR0b24tZGVsYXkiOiIwIiwic2dwYi1jbG9zZS1idXR0b24tcG9zaXRpb24iOiJ0b3BSaWdodCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXRvcCI6Ii0xOCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjoiLTE4Iiwic2dwYi1idXR0b24tcG9zaXRpb24tYm90dG9tIjoiIiwic2dwYi1idXR0b24tcG9zaXRpb24tbGVmdCI6IiIsInNncGItYnV0dG9uLWltYWdlIjoiIiwic2dwYi1idXR0b24taW1hZ2Utd2lkdGgiOiIzMCIsInNncGItYnV0dG9uLWltYWdlLWhlaWdodCI6IjMwIiwic2dwYi1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwic2dwYi1ib3JkZXItcmFkaXVzIjoiMCIsInNncGItYm9yZGVyLXJhZGl1cy10eXBlIjoiJSIsInNncGItYnV0dG9uLXRleHQiOiJDbG9zZSIsInNncGItb3ZlcmxheS1jbGljayI6Im9uIiwic2dwYi1wb3B1cC1kaW1lbnNpb24tbW9kZSI6InJlc3BvbnNpdmVNb2RlIiwic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjoiNjAiLCJzZ3BiLXdpZHRoIjoiNjQwcHgiLCJzZ3BiLWhlaWdodCI6IjQ4MHB4Iiwic2dwYi1tYXgtd2lkdGgiOiIiLCJzZ3BiLW1heC1oZWlnaHQiOiIiLCJzZ3BiLW1pbi13aWR0aCI6IjUwMHB4Iiwic2dwYi1taW4taGVpZ2h0IjoiMzUwcHgiLCJzZ3BiLW9wZW4tYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItY2xvc2UtYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItZW5hYmxlLWNvbnRlbnQtc2Nyb2xsaW5nIjoib24iLCJzZ3BiLXBvcHVwLW9yZGVyIjoiMCIsInNncGItcG9wdXAtZGVsYXkiOiIwIiwic2dwYi1wb3N0LWlkIjoiODUwIiwic2dwYi1lbmFibGUtcG9wdXAtb3ZlcmxheSI6Im9uIiwic2dwYi1idXR0b24taW1hZ2UtZGF0YSI6IiIsInNncGItYmFja2dyb3VuZC1pbWFnZS1kYXRhIjoiIiwic2dwYkNvbmRpdGlvbnMiOm51bGx9">
+            <div class="sgpb-popup-builder-content-850 sgpb-popup-builder-content-html">
+                <div class="sgpb-main-html-content-wrapper">
+                    <iframe aria-label='Ren-Nu Waitlist' frameborder="0" style="height:500px;width:99%;border:none;"
+                        src='https://forms.zohopublic.com/santabarbaranutrients/form/RenNuWaitlist/formperma/mHBwCq8Mar0AL9JYXktv6hsuiTyJZUY9Mf81ZQzPqP8'></iframe>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="sgpb-main-popup-data-container-850">
+        <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-850" data-id="850"
+            data-events="[{&quot;param&quot;:&quot;click&quot;,&quot;operator&quot;:&quot;defaultClickClassName&quot;,&quot;value&quot;:&quot;sg-popup-id-850&quot;,&quot;hiddenOption&quot;:[]}]"
+            data-options="eyJzZ3BiLXR5cGUiOiJodG1sIiwic2dwYi1pcy1wcmV2aWV3IjoiMCIsInNncGItaXMtYWN0aXZlIjoiY2hlY2tlZCIsInNncGItYmVoYXZpb3ItYWZ0ZXItc3BlY2lhbC1ldmVudHMiOltbeyJwYXJhbSI6InNlbGVjdF9ldmVudCJ9XV0sInNncGItY29udGVudC1wYWRkaW5nIjoiMTIiLCJzZ3BiLXBvcHVwLXotaW5kZXgiOiI5OTk5Iiwic2dwYi1wb3B1cC10aGVtZXMiOiJzZ3BiLXRoZW1lLTYiLCJzZ3BiLWRpc2FibGUtYm9yZGVyIjoib24iLCJzZ3BiLW92ZXJsYXktY29sb3IiOiIiLCJzZ3BiLW92ZXJsYXktb3BhY2l0eSI6IjAuNCIsInNncGItY29udGVudC1jdXN0b20tY2xhc3MiOiJzZy1wb3B1cC1jb250ZW50Iiwic2dwYi1iYWNrZ3JvdW5kLWltYWdlLW1vZGUiOiJuby1yZXBlYXQiLCJzZ3BiLWVzYy1rZXkiOiJvbiIsInNncGItZW5hYmxlLWNsb3NlLWJ1dHRvbiI6Im9uIiwic2dwYi1jbG9zZS1idXR0b24tZGVsYXkiOiIwIiwic2dwYi1jbG9zZS1idXR0b24tcG9zaXRpb24iOiJ0b3BSaWdodCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXRvcCI6Ii0xOCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjoiLTE4Iiwic2dwYi1idXR0b24tcG9zaXRpb24tYm90dG9tIjoiIiwic2dwYi1idXR0b24tcG9zaXRpb24tbGVmdCI6IiIsInNncGItYnV0dG9uLWltYWdlIjoiIiwic2dwYi1idXR0b24taW1hZ2Utd2lkdGgiOiIzMCIsInNncGItYnV0dG9uLWltYWdlLWhlaWdodCI6IjMwIiwic2dwYi1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwic2dwYi1ib3JkZXItcmFkaXVzIjoiMCIsInNncGItYm9yZGVyLXJhZGl1cy10eXBlIjoiJSIsInNncGItYnV0dG9uLXRleHQiOiJDbG9zZSIsInNncGItb3ZlcmxheS1jbGljayI6Im9uIiwic2dwYi1wb3B1cC1kaW1lbnNpb24tbW9kZSI6InJlc3BvbnNpdmVNb2RlIiwic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjoiNjAiLCJzZ3BiLXdpZHRoIjoiNjQwcHgiLCJzZ3BiLWhlaWdodCI6IjQ4MHB4Iiwic2dwYi1tYXgtd2lkdGgiOiIiLCJzZ3BiLW1heC1oZWlnaHQiOiIiLCJzZ3BiLW1pbi13aWR0aCI6IjUwMHB4Iiwic2dwYi1taW4taGVpZ2h0IjoiMzUwcHgiLCJzZ3BiLW9wZW4tYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItY2xvc2UtYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItZW5hYmxlLWNvbnRlbnQtc2Nyb2xsaW5nIjoib24iLCJzZ3BiLXBvcHVwLW9yZGVyIjoiMCIsInNncGItcG9wdXAtZGVsYXkiOiIwIiwic2dwYi1wb3N0LWlkIjoiODUwIiwic2dwYi1lbmFibGUtcG9wdXAtb3ZlcmxheSI6Im9uIiwic2dwYi1idXR0b24taW1hZ2UtZGF0YSI6IiIsInNncGItYmFja2dyb3VuZC1pbWFnZS1kYXRhIjoiIiwic2dwYkNvbmRpdGlvbnMiOm51bGx9">
+            <div class="sgpb-popup-builder-content-850 sgpb-popup-builder-content-html">
+                <!-- Content Wrapper for Windmill -->
+                <div class="sgpb-main-html-content-wrapper">
+                    <form id="rennu-prefill-form" class="rennu-prefill-form"
+                        style="max-width:480px;margin:0 auto;padding:12px;">
+                        <p style="margin:0 0 10px;"><label>First Name<br />
+                                <input type="text" name="first_name" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>Last Name<br />
+                                <input type="text" name="last_name" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>Email<br />
+                                <input type="email" name="email" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>Phone<br />
+                                <input type="tel" name="phone" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <button type="submit"
+                            style="padding:10px 20px;background:#186079;color:#fff;border:none;border-radius:3px;cursor:pointer;">Continue</button>
+                    </form>
+                    <!-- <iframe id="rennu-waitlist-iframe" aria-label='Ren-Nu Waitlist' frameborder="0"
+                        style="height:500px;width:99%;border:none;display:none;"
+                        data-base-src='https://forms.zohopublic.com/santabarbaranutrients/form/RenNuWaitlist/formperma/mHBwCq8Mar0AL9JYXktv6hsuiTyJZUY9Mf81ZQzPqP8'></iframe> -->
+                </div>
+                <!-- End of Content Wrapper for Windmill -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

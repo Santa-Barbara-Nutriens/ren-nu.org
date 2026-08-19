@@ -146,6 +146,18 @@ p {
     box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
 }
 
+.btn-outline {
+    background: transparent;
+    color: var(--orange-dk);
+    border: 1.5px solid var(--orange);
+}
+
+.btn-outline:hover {
+    background: var(--orange);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 .btn:focus-visible,
 a:focus-visible,
 summary:focus-visible,
