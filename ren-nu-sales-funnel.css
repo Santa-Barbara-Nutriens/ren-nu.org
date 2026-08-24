@@ -2,6 +2,8 @@
     --orange: #f5845c;
     --orange-dk: #d8663f;
     --orange-lt: #FFD9BF;
+    --orange-mlt: ##FEEEE3;
+    --orange-vlt: #FFF3EB;
     --ink: #1e2624;
     --ink-soft: #55625d;
     --paper: #ffffff;
@@ -272,20 +274,15 @@ header {
 }
 
 .logo {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
     white-space: nowrap;
 }
 
-.logo em {
-    color: var(--orange-dk);
-    font-style: normal;
-}
-
-.logo sup {
-    font-size: 11px;
+.logo img {
+    height: 36px;
+    width: auto;
+    display: block;
 }
 
 .jump {
@@ -355,8 +352,6 @@ header {
 }
 
 .stop-head {
-    /* CHANGED: 720px -> var(--head-max); identical value, now shared with
-       .hero-gh__copy's alignment maths. */
     max-width: var(--head-max);
     margin: 0 auto 48px;
     text-align: center;
@@ -793,26 +788,112 @@ header {
     display: block;
 }
 
-/* ---------- PANEL GRID (Framework) ---------- */
-.panel-grid {
+/* ---------- FRAMEWORK GRID (What's included) ---------- */
+.framework-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.panel {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 20px;
+.framework-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 26px;
     text-align: left;
 }
 
-.panel img {
+.framework-card__icon {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    color: var(--orange);
+}
+
+.framework-card__icon svg {
     width: 100%;
-    height: 140px;
+    height: 100%;
+}
+
+.framework-card__body h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.12rem;
+    margin: 0 0 8px;
+}
+
+.framework-card__body p {
+    font-size: .95rem;
+    margin: 0;
+}
+
+.framework-card__tag {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: var(--orange-vlt);
+    color: var(--orange);
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: .78rem;
+}
+
+/* ---------- INCLUDED HIGHLIGHT BAR (KetoCitra) ---------- */
+.framework-included {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 20px;
+    padding: 30px 34px;
+    background: var(--orange-lt);
+    border-radius: 14px;
+    text-align: left;
+}
+
+.framework-included__icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--paper);
+    color: var(--orange);
+}
+
+.framework-card__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.framework-included__body {
+    flex: 1;
+}
+
+.framework-included__body h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.framework-included__body p {
+    font-size: .95rem;
+    margin: 0;
+}
+
+.framework-included__media {
+    flex: none;
+    width: 190px;
+    height: auto;
     object-fit: cover;
-    margin-bottom: 16px;
+    aspect-ratio: 719 / 427;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(30, 38, 36, .16);
 }
 
 /* ---------- STEPS (How it works) ---------- */
@@ -1200,12 +1281,21 @@ footer {
 }
 
 .footer-logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    white-space: nowrap;
     color: #fff;
     margin-bottom: 14px;
 }
 
 .footer-logo em {
     color: var(--orange);
+    font-style: normal;
+}
+
+.footer-logo sup {
+    font-size: 11px;
 }
 
 .copyright {
@@ -1224,7 +1314,6 @@ footer {
     }
 
     .icon-grid,
-    .panel-grid,
     .steps,
     .stat-row {
         grid-template-columns: repeat(2, 1fr);
@@ -1287,10 +1376,18 @@ footer {
     }
 
     .icon-grid,
-    .panel-grid,
+    .framework-grid,
     .steps,
     .stat-row {
         grid-template-columns: 1fr;
+    }
+
+    .framework-included {
+        flex-wrap: wrap;
+    }
+
+    .framework-included__media {
+        margin: 0 auto;
     }
 
     .steps.timeline {
@@ -1421,158 +1518,83 @@ footer {
 }
 
 /* =====================================================================
-   HERO — "Golden Hour"
-   Rebuilt from final_hero_section.png; colours pixel-sampled from that
-   file, photography = hero1.jpg feathered into the peach field with a
-   two-axis alpha mask (no baked-in image edge).
-   Standalone reference / mockup nav variant: hero-section.html
+   HERO — "Wave"
+   Modeled on virtahealth.com's video hero: a full-bleed background media
+   layer, a solid colour scrim, copy on top, and a wave-shaped SVG divider
+   cut into the section's bottom edge. Their blue is swapped for ren-nu's
+   orange (--orange / --orange-dk), and the background video is swapped
+   for hero_full.jpg since this is a static page.
    ===================================================================== */
-:root {
-    --h-navy: #14283E;
-    --h-cta: #E1560F;
-    --h-cta-dk: #C4470A;
-    --h-peach-top: #FDC999;
-    --h-peach-hi: #FEE3C8;
-    --h-peach-mid: #FDD9B8;
-    --h-peach-lo: #FCC08A;
-    --h-orange-deep: #F98B3F;
-    --h-cream: #FBEDDD;
-}
 
-.hero-gh {
+.hero-wave {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    min-height: clamp(600px, 88vh, 940px);
+    min-height: clamp(560px, 86vh, 880px);
     display: flex;
-    flex-direction: column;
-    padding: 0;
-    background: var(--h-peach-mid);
+    align-items: center;
+    color: #fff;
 }
 
-/* layer 0 — the peach/orange gradient field */
-.hero-gh__wash {
+/* layer 0 — hero_full.jpg, standing in for the background video */
+.hero-wave__media {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-        radial-gradient(78% 62% at 74% 6%, var(--h-peach-hi) 0%, rgba(254, 227, 200, 0) 68%),
-        radial-gradient(70% 56% at 2% 90%, var(--h-orange-deep) 0%, rgba(249, 139, 63, 0) 66%),
-        radial-gradient(58% 44% at 12% 104%, var(--h-cream) 0%, rgba(251, 237, 221, 0) 58%),
-        linear-gradient(180deg,
-            var(--h-peach-top) 0%,
-            #FDD2A8 22%,
-            var(--h-peach-mid) 46%,
-            var(--h-peach-lo) 74%,
-            #FBA765 100%);
 }
 
-/* layer 1 — hero1.jpg, width-driven so the scene is never cropped;
-   only the alpha mask hides the left edge where the headline sits */
-.hero-gh__photo {
-    position: absolute;
-    top: 6%;
-    right: 0;
-    width: 78%;
-    height: auto;
-    z-index: 1;
-    display: block;
-    border-radius: 0;
-
-    --mask-x: linear-gradient(96deg,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, .12) 16%,
-            rgba(0, 0, 0, .46) 32%,
-            rgba(0, 0, 0, .78) 46%,
-            rgba(0, 0, 0, .96) 60%,
-            rgba(0, 0, 0, 1) 70%);
-    --mask-y: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, .30) 5%,
-            rgba(0, 0, 0, .90) 13%,
-            rgba(0, 0, 0, 1) 20%,
-            rgba(0, 0, 0, 1) 80%,
-            rgba(0, 0, 0, .58) 90%,
-            rgba(0, 0, 0, .16) 97%,
-            rgba(0, 0, 0, 0) 100%);
-
-    -webkit-mask-image: var(--mask-x), var(--mask-y);
-    mask-image: var(--mask-x), var(--mask-y);
-    -webkit-mask-composite: source-in;
-    mask-composite: intersect;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    mask-size: 100% 100%;
+.hero-wave__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 68% center;
 }
 
-/* layer 2 — orange bloom re-asserted over the photo's lower edge */
-.hero-gh__bloom {
+/* layer 1 — orange scrim (virtahealth's blue video-shade, in ren-nu orange),
+   darkest over the copy and fading out so the photo still reads on the right */
+.hero-wave__scrim {
     position: absolute;
     inset: 0;
-    z-index: 2;
-    pointer-events: none;
+    z-index: 1;
     background:
-        radial-gradient(36% 28% at 0% 94%, rgba(249, 135, 58, .58) 0%, rgba(249, 135, 58, 0) 66%),
-        linear-gradient(184deg, rgba(253, 210, 168, 0) 72%, rgba(252, 186, 133, .24) 86%, rgba(251, 167, 101, .46) 100%);
+        linear-gradient(100deg,
+            var(--orange-dk) 0%,
+            rgba(216, 102, 63, .92) 28%,
+            rgba(245, 132, 92, .62) 50%,
+            rgba(245, 132, 92, .22) 68%,
+            rgba(245, 132, 92, 0) 84%),
+        linear-gradient(0deg, rgba(30, 38, 36, .28) 0%, rgba(30, 38, 36, 0) 40%);
 }
 
-/* hem: blends the hero's bottom edge into the next section's top colour */
-.hero-gh::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 8%;
-    z-index: 2;
-    pointer-events: none;
-    background: linear-gradient(180deg, rgba(255, 217, 191, 0) 0%, rgba(255, 217, 191, .28) 55%, var(--orange-lt) 100%);
-}
-
-/* layer 3 — copy
+/* layer 2 — copy
    Same box model as .wrap (max-width + 28px side padding) so the headline
    sits on the exact same left edge as every other section's content. */
-.hero-gh__inner {
+.hero-wave__inner {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     max-width: var(--max);
     width: 100%;
     margin: 0 auto;
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    /* CHANGED: left padding back to 28px (was 0) so this box is byte-for-byte
-       the .wrap box model — the copy's indent below is measured from here. */
-    padding: clamp(48px, 14vh, 132px) 28px 88px;
+    padding: clamp(48px, 14vh, 132px) 28px 132px;
 }
 
-.hero-gh__copy {
-    max-width: 420px;
-    /* CHANGED: indent the copy so it starts on the same left edge as the
-       .stop-head blocks in every section below (#who-we-are, #framework …).
-       .stop-head is max-width:var(--head-max) and centred inside .wrap, so its
-       left edge sits (wrapContentWidth - head-max) / 2 further right.
-       100% here = .hero-gh__inner's content width = .wrap's content width,
-       so this tracks the viewport without needing 100vw (scrollbar-safe).
-       max(0px, …) collapses the indent once .wrap is narrower than --head-max. */
-    margin-left: max(0px, (100% - var(--head-max))/ 50);
+.hero-wave__copy {
+    max-width: 460px;
 }
 
-.hero-gh__title {
+.hero-wave__title {
     font-family: var(--font-display);
     font-weight: 500;
     font-size: clamp(2.1rem, 4vw, 3.6rem);
     line-height: 1.16;
     letter-spacing: -.005em;
-    color: var(--h-navy);
+    color: #fff;
     margin: 0;
-    /* breaks are set explicitly with .hero-gh__br below 4 lines, exactly as
-       in the mockup; this is only a safety net for odd font fallbacks */
     max-width: 12em;
+    text-shadow: 0 2px 28px rgba(20, 20, 16, .22);
 }
 
-.hero-gh__ctas {
+.hero-wave__ctas {
     display: flex;
     align-items: center;
     gap: 30px;
@@ -1580,91 +1602,100 @@ footer {
     margin-top: clamp(28px, 7vh, 72px);
 }
 
-.hero-gh__btn {
+.hero-wave__btn {
     display: inline-block;
-    background: var(--h-cta);
-    color: #fff;
+    background: #fff;
+    color: var(--orange-dk);
     font-family: var(--font-body);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 14px 26px;
     border-radius: 4px;
     transition: background .18s ease, transform .18s ease;
 }
 
-.hero-gh__btn:hover {
-    background: var(--h-cta-dk);
+.hero-wave__btn:hover {
+    background: var(--orange-lt);
     transform: translateY(-1px);
 }
 
-.hero-gh__link {
+.hero-wave__link {
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 600;
-    color: var(--h-navy);
+    color: #fff;
     text-decoration: underline;
-    text-decoration-color: var(--h-cta);
+    text-decoration-color: rgba(255, 255, 255, .6);
     text-decoration-thickness: 1.5px;
     text-underline-offset: 6px;
     transition: color .18s ease;
 }
 
-.hero-gh__link:hover {
-    color: var(--h-cta);
+.hero-wave__link:hover {
+    color: var(--orange-lt);
+}
+
+/* layer 3 — the wave divider, filled with the next section's background
+   colour (--paper-alt) so the hero tapers seamlessly into #who-we-are */
+.hero-wave__divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 3;
+    line-height: 0;
+    color: var(--paper-alt);
+    pointer-events: none;
+}
+
+.hero-wave__divider svg {
+    display: block;
+    width: 100%;
+    height: clamp(46px, 8vw, 110px);
 }
 
 /* explicit headline breaks (desktop only) */
-.hero-gh__br {
+.hero-wave__br {
     display: inline;
 }
 
 @media (max-width: 900px) {
-    .hero-gh__br {
+    .hero-wave__br {
         display: none;
     }
 }
 
-@media (max-width: 1024px) {
-    .hero-gh__photo {
-        width: 100%;
-        top: 8%;
-    }
-}
-
 @media (max-width: 720px) {
-    .hero-gh {
+    .hero-wave {
         min-height: 0;
     }
 
-    .hero-gh__photo {
-        position: relative;
-        width: 118%;
-        max-width: none;
-        top: 0;
-        right: auto;
-        margin: 12px -9% 0;
-        order: 3;
-        --mask-x: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-        --mask-y: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 62%, rgba(0, 0, 0, .45) 84%, rgba(0, 0, 0, 0) 100%);
+    .hero-wave__media img {
+        object-position: 62% center;
     }
 
-    .hero-gh__inner {
-        padding-top: 40px;
+    .hero-wave__scrim {
+        background:
+            linear-gradient(180deg,
+                var(--orange-dk) 0%,
+                rgba(216, 102, 63, .88) 34%,
+                rgba(245, 132, 92, .5) 62%,
+                rgba(245, 132, 92, .22) 100%);
     }
 
-    .hero-gh__title {
+    .hero-wave__inner {
+        padding: 40px 28px 96px;
+    }
+
+    .hero-wave__title {
         max-width: 16em;
-    }
-
-    .hero-gh__bloom {
-        background: linear-gradient(180deg, rgba(253, 210, 168, 0) 40%, rgba(251, 167, 101, .55) 100%);
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
 
-    .hero-gh__btn,
-    .hero-gh__link {
+    .hero-wave__btn,
+    .hero-wave__link {
         transition: none;
     }
 }
