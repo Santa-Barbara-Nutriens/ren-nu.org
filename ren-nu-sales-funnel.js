@@ -135,6 +135,24 @@
         });
     }
 
+    /* ===================== SHORTS ROW (Section 11) ===================== */
+    function initShortsRow() {
+        document.querySelectorAll('[data-shorts-track]').forEach(function (track) {
+            var row = track.closest('.shorts-row');
+            var prevBtn = row.querySelector('[data-shorts-prev]');
+            var nextBtn = row.querySelector('[data-shorts-next]');
+
+            function scrollByCard(direction) {
+                var card = track.querySelector('.short-card');
+                var amount = card ? card.getBoundingClientRect().width + 20 : track.clientWidth * 0.8;
+                track.scrollBy({ left: amount * direction, behavior: 'smooth' });
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+            if (nextBtn) nextBtn.addEventListener('click', function () { scrollByCard(1); });
+        });
+    }
+
     /* ===================== SCROLL REVEAL ===================== */
     function initReveal() {
         var targets = document.querySelectorAll('[data-reveal]');
@@ -335,35 +353,75 @@
             if (e.key === 'Escape') closePopup();
         });
 
-        // Prefill form -> builds the Zoho iframe URL with the captured fields.
+        // Prefill form -> submit captured fields straight to a Windmill webhook.
+        //
+        // IMPORTANT: this runs in the visitor's browser, so it must call a
+        // PUBLIC / anonymous Windmill webhook (no secret Bearer token here).
+        // The token-based fetch pattern in ren-nu-sales-funnel.ts is meant to
+        // run *inside* Windmill (server-side), never in client-side JS, since
+        // any token embedded in this file would be visible to every visitor
+        // via "View Source".
+        //
+        // Setup needed in Windmill:
+        // 1. Create a script/flow whose main() accepts the fields you want,
+        //    e.g. async function main(first_name, last_name, email, phone).
+        // 2. Open its "Webhooks" tab and create a trigger (Run, or Run async
+        //    for fire-and-forget).
+        // 3. Set that trigger's access to public/anonymous so no token is
+        //    required to call it from the browser.
+        // 4. Paste the resulting URL below.
+        var WINDMILL_WEBHOOK_URL = 'https://app.windmill.dev/api/w/YOUR_WORKSPACE/jobs/run_wait_result/p/u/YOUR_USER/YOUR_SCRIPT_PATH';
+
         var form = document.getElementById('rennu-prefill-form');
-        var iframe = document.getElementById('rennu-waitlist-iframe');
-        if (!form || !iframe) return;
+        if (!form) return;
 
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            // NOTE: These keys (e.g. 'Name_First') must exactly match the field
-            // "Link Name" configured in the Zoho Form builder for each field
-            // (Form builder > field > Options > Link Name). Update them here if
-            // your Zoho form uses different link names.
-            var params = new URLSearchParams();
-            params.set('Name_First', form.first_name.value.trim());
-            params.set('Name_Last', form.last_name.value.trim());
-            params.set('Email', form.email.value.trim());
-            params.set('PhoneNumber', form.phone.value.trim());
+            var submitBtn = form.querySelector('button[type="submit"]');
+            var payload = {
+                first_name: form.first_name.value.trim(),
+                last_name: form.last_name.value.trim(),
+                email: form.email.value.trim(),
+                phone: form.phone.value.trim()
+            };
 
-            var baseSrc = iframe.getAttribute('data-base-src');
-            iframe.src = baseSrc + '?' + params.toString();
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+            }
 
-            form.style.display = 'none';
-            iframe.style.display = 'block';
+            fetch(WINDMILL_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+                .then(function (response) {
+                    if (!response.ok) throw new Error('Request failed: ' + response.status);
+                    form.innerHTML = '<p style="text-align:center;font-weight:600;">Thanks! Your interest form has been submitted.</p>';
+                })
+                .catch(function (err) {
+                    console.error('Windmill webhook submission failed:', err);
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Continue';
+                    }
+                    var errorEl = form.querySelector('.rennu-form-error');
+                    if (!errorEl) {
+                        errorEl = document.createElement('p');
+                        errorEl.className = 'rennu-form-error';
+                        errorEl.style.color = '#c0392b';
+                        form.appendChild(errorEl);
+                    }
+                    errorEl.textContent = 'Something went wrong submitting the form. Please try again.';
+                });
         });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
         initNewsFeed();
         initCarousels();
+        initShortsRow();
         initReveal();
         initJumpNav();
         initMobileNav();
