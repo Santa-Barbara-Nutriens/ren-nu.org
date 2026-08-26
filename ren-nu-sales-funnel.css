@@ -1365,6 +1365,35 @@ header {
     color: rgba(255, 255, 255, .85);
 }
 
+/* first-card variant: pairs the embedded clip with a link out to the
+   full video on YouTube, stacked underneath instead of overlaid on it */
+.short-card-slot {
+    flex: 0 0 calc(25% - 15px);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.short-card-slot .short-card {
+    flex: none;
+    width: 100%;
+}
+
+.short-card-yt-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--orange-dk);
+}
+
+.short-card-yt-link:hover {
+    text-decoration: underline;
+}
+
 .shorts-nav {
     position: absolute;
     top: 50%;
@@ -1383,13 +1412,17 @@ header {
 }
 
 @media (max-width:900px) {
-    .short-card {
+
+    .short-card,
+    .short-card-slot {
         flex-basis: calc(50% - 10px);
     }
 }
 
 @media (max-width:640px) {
-    .short-card {
+
+    .short-card,
+    .short-card-slot {
         flex-basis: 78%;
     }
 
