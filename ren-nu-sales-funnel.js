@@ -355,30 +355,45 @@
 
         // Prefill form -> submit captured fields straight to a Windmill webhook.
         //
-        // IMPORTANT: this runs in the visitor's browser, so it must call a
-        // PUBLIC / anonymous Windmill webhook (no secret Bearer token here).
-        // The token-based fetch pattern in ren-nu-sales-funnel.ts is meant to
-        // run *inside* Windmill (server-side), never in client-side JS, since
-        // any token embedded in this file would be visible to every visitor
-        // via "View Source".
-        //
-        // Setup needed in Windmill:
-        // 1. Create a script/flow whose main() accepts the fields you want,
-        //    e.g. async function main(first_name, last_name, email, phone).
-        // 2. Open its "Webhooks" tab and create a trigger (Run, or Run async
-        //    for fire-and-forget).
-        // 3. Set that trigger's access to public/anonymous so no token is
-        //    required to call it from the browser.
-        // 4. Paste the resulting URL below.
-        var WINDMILL_WEBHOOK_URL = 'https://app.windmill.dev/api/w/YOUR_WORKSPACE/jobs/run_wait_result/p/u/YOUR_USER/YOUR_SCRIPT_PATH';
+        // NOTE: this runs in the visitor's browser, so the Bearer token below
+        // is visible to anyone via "View Source" / devtools the moment this
+        // page is live — deliberately accepted here (matches WindMill_socet.ts)
+        // rather than switching the trigger to public/anonymous access.
+        // Treat this token as public: don't reuse it for anything with wider
+        // permissions, and rotate it in Windmill if that ever becomes a problem.
+        var WINDMILL_WEBHOOK_URL = 'https://app.windmill.dev/api/w/sbn-dev/jobs/run_wait_result/p/f/leads/submit_interest';
+        var WINDMILL_TOKEN = 'tvCyPtjhzjk389OVDFdXCIitgEhpCwbp';
 
         var form = document.getElementById('rennu-prefill-form');
         if (!form) return;
 
+        var submitBtn = form.querySelector('button[type="submit"]');
+
+        // Gate the Continue button on first name, last name and email being
+        // filled in (phone stays required for submission but doesn't block
+        // enabling the button).
+        var gatedFields = [form.first_name, form.last_name, form.email];
+
+        function updateSubmitState() {
+            var filled = gatedFields.every(function (field) {
+                return field.value.trim() !== '' && field.checkValidity();
+            });
+            if (submitBtn) {
+                submitBtn.disabled = !filled;
+                submitBtn.style.background = filled ? '#186079' : '#9aa5a3';
+                submitBtn.style.cursor = filled ? 'pointer' : 'not-allowed';
+            }
+        }
+
+        gatedFields.forEach(function (field) {
+            field.addEventListener('input', updateSubmitState);
+        });
+
+        updateSubmitState();
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            var submitBtn = form.querySelector('button[type="submit"]');
             var payload = {
                 first_name: form.first_name.value.trim(),
                 last_name: form.last_name.value.trim(),
