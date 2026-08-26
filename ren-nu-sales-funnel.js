@@ -398,7 +398,7 @@
                 first_name: form.first_name.value.trim(),
                 last_name: form.last_name.value.trim(),
                 email: form.email.value.trim(),
-                phone: form.phone.value.trim()
+                phone_number: form.phone.value.trim()
             };
 
             if (submitBtn) {
@@ -408,7 +408,10 @@
 
             fetch(WINDMILL_WEBHOOK_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Authorization': 'Bearer ' + WINDMILL_TOKEN,
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(payload)
             })
                 .then(function (response) {
