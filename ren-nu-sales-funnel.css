@@ -1385,9 +1385,9 @@ header {
     align-items: center;
     gap: 6px;
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
-    color: var(--orange-dk);
+    color: var(--orange);
 }
 
 .short-card-yt-link:hover {
