@@ -1784,19 +1784,22 @@ footer {
 }
 
 .hero-wave__link {
+    display: inline-block;
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, .6);
-    text-decoration-thickness: 1.5px;
-    text-underline-offset: 6px;
-    transition: color .18s ease;
+    text-decoration: none;
+    padding: 14px 26px;
+    border: 1.5px solid #fff;
+    border-radius: 4px;
+    transition: background .18s ease, color .18s ease, transform .18s ease;
 }
 
 .hero-wave__link:hover {
-    color: var(--orange-lt);
+    background: #fff;
+    color: var(--orange-dk);
+    transform: translateY(-1px);
 }
 
 /* layer 3 — the wave divider, filled with the next section's background
