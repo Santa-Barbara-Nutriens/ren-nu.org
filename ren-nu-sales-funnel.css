@@ -71,6 +71,11 @@ h2 {
     font-size: clamp(1.7rem, 3vw, 2.4rem);
 }
 
+h2.orange {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    color: var(--orange-dk);
+}
+
 h3 {
     font-size: 1.2rem;
 }
@@ -1437,8 +1442,8 @@ header {
 
 /* ---------- FOOTER ---------- */
 footer {
-    background: var(--ink);
-    color: #cdd4cf;
+    background: var(--orange-lt);
+    color: var(--ink-soft);
     padding: 48px 0;
     text-align: center;
     font-size: 13px;
@@ -1449,7 +1454,7 @@ footer {
     font-weight: 700;
     font-size: 22px;
     white-space: nowrap;
-    color: #fff;
+    color: var(--ink);
     margin-bottom: 14px;
 }
 
@@ -1722,11 +1727,11 @@ footer {
     z-index: 1;
     background:
         linear-gradient(100deg,
-            var(--orange-dk) 0%,
-            rgba(216, 102, 63, .92) 20%,
-            rgba(245, 132, 92, .62) 40%,
-            rgba(245, 132, 92, .22) 56%,
-            rgba(245, 132, 92, 0) 70%),
+            rgba(216, 102, 63, .88) 0%,
+            rgba(216, 102, 63, .78) 20%,
+            rgba(245, 132, 92, .5) 40%,
+            rgba(245, 132, 92, .16) 56%,
+            rgba(245, 132, 92, 0) 66%),
         linear-gradient(0deg, rgba(30, 38, 36, .28) 0%, rgba(30, 38, 36, 0) 40%);
 }
 
@@ -1844,10 +1849,10 @@ footer {
     .hero-wave__scrim {
         background:
             linear-gradient(180deg,
-                var(--orange-dk) 0%,
-                rgba(216, 102, 63, .88) 34%,
-                rgba(245, 132, 92, .5) 62%,
-                rgba(245, 132, 92, .22) 100%);
+                rgba(216, 102, 63, .88) 0%,
+                rgba(216, 102, 63, .78) 34%,
+                rgba(245, 132, 92, .42) 62%,
+                rgba(245, 132, 92, .16) 100%);
     }
 
     .hero-wave__inner {
