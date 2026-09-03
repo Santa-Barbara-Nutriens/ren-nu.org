@@ -339,7 +339,7 @@ header {
     padding: 56px 0;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(120% 140% at 50% 0%, var(--orange-lt) 20%, var(--paper-alt) 62%);
+    background: radial-gradient(120% 140% at 50% 0%, var(--orange-lt) 50%, var(--paper-alt) 62%);
     /* background: var(--orange-lt); */
 }
 
@@ -639,6 +639,38 @@ header {
     margin-top: 12px;
     font-size: 12.5px;
     color: var(--ink-soft);
+}
+
+/* ---------- TEAM INTRO (Meet the team) ---------- */
+.team-intro {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.team-intro__media {
+    margin: 0;
+}
+
+.team-intro__media img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(30, 38, 36, .1);
+}
+
+.team-intro__copy .eyebrow {
+    margin-bottom: 14px;
+}
+
+.team-intro__copy h2 {
+    margin-bottom: 20px;
+}
+
+.team-intro__roles {
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 28px;
 }
 
 /* ---------- STAT ROW (Evidence) ---------- */
@@ -1647,6 +1679,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .team-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
     .icon-grid,
     .steps,
     .stat-row,
@@ -1898,10 +1935,10 @@ footer {
     z-index: 1;
     background:
         linear-gradient(100deg,
-            rgba(216, 102, 63, .88) 0%,
-            rgba(216, 102, 63, .78) 20%,
-            rgba(245, 132, 92, .5) 40%,
-            rgba(245, 132, 92, .16) 56%,
+            rgba(216, 102, 63, .72) 0%,
+            rgba(216, 102, 63, .62) 20%,
+            rgba(245, 132, 92, .38) 40%,
+            rgba(245, 132, 92, .1) 56%,
             rgba(245, 132, 92, 0) 66%),
         linear-gradient(0deg, rgba(30, 38, 36, .28) 0%, rgba(30, 38, 36, 0) 40%);
 }
