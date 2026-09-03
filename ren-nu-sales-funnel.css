@@ -533,6 +533,20 @@ header {
     margin-left: 6px;
 }
 
+.hero-container {
+    display: flex;
+    justify-content: flex-end;
+    /* rechtsbündig */
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
 /* ---------- ICON GRID (Problem) ---------- */
 .icon-grid {
     display: grid;
