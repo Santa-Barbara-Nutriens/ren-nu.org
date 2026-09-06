@@ -4,6 +4,7 @@
     --orange-lt: #FFD9BF;
     --orange-mlt: ##FEEEE3;
     --orange-vlt: #FFF3EB;
+    --blue-lt: #EAF4FB;
     --ink: #1e2624;
     --ink-soft: #55625d;
     --green: #3a8a5c;
@@ -346,6 +347,11 @@ header {
 .stop.alt {
     /* background: radial-gradient(120% 140% at 50% 0%, var(--paper-alt) 50%, var(--orange-lt) 92%); */
     background: var(--paper-alt);
+}
+
+.stop.blue {
+    /* background: radial-gradient(120% 140% at 50% 0%, var(--paper-alt) 50%, var(--orange-lt) 92%); */
+    background: var(--blue-lt);
 }
 
 .section-tag {
@@ -1053,6 +1059,7 @@ header {
     margin-bottom: 10px;
 }
 
+/* ---------- superseded by .journey-timeline (see 16_weeks_of_guidance.png redesign below) ----------
 .steps.timeline {
     position: relative;
     gap: 22px;
@@ -1140,6 +1147,103 @@ header {
     color: #b5b5b5;
     font-size: 1.15rem;
     line-height: 1.2;
+}
+---------- end superseded .steps.timeline ---------- */
+
+.journey-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 6px;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    top: 27px;
+    height: 2px;
+    background: var(--orange);
+    z-index: 0;
+}
+
+.journey-step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.journey-step__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    background: var(--paper);
+    color: var(--orange);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.journey-step__weeks {
+    display: block;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: .85rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--orange-dk);
+    margin-bottom: 10px;
+}
+
+.journey-step h3 {
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+}
+
+.journey-step p {
+    font-size: .95rem;
+    margin: 0;
+}
+
+.journey-support {
+    margin-top: 44px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+    text-align: center;
+}
+
+.journey-support h3 {
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+}
+
+.journey-support__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+}
+
+.journey-support__list li:not(:first-child)::before {
+    content: "\2022";
+    display: inline-block;
+    color: var(--orange);
+    margin: 0 14px;
 }
 
 /* ---------- INCLUDE LIST ---------- */
@@ -1701,28 +1805,17 @@ footer {
     .icon-grid,
     .steps,
     .stat-row,
-    .evidence-grid {
+    .evidence-grid,
+    .journey-timeline {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .steps.timeline::before {
+    .journey-timeline::before {
         display: none;
     }
 
-    .timeline-weeks {
-        font-size: .92rem;
-    }
-
-    .timeline-phase {
-        font-size: .95rem;
-    }
-
-    .timeline-card h3 {
-        font-size: 1.55rem;
-    }
-
-    .timeline-card p {
-        font-size: 1rem;
+    .journey-step {
+        margin-bottom: 8px;
     }
 }
 
@@ -1765,7 +1858,8 @@ footer {
     .framework-grid,
     .steps,
     .stat-row,
-    .evidence-grid {
+    .evidence-grid,
+    .journey-timeline {
         grid-template-columns: 1fr;
     }
 
@@ -1781,24 +1875,12 @@ footer {
         margin: 0 auto;
     }
 
-    .steps.timeline {
+    .journey-timeline {
         gap: 18px;
     }
 
-    .timeline-weeks {
-        margin-bottom: 12px;
-    }
-
-    .timeline-card {
-        min-height: 0;
-    }
-
-    .timeline-card h3 {
-        font-size: 1.45rem;
-    }
-
-    .timeline-card p {
-        font-size: .98rem;
+    .journey-support {
+        padding: 22px 18px;
     }
 
     .include-list li {
