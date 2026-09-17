@@ -436,6 +436,46 @@
         });
     }
 
+    /* ===================== HERO GIF — PLAY ON HOVER ===================== */
+    function initHeroGifHover() {
+        var wrap = document.getElementById('heroGifHover');
+        if (!wrap) return;
+
+        var canvas = wrap.querySelector('.hero-split__poster');
+        var gif = wrap.querySelector('.hero-split__gif');
+        if (!canvas || !gif) return;
+
+        var ctx = canvas.getContext('2d');
+        var baseSrc = gif.getAttribute('src');
+
+        function drawPoster() {
+            canvas.width = gif.naturalWidth;
+            canvas.height = gif.naturalHeight;
+            try {
+                ctx.drawImage(gif, 0, 0, canvas.width, canvas.height);
+            } catch (err) {
+                // Canvas stays blank if the frame can't be captured; harmless.
+            }
+        }
+
+        if (gif.complete) {
+            drawPoster();
+        } else {
+            gif.addEventListener('load', drawPoster, { once: true });
+        }
+
+        // Reloading the src on every hover restarts the gif from frame one;
+        // it plays through and, if the file loops once, stops on its own.
+        wrap.addEventListener('mouseenter', function () {
+            gif.src = baseSrc + (baseSrc.indexOf('?') === -1 ? '?' : '&') + 'play=' + Date.now();
+            wrap.classList.add('is-playing');
+        });
+
+        wrap.addEventListener('mouseleave', function () {
+            wrap.classList.remove('is-playing');
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         initNewsFeed();
         initCarousels();
@@ -447,5 +487,6 @@
         initTeamVideoStart();
         initPlaylistRotationDelay();
         initInterestPopup();
+        initHeroGifHover();
     });
 })();
