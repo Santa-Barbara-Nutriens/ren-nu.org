@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kidney Health — eGFR Gauge</title>
+  <style>
+    :root {
+      --bg: #0e3149;
+      /* background color #124d61  */
+      --bg-deep: ##0e3149;
+      /* deep background color #124d61 */
+      --ring-track: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --text-dim: rgba(255, 255, 255, 0.72);
+      --text-faint: rgba(255, 255, 255, 0.5);
+      --green: #3FA55A;
+      --yellow: #F0C64C;
+      --orange: #EE9A44;
+      --red: #E5594F;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-deep);
+    }
+
+    .gauge-card {
+      box-sizing: border-box;
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 28px 24px 24px;
+      background: var(--bg);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      color: var(--text);
+      text-align: center;
+    }
+
+    .gauge-title {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--text);
+    }
+
+    .gauge-sub {
+      margin: 0 0 8px;
+      font-size: 12px;
+      color: var(--text-faint);
+    }
+
+    .gauge-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      margin: 8px auto 4px;
+    }
+
+    .gauge-wrap svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .band {
+      fill: none;
+      stroke-width: 26;
+    }
+
+    .band-red {
+      stroke: var(--red);
+    }
+
+    .band-orange {
+      stroke: var(--orange);
+    }
+
+    .band-yellow {
+      stroke: var(--yellow);
+    }
+
+    .band-green {
+      stroke: var(--green);
+    }
+
+    .tick-label {
+      font-size: 12px;
+      fill: var(--text-faint);
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    #needle {
+      transition: transform 500ms cubic-bezier(.34, 1.4, .4, 1);
+      transform-origin: 200px 200px;
+    }
+
+    #needle line {
+      stroke: var(--text);
+      stroke-width: 4;
+      stroke-linecap: round;
+    }
+
+    .hub {
+      fill: var(--text);
+    }
+
+    .hub-ring {
+      fill: none;
+      stroke: var(--bg);
+      stroke-width: 3;
+    }
+
+    .value-text {
+      font-size: 52px;
+      font-weight: 700;
+      fill: var(--text);
+      text-anchor: middle;
+    }
+
+    .unit-text {
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      fill: var(--text-dim);
+      text-anchor: middle;
+    }
+
+    .stage-text {
+      font-size: 13px;
+      font-weight: 600;
+      text-anchor: middle;
+      letter-spacing: 0.02em;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      font-size: 11.5px;
+      color: var(--text-dim);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .swatch {
+      width: 9px;
+      height: 9px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    .demo-controls {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.2);
+      text-align: left;
+    }
+
+    .demo-controls label {
+      display: block;
+      font-size: 11px;
+      color: var(--text-faint);
+      margin-bottom: 6px;
+    }
+
+    .demo-controls input[type="range"] {
+      width: 100%;
+      accent-color: #ffffff;
+    }
+
+    .demo-controls .demo-note {
+      margin-top: 6px;
+      font-size: 10.5px;
+      color: var(--text-faint);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="gauge-card">
+    <h2 class="gauge-title">Kidney Health</h2>
+    <p class="gauge-sub">KDIGO GFR categories</p>
+
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 400 400">
+        <!-- color bands (KDIGO-based: green ≥90, yellow 60–89, orange 45–59, red <45) -->
+        <path class="band band-red" d="M 86.86,313.14 A 160,160 0 0,1 111.10,66.96" />
+        <path class="band band-orange" d="M 111.10,66.96 A 160,160 0 0,1 200,40" />
+        <path class="band band-yellow" d="M 200,40 A 160,160 0 0,1 347.82,138.77" />
+        <path class="band band-green" d="M 347.82,138.77 A 160,160 0 0,1 313.14,313.14" />
+
+        <!-- tick labels at band boundaries -->
+        <text class="tick-label" x="71" y="333">0</text>
+        <text class="tick-label" x="99" y="43">45</text>
+        <text class="tick-label" x="200" y="16">60</text>
+        <text class="tick-label" x="369" y="125">90</text>
+        <text class="tick-label" x="330" y="333">120</text>
+
+        <!-- needle -->
+        <g id="needle">
+          <line x1="200" y1="200" x2="200" y2="66" />
+        </g>
+        <circle class="hub" cx="200" cy="200" r="10" />
+        <circle class="hub-ring" cx="200" cy="200" r="10" />
+
+        <!-- center readout -->
+        <text id="valueText" class="value-text" x="200" y="216">75</text>
+        <text class="unit-text" x="200" y="245">[eGFR]</text>
+        <text id="stageText" class="stage-text" x="200" y="270">Mildly decreased</text>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item"><span class="swatch" style="background:var(--green)"></span>≥90</span>
+      <span class="legend-item"><span class="swatch" style="background:var(--yellow)"></span>60–89</span>
+      <span class="legend-item"><span class="swatch" style="background:var(--orange)"></span>45–59</span>
+      <span class="legend-item"><span class="swatch" style="background:var(--red)"></span>&lt;45</span>
+    </div>
+
+    <!-- Demo controls: for previewing only — remove this block in production
+       and drive the gauge from your app via KidneyGauge.setValue(value) -->
+    <div class="demo-controls">
+      <label for="demoSlider">set eGFR value (<span id="demoSliderVal">60</span>)</label>
+      <input id="demoSlider" type="range" min="0" max="120" step="1" value="60">
+      <!-- <div class="demo-note">Drive this from your app instead: <code>KidneyGauge.setValue(60)</code></div> -->
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var CX = 200, CY = 200;
+      var START_ANGLE = 225;   // degrees, measured clockwise from 12 o'clock
+      var SWEEP = 270;         // total sweep of the gauge
+      var MIN_VAL = 0, MAX_VAL = 120;
+
+      var needle = document.getElementById('needle');
+      var valueText = document.getElementById('valueText');
+      var stageText = document.getElementById('stageText');
+      var slider = document.getElementById('demoSlider');
+      var sliderVal = document.getElementById('demoSliderVal');
+
+      function stageFor(v) {
+        if (v >= 90) return { label: 'Normal / high', color: '#3FA55A' };
+        if (v >= 60) return { label: 'Mildly decreased', color: '#F0C64C' };
+        if (v >= 45) return { label: 'Mild–moderate decrease', color: '#EE9A44' };
+        return { label: 'Moderate–severe decrease', color: '#E5594F' };
+      }
+
+      function setValue(raw) {
+        var v = Math.max(MIN_VAL, Math.min(MAX_VAL, Number(raw)));
+        var fraction = (v - MIN_VAL) / (MAX_VAL - MIN_VAL);
+        var angle = START_ANGLE + fraction * SWEEP;
+
+        needle.setAttribute('transform', 'rotate(' + angle + ' ' + CX + ' ' + CY + ')');
+        valueText.textContent = Math.round(v);
+
+        var stage = stageFor(v);
+        stageText.textContent = stage.label;
+        stageText.style.fill = stage.color;
+
+        if (slider) slider.value = v;
+        if (sliderVal) sliderVal.textContent = Math.round(v);
+      }
+
+      if (slider) {
+        slider.addEventListener('input', function (e) { setValue(e.target.value); });
+      }
+
+      // Public API for embedding on a website:
+      //   KidneyGauge.setValue(72)
+      window.KidneyGauge = { setValue: setValue };
+
+      setValue(60); // initial demo value
+    })();
+  </script>
+
+</body>
+
+</html>
