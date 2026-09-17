@@ -2078,22 +2078,28 @@ footer {
    ===================================================================== */
 
 /* ---------- HERO (split, orange copy / hover-play gif) ---------- */
+/* Copy column width is derived with the same math as .wrap (--max,
+   28px side padding) so its text starts at the identical x-position as
+   every other section's content, without actually nesting inside
+   .wrap — that let the media column simply be "everything left over"
+   (1fr) and bleed to the browser's right edge for free, no JS needed. */
 .hero-split {
+    --hero-gutter: max(0px, (100vw - var(--max)) / 2);
+    --hero-content-w: calc(min(100vw, var(--max)) - 56px);
+    --hero-copy-w: calc(var(--hero-content-w) * 2 / 5);
     background: var(--orange);
     overflow: hidden;
 }
 
 .hero-split__grid {
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: calc(var(--hero-gutter) + 28px + var(--hero-copy-w)) 1fr;
     align-items: center;
     min-height: clamp(480px, 78vh, 760px);
 }
 
 .hero-split__copy {
-    padding: 56px 28px;
-    max-width: 560px;
-    margin: 0 auto;
+    padding: 56px 40px 56px calc(var(--hero-gutter) + 28px + 0px);
 }
 
 .hero-split__title {
@@ -2158,6 +2164,10 @@ footer {
 @media (max-width: 900px) {
     .hero-split__grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-split__copy {
+        padding: 40px 0;
     }
 
     .hero-split__media {
