@@ -405,6 +405,15 @@ header {
     margin-bottom: 8px;
 }
 
+.section-tag-hero {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 8px;
+}
+
 .stop-head {
     max-width: var(--head-max);
     margin: 0 auto 48px;
@@ -2086,7 +2095,7 @@ footer {
 .hero-split {
     --hero-gutter: max(0px, (100vw - var(--max)) / 2);
     --hero-content-w: calc(min(100vw, var(--max)) - 56px);
-    --hero-copy-w: calc(var(--hero-content-w) * 2 / 5);
+    --hero-copy-w: calc(var(--hero-content-w) / 3);
     background: var(--orange);
     overflow: hidden;
 }
@@ -2099,7 +2108,7 @@ footer {
 }
 
 .hero-split__copy {
-    padding: 56px 40px 56px calc(var(--hero-gutter) + 28px + 0px);
+    padding: 56px 24px 56px calc(var(--hero-gutter) + 28px + 0px);
 }
 
 .hero-split__title {
