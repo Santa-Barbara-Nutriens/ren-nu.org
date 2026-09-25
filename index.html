@@ -1,224 +1,162 @@
-<!-- ============================================================
-     Ren-Nu Hero-Section
-     Eigenständiger Block: einfach in ein Custom-HTML-Block bei
-     WordPress einfügen. Schriften werden von Google Fonts geladen.
-     ============================================================ -->
-<section class="rn-hero">
-  <div class="rn-inner">
-    <h1 class="rn-headline">Ren-Nu: your roadmap to metabolic health.</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="rn-cards">
-      <article class="rn-card rn-card--pkd">
-        <img class="rn-icon" src="Images/kidney-red.svg" alt="" aria-hidden="true">
-        <p class="rn-card-label">For PKD</p>
-        <a class="rn-btn" href="ren-nu-sales-funnel.html">Join Now</a>
-      </article>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ren-Nu: your roadmap to metabolic health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="ren-nu-sales-funnel.css">
+  <link rel="stylesheet" href="ren-nu-landing-page.css">
+</head>
 
-      <article class="rn-card rn-card--ckd">
-        <img class="rn-icon" src="Images/kidney-blue.svg" alt="" aria-hidden="true">
-        <p class="rn-card-label">For CKD</p>
-        <button type="button" class="rn-btn">Join Waitlist</button>
-      </article>
+<body>
 
-      <article class="rn-card rn-card--covid">
-        <img class="rn-icon" src="Images/lungs.svg" alt="" aria-hidden="true">
-        <p class="rn-card-label">For Long COVID</p>
-        <button type="button" class="rn-btn">Join Waitlist</button>
-      </article>
+  <!-- ============ STICKY HEADER / JUMP NAV ============ -->
+  <header id="siteHeader">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="logo"><img src="Images/Ren-Nu Logo.png" alt="Ren-Nu™"></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="jump" id="jumpNav">
+        <a href="ren-nu-the-science.html" data-jump>The Science</a>
+        <a href="ren-nu-for-clinicians.html" data-jump>For Clinicians</a>
+        <a href="ren-nu-about-us.html" data-jump>About Us</a>
+        <a href="ren-nu-resources.html" data-jump>Resources</a>
+        <a href="ren-nu-pricing.html" data-jump>Pricing</a>
+        <a href="ren-nu-shop.html" data-jump>Shop</a>
+        <a href="ren-nu-faq.html" data-jump>FAQs</a>
+      </nav>
+      <div class="nav-ctas">
+        <a href="#" class="btn btn-outline btn-sm">Book a Call</a>
+        <a href="#" class="btn btn-primary btn-sm">Apply</a>
+      </div>
+    </div>
+  </header>
 
-      <article class="rn-card rn-card--mental">
-        <img class="rn-icon" src="Images/brain.svg" alt="" aria-hidden="true">
-        <p class="rn-card-label">For Mental Health</p>
-        <button type="button" class="rn-btn">Join Waitlist</button>
-      </article>
+  <main>
+
+    <section class="rn-hero">
+      <img class="rn-hero-background" src="Images/landing_page_background-aquarell.svg" alt="" aria-hidden="true">
+      <div class="wrap">
+        <div class="rn-branding">
+          <img class="rn-logo" src="Images/Ren-Nu Logo.png" alt="Ren-Nu">
+          <h1 class="rn-headline">Your roadmap to metabolic health.</h1>
+        </div>
+
+        <div class="rn-cards">
+          <article class="rn-card rn-card--pkd">
+            <img class="rn-icon" src="Images/kidney-red.svg" alt="" aria-hidden="true">
+            <p class="rn-card-label">For PKD</p>
+            <a class="rn-btn" href="ren-nu-sales-funnel.html">Join Now</a>
+          </article>
+
+          <article class="rn-card rn-card--ckd">
+            <img class="rn-icon" src="Images/kidney-blue.svg" alt="" aria-hidden="true">
+            <p class="rn-card-label">For CKD</p>
+            <button type="button" class="rn-btn">Join Waitlist</button>
+          </article>
+
+          <article class="rn-card rn-card--covid">
+            <img class="rn-icon" src="Images/lungs.svg" alt="" aria-hidden="true">
+            <p class="rn-card-label">For Long COVID</p>
+            <button type="button" class="rn-btn">Join Waitlist</button>
+          </article>
+
+          <article class="rn-card rn-card--mental">
+            <img class="rn-icon" src="Images/brain.svg" alt="" aria-hidden="true">
+            <p class="rn-card-label">For Mental Health</p>
+            <button type="button" class="rn-btn">Join Waitlist</button>
+          </article>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <!-- <a href="#hero" class="logo"><img src="Ren-Nu Logo.png" alt="Ren-Nu™"></a> -->
+          <p>Ren-Nu™ is an educational program and does not provide medical treatment. Always consult
+            your healthcare provider before making changes to your care plan.</p>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-heading">Social Links</span>
+          <ul class="footer-links">
+            <li><a href="https://www.facebook.com/RenNuRenalNutrition/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.facebook.com/groups/renalnutrition" target="_blank" rel="noopener">Join
+                our Facebook Community</a></li>
+            <li><a href="https://www.instagram.com/rennurenalnutrition/" target="_blank" rel="noopener">Instagram</a>
+            </li>
+            <li><a href="https://www.linkedin.com/company/105193406/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://x.com/RenNuProgram" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://open.spotify.com/show/1wZCftHdQDwNq67XsFeZSf?si=c36b3f6f35754b3c" target="_blank"
+                rel="noopener">Podcast on Spotify</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-heading">Find Us Here</span>
+          <address class="footer-address">
+            <strong>Santa Barbara Nutrients, Inc</strong><br>
+            California NanoSystems Institute<br>
+            University of California, Mail Code 6105<br>
+            Santa Barbara, CA 93106, USA<br>
+            Email: <a href="mailto:info@ren-nu.org">info@ren-nu.org</a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="https://ren-nu.org/terms-conditions/" target="_blank" rel="noopener">Terms &amp;
+            Conditions</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://ren-nu.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2026 Santa Barbara Nutrients. .</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="ren-nu-sales-funnel.js"></script>
+  <script src="WindMill_socet.ts"></script>
+
+  <div class="sgpb-main-popup-data-container-850">
+    <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-850" data-id="850"
+      data-events="[{&quot;param&quot;:&quot;click&quot;,&quot;operator&quot;:&quot;defaultClickClassName&quot;,&quot;value&quot;:&quot;sg-popup-id-850&quot;,&quot;hiddenOption&quot;:[]}]"
+      data-options="eyJzZ3BiLXR5cGUiOiJodG1sIiwic2dwYi1pcy1wcmV2aWV3IjoiMCIsInNncGItaXMtYWN0aXZlIjoiY2hlY2tlZCIsInNncGItYmVoYXZpb3ItYWZ0ZXItc3BlY2lhbC1ldmVudHMiOltbeyJwYXJhbSI6InNlbGVjdF9ldmVudCJ9XV0sInNncGItY29udGVudC1wYWRkaW5nIjoiMTIiLCJzZ3BiLXBvcHVwLXotaW5kZXgiOiI5OTk5Iiwic2dwYi1wb3B1cC10aGVtZXMiOiJzZ3BiLXRoZW1lLTYiLCJzZ3BiLWRpc2FibGUtYm9yZGVyIjoib24iLCJzZ3BiLW92ZXJsYXktY29sb3IiOiIiLCJzZ3BiLW92ZXJsYXktb3BhY2l0eSI6IjAuNCIsInNncGItY29udGVudC1jdXN0b20tY2xhc3MiOiJzZy1wb3B1cC1jb250ZW50Iiwic2dwYi1iYWNrZ3JvdW5kLWltYWdlLW1vZGUiOiJuby1yZXBlYXQiLCJzZ3BiLWVzYy1rZXkiOiJvbiIsInNncGItZW5hYmxlLWNsb3NlLWJ1dHRvbiI6Im9uIiwic2dwYi1jbG9zZS1idXR0b24tZGVsYXkiOiIwIiwic2dwYi1jbG9zZS1idXR0b24tcG9zaXRpb24iOiJ0b3BSaWdodCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXRvcCI6Ii0xOCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjoiLTE4Iiwic2dwYi1idXR0b24tcG9zaXRpb24tYm90dG9tIjoiIiwic2dwYi1idXR0b24tcG9zaXRpb24tbGVmdCI6IiIsInNncGItYnV0dG9uLWltYWdlIjoiIiwic2dwYi1idXR0b24taW1hZ2Utd2lkdGgiOiIzMCIsInNncGItYnV0dG9uLWltYWdlLWhlaWdodCI6IjMwIiwic2dwYi1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwic2dwYi1ib3JkZXItcmFkaXVzIjoiMCIsInNncGItYm9yZGVyLXJhZGl1cy10eXBlIjoiJSIsInNncGItYnV0dG9uLXRleHQiOiJDbG9zZSIsInNncGItb3ZlcmxheS1jbGljayI6Im9uIiwic2dwYi1wb3B1cC1kaW1lbnNpb24tbW9kZSI6InJlc3BvbnNpdmVNb2RlIiwic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjoiNjAiLCJzZ3BiLXdpZHRoIjoiNjQwcHgiLCJzZ3BiLWhlaWdodCI6IjQ4MHB4Iiwic2dwYi1tYXgtd2lkdGgiOiIiLCJzZ3BiLW1heC1oZWlnaHQiOiIiLCJzZ3BiLW1pbi13aWR0aCI6IjUwMHB4Iiwic2dwYi1taW4taGVpZ2h0IjoiMzUwcHgiLCJzZ3BiLW9wZW4tYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItY2xvc2UtYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItZW5hYmxlLWNvbnRlbnQtc2Nyb2xsaW5nIjoib24iLCJzZ3BiLXBvcHVwLW9yZGVyIjoiMCIsInNncGItcG9wdXAtZGVsYXkiOiIwIiwic2dwYi1wb3N0LWlkIjoiODUwIiwic2dwYi1lbmFibGUtcG9wdXAtb3ZlcmxheSI6Im9uIiwic2dwYi1idXR0b24taW1hZ2UtZGF0YSI6IiIsInNncGItYmFja2dyb3VuZC1pbWFnZS1kYXRhIjoiIiwic2dwYkNvbmRpdGlvbnMiOm51bGx9">
+      <div class="sgpb-popup-builder-content-850 sgpb-popup-builder-content-html">
+        <div class="sgpb-main-html-content-wrapper">
+          <form id="rennu-prefill-form" class="rennu-prefill-form" style="max-width:480px;margin:0 auto;padding:12px;">
+            <p style="margin:0 0 10px;"><label>*First Name<br />
+                <input type="text" name="first_name" required
+                  style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+            <p style="margin:0 0 10px;"><label>*Last Name<br />
+                <input type="text" name="last_name" required
+                  style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+            <p style="margin:0 0 10px;"><label>*Email<br />
+                <input type="email" name="email" required
+                  style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+            <p style="margin:0 0 10px;"><label>Phone<br />
+                <input type="tel" name="phone" style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+            <button type="submit" disabled
+              style="padding:10px 20px;background:#9aa5a3;color:#fff;border:none;border-radius:3px;cursor:not-allowed;">Continue</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<style>
-  .rn-hero {
-    --rn-bg: #F7F1E6;
-    --rn-ink: #1B3A36;
-    --rn-leaf: #6E8B6A;
-    --rn-leaf-soft: #A9C0A0;
-    --rn-sun: #F3C98A;
-    --rn-hill-1: #A9C4BE;
-    --rn-hill-2: #7FA79E;
-    --rn-brand: #1F5E52;
-    --rn-brand-accent: #E1785B;
+</body>
 
-    --rn-pkd-bg: #F6D9CE;
-    --rn-pkd-icon: #D9694B;
-    --rn-pkd-btn: #D9694B;
-
-    --rn-ckd-bg: #DCE9EA;
-    --rn-ckd-icon: #3E7078;
-    --rn-ckd-btn: #2E5960;
-
-    --rn-covid-bg: #F6E3C2;
-    --rn-covid-icon: #C98A2E;
-    --rn-covid-btn: #C98A2E;
-
-    --rn-mental-bg: #E7DEF2;
-    --rn-mental-icon: #7C5FA6;
-    --rn-mental-btn: #7C5FA6;
-
-    position: relative;
-    overflow: hidden;
-    background: var(--rn-bg) url("Images/landing_page_center_free.png") center / cover no-repeat;
-    aspect-ratio: 3 / 2;
-    color: var(--rn-ink);
-    font-family: "Work Sans", system-ui, sans-serif;
-    border-radius: 28px;
-  }
-
-  .rn-hero * {
-    box-sizing: border-box;
-  }
-
-  /* Logo und Headline sind Teil des Hintergrundbilds */
-  .rn-headline {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-
-  .rn-inner {
-    position: absolute;
-    top: 54%;
-    left: 17%;
-    right: 17%;
-  }
-
-  .rn-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-  }
-
-  .rn-card {
-    border-radius: 18px;
-    padding: 1.75rem 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.9rem;
-  }
-
-  .rn-icon {
-    width: 276px;
-    max-width: 100%;
-    height: auto;
-    mix-blend-mode: multiply;
-  }
-
-  .rn-card-label {
-    font-weight: 600;
-    font-size: 1.55rem;
-    margin: 0;
-  }
-
-  .rn-btn {
-    display: inline-block;
-    text-decoration: none;
-    border: none;
-    border-radius: 999px;
-    padding: 0.75rem 1.55rem;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 1rem;
-    color: #fff;
-    cursor: pointer;
-    transition: filter 0.15s ease;
-  }
-
-  .rn-btn:hover {
-    filter: brightness(1.08);
-  }
-
-  .rn-btn:focus-visible {
-    outline: 3px solid var(--rn-ink);
-    outline-offset: 2px;
-  }
-
-  .rn-card--pkd {
-    background: var(--rn-pkd-bg);
-  }
-
-  .rn-card--pkd {
-    --rn-icon: var(--rn-pkd-icon);
-  }
-
-  .rn-card--ckd {
-    --rn-icon: var(--rn-ckd-icon);
-  }
-
-  .rn-card--covid {
-    --rn-icon: var(--rn-covid-icon);
-  }
-
-  .rn-card--mental {
-    --rn-icon: var(--rn-mental-icon);
-  }
-
-  .rn-card--pkd .rn-btn {
-    background: var(--rn-pkd-btn);
-  }
-
-  .rn-card--ckd {
-    background: var(--rn-ckd-bg);
-  }
-
-  .rn-card--ckd .rn-btn {
-    background: var(--rn-ckd-btn);
-  }
-
-  .rn-card--covid {
-    background: var(--rn-covid-bg);
-  }
-
-  .rn-card--covid .rn-btn {
-    background: var(--rn-covid-btn);
-  }
-
-  .rn-card--mental {
-    background: var(--rn-mental-bg);
-  }
-
-  .rn-card--mental .rn-btn {
-    background: var(--rn-mental-btn);
-  }
-
-  @media (max-width: 780px) {
-    .rn-hero {
-      aspect-ratio: auto;
-      padding: 62vw 1rem 2rem;
-      background-position: top center;
-      background-size: 100% auto;
-    }
-
-    .rn-inner {
-      position: relative;
-      top: auto;
-      left: auto;
-      right: auto;
-    }
-
-    .rn-cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 480px) {
-    .rn-cards {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap"
-  rel="stylesheet">
+</html>

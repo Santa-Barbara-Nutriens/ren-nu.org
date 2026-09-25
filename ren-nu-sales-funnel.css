@@ -15,7 +15,7 @@
     --card: #ffffff;
     --line: #e3e6de;
     --line-dk: #c9cec2;
-    --font-display: 'Lora', serif;
+    --font-display: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
     --font-mono: 'IBM Plex Mono', monospace;
     --max: 1120px;
@@ -122,7 +122,7 @@ p {
 }
 
 .btn-sm {
-    padding: 9px 18px;
+    padding: 9px 10px;
     font-size: 14px;
 }
 
@@ -270,7 +270,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, .94);
+    background: #fff;
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
 }
@@ -375,7 +375,7 @@ header {
 .problem-media {
     border-radius: 16px;
     overflow: hidden;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1100 / 820;
 }
 
 .problem-media iframe {
@@ -389,6 +389,7 @@ header {
     color: var(--paper-alt);
     font-weight: 300;
     font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    text-align: center;
     margin: 0;
 }
 
@@ -644,7 +645,8 @@ header {
     margin: 40px auto 0;
     text-align: center;
     font-style: italic;
-    color: var(--ink-soft);
+    font-weight: bold;
+    color: var(--blue);
 }
 
 .short-divider {
@@ -880,9 +882,9 @@ header {
     justify-content: center;
     width: 44px;
     height: 44px;
-    border: 1.5px solid var(--green);
+    border: 1.5px solid var(--blue);
     border-radius: 50%;
-    color: var(--green);
+    color: var(--blue);
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -890,11 +892,11 @@ header {
 .evidence-item__status {
     display: block;
     font-family: var(--font-body);
-    font-weight: 700;
+    font-weight: 1000;
     font-size: 15px;
     letter-spacing: .04em;
     text-transform: uppercase;
-    color: var(--green);
+    color: var(--blue);
 }
 
 .evidence-highlight {
@@ -1078,7 +1080,7 @@ header {
     padding: 30px 34px;
     background: var(--orange-lt);
     border-radius: 14px;
-    text-align: left;
+    text-align: center;
 }
 
 .framework-included__icon {
@@ -1119,7 +1121,7 @@ header {
     width: 190px;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 719 / 427;
+    aspect-ratio: 4209 / 3129;
     border-radius: 12px;
     box-shadow: 0 10px 22px rgba(30, 38, 36, .16);
 }
@@ -2099,6 +2101,400 @@ footer {
     color: var(--ink);
 }
 
+/* ---------- REN-NU PRICING PAGE ---------- */
+.rn-hero {
+    --rn-paper: #f8f5f1;
+    --rn-ink: #1e292b;
+    --rn-muted: #60717d;
+    --rn-accent: #f05f50;
+    --rn-accent-soft: #fff0ed;
+    --rn-green: #479d58;
+    position: relative;
+    padding: 4rem 0 3rem;
+    background: var(--rn-paper);
+    color: var(--rn-ink);
+    overflow-x: hidden;
+}
+
+.rn-pricing-content {
+    width: min(100% - 2rem, 960px);
+    margin-inline: auto;
+    padding: 0;
+    text-align: center;
+}
+
+.rn-pricing-intro,
+.rn-comparison>header {
+    position: static;
+    z-index: auto;
+    background: transparent;
+    border: 0;
+    backdrop-filter: none;
+}
+
+.rn-pricing-intro {
+    max-width: 670px;
+    margin: 0 auto 2.5rem;
+}
+
+.rn-eyebrow,
+.rn-option-label,
+.rn-value-table thead span {
+    margin: 0;
+    color: var(--rn-accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.rn-pricing-intro h1,
+.rn-comparison h2 {
+    margin: 0.65rem 0 0;
+    color: var(--rn-ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.rn-pricing-intro h1 {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+}
+
+.rn-pricing-panel {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(30, 41, 43, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(30, 41, 43, 0.08);
+}
+
+.rn-payment-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.rn-payment-option {
+    min-height: 205px;
+    padding: 1.75rem 1.25rem;
+    background: rgba(248, 245, 241, 0.86);
+    border: 1px solid rgba(30, 41, 43, 0.08);
+    border-radius: 10px;
+}
+
+.rn-payment-option--installments {
+    background: rgba(255, 255, 255, 0.65);
+    border: 2px solid #f06b5b;
+}
+
+.rn-option-price,
+.rn-option-title {
+    margin: 0.75rem 0 0.85rem;
+    color: var(--rn-ink);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.rn-option-title {
+    font-size: clamp(1.65rem, 3vw, 2.25rem);
+}
+
+.rn-payment-option>p:last-child {
+    max-width: 28ch;
+    margin: 0 auto;
+    color: var(--rn-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.rn-bonus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 62px;
+    margin: 1.25rem 0;
+    padding: 0.85rem 1rem;
+    color: #e95447;
+    background: var(--rn-accent-soft);
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    font-weight: 600;
+}
+
+.rn-bonus sup {
+    font-family: inherit;
+    font-size: 0.6em;
+}
+
+.rn-bonus-icon {
+    display: grid;
+    width: 44px;
+    height: 54px;
+    place-items: center;
+    /* border: 2px solid currentColor;
+    border-radius: 5px; */
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.rn-inclusions {
+    color: var(--rn-ink);
+    background: rgba(248, 245, 241, 0.9);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.rn-inclusions summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.05rem 1.25rem;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 600;
+    list-style: none;
+}
+
+.rn-inclusions summary::-webkit-details-marker {
+    display: none;
+}
+
+.rn-inclusions summary::after {
+    color: var(--rn-accent);
+    content: "+";
+    font-family: Arial, sans-serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+}
+
+.rn-inclusions[open] summary::after {
+    content: "-";
+}
+
+.rn-inclusions ul {
+    margin: 0;
+    padding: 0 1.25rem 1.25rem 2.5rem;
+    color: var(--rn-muted);
+    line-height: 1.55;
+}
+
+.rn-comparison {
+    margin-top: 3.25rem;
+}
+
+.rn-comparison>header {
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.rn-comparison h2 {
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+}
+
+.rn-comparison header p {
+    margin: 0.75rem 0 0;
+    color: var(--rn-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.rn-table-scroll {
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(30, 41, 43, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(30, 41, 43, 0.06);
+}
+
+.rn-value-table {
+    width: 100%;
+    min-width: 690px;
+    border-collapse: collapse;
+    color: #34434c;
+    font-size: 0.9rem;
+}
+
+.rn-value-table th,
+.rn-value-table td {
+    padding: 1rem 0.85rem;
+    border-bottom: 1px solid rgba(30, 41, 43, 0.1);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.rn-value-table thead th {
+    color: #566675;
+    font-family: var(--font-body);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.rn-value-table thead th:first-child,
+.rn-value-table tbody th {
+    width: 36%;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.rn-value-table tbody th {
+    color: #42525e;
+    font-family: var(--font-body);
+    font-size: 0.84rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.rn-value-table tbody tr:last-child th,
+.rn-value-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.rn-table-highlight {
+    background: rgba(255, 239, 235, 0.72);
+}
+
+.rn-value-table thead .rn-table-highlight {
+    color: var(--rn-ink);
+}
+
+.rn-value-table thead .rn-table-highlight span {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.rn-status span[aria-hidden="true"] {
+    display: inline-grid;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.rn-status--yes,
+.rn-status--down {
+    color: var(--rn-green);
+}
+
+.rn-status--no,
+.rn-status--up {
+    color: var(--rn-accent);
+}
+
+.rn-cost-row th,
+.rn-cost-row td {
+    color: #26343b;
+    font-family: var(--font-display);
+}
+
+.rn-disclaimer {
+    max-width: 710px;
+    margin: 1.5rem auto 0;
+    color: #697984;
+    font-size: 0.75rem;
+    line-height: 1.45;
+}
+
+.rn-apply-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    min-height: 44px;
+    margin-top: 1rem;
+    padding: 0.65rem 1.5rem;
+    color: #fff;
+    background: var(--rn-accent);
+    border-radius: 6px;
+    box-shadow: 0 5px 12px rgba(240, 95, 80, 0.22);
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.rn-apply-button:hover,
+.rn-apply-button:focus-visible {
+    color: #fff;
+    background: #cf4738;
+}
+
+.rn-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (max-width: 780px) {
+    .rn-hero {
+        padding: 3rem 0 2.5rem;
+    }
+
+    .rn-payment-options {
+        grid-template-columns: 1fr;
+    }
+
+    .rn-payment-option {
+        min-height: 0;
+    }
+
+    .rn-table-scroll {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rn-hero {
+        padding-top: 2.25rem;
+    }
+
+    .rn-pricing-content {
+        width: min(100% - 1.25rem, 960px);
+    }
+
+    .rn-pricing-intro {
+        margin-bottom: 1.75rem;
+    }
+
+    .rn-pricing-intro h1 br,
+    .rn-comparison header br {
+        display: none;
+    }
+
+    .rn-pricing-panel {
+        padding: 0.85rem;
+    }
+
+    .rn-payment-option {
+        padding: 1.35rem 1rem;
+    }
+
+    .rn-bonus {
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .rn-comparison {
+        margin-top: 2.5rem;
+    }
+}
+
 /* =====================================================================
    HERO — "Wave"
    Modeled on virtahealth.com's video hero: a full-bleed background media
@@ -2138,7 +2534,7 @@ footer {
     font-weight: 500;
     font-size: clamp(2.1rem, 4vw, 3.4rem);
     line-height: 1.18;
-    color: var(--ink);
+    color: var(--blue);
     margin: 0;
 }
 
