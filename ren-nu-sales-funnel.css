@@ -423,6 +423,7 @@ header {
 
 .stop-sub {
     font-size: 1.05rem;
+    color: var(--blue);
 }
 
 [data-reveal] {
