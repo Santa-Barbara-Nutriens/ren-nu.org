@@ -1072,6 +1072,10 @@ header {
     font-size: .78rem;
 }
 
+.framework-grid+.framework-card {
+    margin-top: 20px;
+}
+
 /* ---------- INCLUDED HIGHLIGHT BAR (KetoCitra) ---------- */
 .framework-included {
     display: flex;
@@ -1119,12 +1123,21 @@ header {
 
 .framework-included__media {
     flex: none;
+    align-self: center;
+    display: block;
     width: 190px;
     height: auto;
     object-fit: cover;
     aspect-ratio: 4209 / 3129;
     border-radius: 12px;
     box-shadow: 0 10px 22px rgba(30, 38, 36, .16);
+}
+
+.framework-card .framework-included__media img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4209 / 3129;
+    object-fit: cover;
 }
 
 /* ---------- STEPS (How it works) ---------- */
