@@ -75,9 +75,8 @@ h2 {
     font-size: clamp(1.7rem, 3vw, 2.4rem);
 }
 
-h2.orange {
-    font-size: clamp(1.7rem, 3vw, 2.4rem);
-    color: var(--orange-dk);
+.orange {
+    color: var(--orange);
 }
 
 h3 {
@@ -385,12 +384,16 @@ header {
     display: block;
 }
 
-.problem-copy h2 {
+.problem-copy h1 {
     color: var(--paper-alt);
-    font-weight: 300;
+    font-weight: bold;
     font-size: clamp(1.9rem, 3.4vw, 2.7rem);
     text-align: center;
     margin: 0;
+}
+
+.problem-copy h1.orange {
+    color: var(--orange);
 }
 
 .problem-copy .short-divider {
@@ -2525,16 +2528,17 @@ footer {
    .wrap — that let the media column simply be "everything left over"
    (1fr) and bleed to the browser's right edge for free, no JS needed. */
 .hero-split {
-    --hero-gutter: max(0px, (100vw - var(--max)) / 2);
+    --hero-gutter: max(0px, (100vw - var(--max)) / 3);
     --hero-content-w: calc(min(100vw, var(--max)) - 56px);
-    --hero-copy-w: calc(var(--hero-content-w) / 3);
+    --hero-copy-w: calc(var(--hero-content-w) / 2);
     background: var(--orange-lt);
     overflow: hidden;
 }
 
 .hero-split__grid {
     display: grid;
-    grid-template-columns: calc(var(--hero-gutter) + 28px + var(--hero-copy-w)) 1fr;
+    grid-template-columns: 1.45fr .55fr;
+    /*calc(var(--hero-gutter) + 28px + var(--hero-copy-w)) 1fr; */
     align-items: center;
     min-height: clamp(480px, 78vh, 760px);
 }
@@ -2545,7 +2549,7 @@ footer {
 
 .hero-split__title {
     font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: bold;
     font-size: clamp(2.1rem, 4vw, 3.4rem);
     line-height: 1.18;
     color: var(--blue);
@@ -2613,6 +2617,164 @@ footer {
 
     .hero-split__media {
         min-height: 340px;
+    }
+}
+
+/* ---------- FIRST TWO SECTIONS: DESKTOP / MOBILE COMPOSITION ---------- */
+#hero {
+    padding: 0;
+    background: var(--paper-alt);
+}
+
+#hero>.wrap {
+    max-width: none;
+    padding: 0;
+}
+
+#hero .section-tag-hero,
+#problem .section-tag {
+    display: none;
+}
+
+#hero .hero-split__grid {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    min-height: clamp(420px, 44vw, 610px);
+}
+
+#hero .hero-split__media {
+    min-height: 0;
+}
+
+#hero .hero-split__copy {
+    padding: clamp(48px, 7vw, 104px) clamp(32px, 7vw, 112px) clamp(48px, 7vw, 104px) clamp(32px, 4vw, 72px);
+}
+
+#hero .hero-split__title,
+#hero .hero-split__copy>.orange {
+    font-size: clamp(2rem, 3.25vw, 3.65rem);
+    line-height: 1.05;
+    letter-spacing: 0;
+}
+
+#hero .hero-split__copy>.orange {
+    margin: 0;
+}
+
+#hero .hero-split__ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+#problem {
+    padding: clamp(52px, 5vw, 84px) 0 clamp(14px, 2.0vw, 40px);
+}
+
+.hero-wave-divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    width: 100%;
+    height: clamp(58px, 7.6vw, 116px);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-wave-divider path {
+    fill: var(--blue-dk);
+}
+
+#problem .wrap {
+    position: relative;
+    z-index: 1;
+}
+
+#problem .problem-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(44px, 8vw, 128px);
+}
+
+#problem .problem-copy h1 {
+    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    line-height: 1.05;
+    text-align: left;
+}
+
+#problem .problem-media {
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    border-radius: 0;
+}
+
+@media (max-width: 900px) {
+    #hero .hero-split__grid {
+        grid-template-columns: 1fr;
+        min-height: 0;
+    }
+
+    #hero .hero-split__media {
+        min-height: clamp(280px, 88vw, 440px);
+        order: 0;
+    }
+
+    #hero .hero-split__copy {
+        order: 1;
+        padding: 40px 28px 52px;
+        text-align: center;
+    }
+
+    #hero .hero-split__title,
+    #hero .hero-split__copy>.orange {
+        font-size: clamp(2.15rem, 9vw, 3.1rem);
+    }
+
+    #hero .hero-split__ctas {
+        flex-direction: column;
+        margin-top: 28px;
+    }
+
+    #hero .hero-split__ctas .btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-wave-divider {
+        display: none;
+    }
+
+    #problem {
+        padding-top: clamp(110px, 16vw, 154px);
+    }
+
+    #problem::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: clamp(90px, 14vw, 130px);
+        background: var(--paper-alt);
+        clip-path: ellipse(68% 100% at 50% 0%);
+    }
+
+    #problem .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    #problem .problem-copy {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    #problem .problem-copy h1 {
+        text-align: center;
+    }
+
+    #problem .problem-media {
+        max-width: min(86vw, 420px);
     }
 }
 
