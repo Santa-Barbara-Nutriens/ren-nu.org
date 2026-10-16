@@ -17,6 +17,7 @@
     --line-dk: #c9cec2;
     --font-display: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --font-hero: 'Montserrat', serif;
     --font-mono: 'IBM Plex Mono', monospace;
     --max: 1120px;
     /* CHANGED: extracted from .stop-head so the hero copy can align to the
@@ -76,6 +77,12 @@ h2 {
 }
 
 .orange {
+    color: var(--orange);
+}
+
+.orange.hero {
+    font-family: var(--font-hero);
+    line-height: 1.18;
     color: var(--orange);
 }
 
@@ -342,7 +349,7 @@ header {
     position: relative;
     overflow: hidden;
     /* background: radial-gradient(120% 140% at 50% 0%, var(--orange-lt) 50%, var(--paper-alt) 62%); */
-    background: var(--orange-lt);
+    background: var(--paper-alt);
 }
 
 .stop.alt {
@@ -424,9 +431,30 @@ header {
     text-align: center;
 }
 
+#framework .stop-head h2 {
+    color: var(--paper);
+}
+
 .stop-sub {
     font-size: 1.05rem;
     color: var(--blue);
+}
+
+.stop-sub.lite {
+    font-size: 1.05rem;
+    color: var(--paper-alt);
+}
+
+.stop-hero-sub {
+    font-size: 1.55rem;
+    color: var(--blue);
+    margin-top: 30px;
+}
+
+.stop-hero-sub {
+    font-size: 1.55rem;
+    color: var(--blue);
+    margin-top: 30px;
 }
 
 [data-reveal] {
@@ -2548,7 +2576,7 @@ footer {
 }
 
 .hero-split__title {
-    font-family: var(--font-display);
+    font-family: var(--font-hero);
     font-weight: bold;
     font-size: clamp(2.1rem, 4vw, 3.4rem);
     line-height: 1.18;
@@ -2637,12 +2665,18 @@ footer {
 }
 
 #hero .hero-split__grid {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    min-height: clamp(420px, 44vw, 610px);
+    grid-template-columns: minmax(0, 225fr) minmax(0, 275fr);
+    /* Height follows the image (see .hero-split__media) instead of a fixed clamp */
+    min-height: 0;
 }
 
+/* Media box keeps the image's own ratio (Hero_santa_barbara.png = 1104x1024),
+   so the section height scales with the viewport width and the image is
+   shown (almost) uncropped at every breakpoint. */
 #hero .hero-split__media {
     min-height: 0;
+    height: auto;
+    aspect-ratio: 1104 / 1024;
 }
 
 #hero .hero-split__copy {
@@ -2653,7 +2687,7 @@ footer {
 #hero .hero-split__copy>.orange {
     font-size: clamp(2rem, 3.25vw, 3.65rem);
     line-height: 1.05;
-    letter-spacing: 0;
+    letter-spacing: .03em;
 }
 
 #hero .hero-split__copy>.orange {
@@ -2715,7 +2749,7 @@ footer {
     }
 
     #hero .hero-split__media {
-        min-height: clamp(280px, 88vw, 440px);
+        min-height: 0;
         order: 0;
     }
 
