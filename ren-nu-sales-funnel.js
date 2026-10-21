@@ -236,10 +236,29 @@
         if (isNaN(startTime) || startTime < 0) return;
 
         video.addEventListener('loadedmetadata', function () {
-            try {
+            video.currentTime = startTime;
+        });
+
+        video.addEventListener('canplay', function handleCanPlay() {
+            video.removeEventListener('canplay', handleCanPlay);
+
+            var wasMuted = video.muted;
+            video.muted = true;
+
+            var playAttempt = video.play();
+            if (playAttempt && typeof playAttempt.then === 'function') {
+                playAttempt.then(function () {
+                    video.pause();
+                    video.currentTime = startTime;
+                    video.muted = wasMuted;
+                }).catch(function () {
+                    video.currentTime = startTime;
+                    video.muted = wasMuted;
+                });
+            } else {
+                video.pause();
                 video.currentTime = startTime;
-            } catch (err) {
-                // Some browsers may block seeking until playback begins.
+                video.muted = wasMuted;
             }
         });
     }

@@ -27,12 +27,14 @@
 
     --rn-blue: #186079;
 
+    --font-hero: 'Fraunces', serif;
+
     position: relative;
     overflow: hidden;
     background: var(--rn-bg);
-    aspect-ratio: 3 / 2;
+    min-height: 0;
     color: var(--rn-ink);
-    font-family: "Montserrat", serif;
+    font-family: "Fraunces", serif;
     border-radius: 28px;
 }
 
@@ -72,7 +74,7 @@
     max-width: 18ch;
     margin: 0;
     color: var(--rn-brand);
-    font-family: "Montserrat", serif;
+    font-family: var(--font-hero);
     /* font-family: var(--font-display); */
     font-size: 3.5rem;
     font-weight: 600;
@@ -89,7 +91,7 @@
 
 .rn-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -263,7 +265,7 @@
     }
 
     .rn-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     }
 }
 
