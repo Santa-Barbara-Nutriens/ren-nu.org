@@ -2736,7 +2736,7 @@ footer {
 }
 
 #hero .hero-split__copy {
-    padding: clamp(48px, 7vw, 104px) clamp(32px, 7vw, 112px) clamp(48px, 7vw, 104px) clamp(32px, 4vw, 72px);
+    padding: clamp(38px, 3vw, 104px) clamp(32px, 7vw, 112px) clamp(48px, 7vw, 104px) clamp(32px, 4vw, 72px);
 }
 
 #hero .hero-split__title,
@@ -2754,6 +2754,42 @@ footer {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+}
+
+#hero .hero-split__trust {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+    max-width: 640px;
+}
+
+#hero .hero-split__trust-icon {
+    width: 88px;
+    height: 64px;
+    flex: 0 0 auto;
+}
+
+#hero .hero-split__trust-copy p {
+    margin: 0;
+}
+
+#hero .hero-split__trust-title {
+    color: var(--blue);
+    font-family: var(--font-hero);
+    font-size: clamp(1.00rem, 1.5vw, 2.00rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: .01em;
+}
+
+#hero .hero-split__trust-sub {
+    margin-top: 26px;
+    color: var(--blue);
+    font-size: clamp(0.75rem, 1.2vw, 1.53rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: .005em;
 }
 
 #problem {
@@ -2829,6 +2865,20 @@ footer {
     #hero .hero-split__ctas .btn {
         justify-content: center;
         width: 100%;
+    }
+
+    #hero .hero-split__trust {
+        margin-top: 26px;
+        justify-content: center;
+        text-align: left;
+    }
+
+    #hero .hero-split__trust-title {
+        font-size: clamp(1.15rem, 5.1vw, 1.65rem);
+    }
+
+    #hero .hero-split__trust-sub {
+        font-size: clamp(1rem, 4.3vw, 1.35rem);
     }
 
     .hero-wave-divider {
