@@ -1,0 +1,720 @@
+/* =====================================================================
+   THE SCIENCE — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .stop-head, .eyebrow, .btn and [data-reveal] behaviour.
+   Everything here is prefixed sci- (or scoped to .sci-page) so it can't
+   leak into the sales funnel.
+   ===================================================================== */
+
+/* [data-reveal] in the shared sheet sets color: --paper-alt, so text that
+   doesn't set its own colour turns white. Light sections reset it here. */
+.sci-page .stop:not(.blue) [data-reveal] {
+    color: var(--ink);
+}
+
+.sci-page .stop.blue h2,
+.sci-page .stop.blue h3 {
+    color: var(--paper-alt);
+}
+
+.sci-page .stop-head .eyebrow {
+    margin-bottom: 12px;
+}
+
+/* ---------- 01 HERO ---------- */
+.sci-hero {
+    padding: clamp(48px, 6vw, 88px) 0 clamp(120px, 13vw, 190px);
+}
+
+.sci-hero::before {
+    content: "";
+    position: absolute;
+    top: -18%;
+    right: -12%;
+    width: clamp(380px, 52vw, 760px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, var(--orange-vlt) 0%, var(--orange-lt) 55%, rgba(255, 217, 191, 0) 72%);
+    opacity: .7;
+    pointer-events: none;
+}
+
+.sci-hero .wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.sci-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: clamp(36px, 6vw, 88px);
+    align-items: center;
+}
+
+.sci-hero__title {
+    font-family: var(--font-hero);
+    font-weight: bold;
+    font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: .02em;
+    color: var(--blue);
+    margin: 10px 0 0;
+}
+
+.sci-hero__sub {
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.5;
+    color: var(--blue);
+    margin: 26px 0 0;
+    max-width: 34em;
+}
+
+.sci-hero__ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+}
+
+.sci-hero__trust {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.sci-hero__trust img {
+    width: 80px;
+    height: auto;
+    flex: 0 0 auto;
+    border-radius: 0;
+}
+
+.sci-hero__trust p {
+    margin: 0;
+    color: var(--blue);
+    font-family: var(--font-hero);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.25;
+}
+
+.sci-hero__trust p span {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: .95rem;
+    color: var(--ink-soft);
+}
+
+/* stat stack ("lab card") */
+.sci-hero__panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.sci-stat {
+    display: grid;
+    grid-template-columns: 112px 1fr;
+    align-items: center;
+    gap: 18px;
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 20px 24px;
+    box-shadow: 0 18px 40px rgba(14, 49, 73, .08);
+    border-left: 4px solid var(--orange);
+}
+
+.sci-stat:nth-child(2) {
+    margin-left: clamp(0px, 3vw, 36px);
+}
+
+.sci-stat__num {
+    font-family: var(--font-hero);
+    font-weight: 700;
+    font-size: clamp(2.1rem, 3.4vw, 2.8rem);
+    line-height: 1;
+    color: var(--orange);
+}
+
+.sci-stat__label {
+    margin: 0;
+    font-size: .98rem;
+    line-height: 1.4;
+    color: var(--ink-soft);
+}
+
+.sci-stat__label strong {
+    display: block;
+    color: var(--blue-dk);
+    font-weight: 700;
+}
+
+/* ---------- 02 HOW IT WORKS (two pathways -> one outcome) ---------- */
+.sci-paths {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.sci-path {
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 16px;
+    padding: 30px 30px 26px;
+}
+
+.sci-path__head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.sci-path__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.sci-path__label {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--orange-lt);
+}
+
+.sci-path h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+}
+
+.sci-path p {
+    color: var(--grey-lt);
+    margin: 0 0 18px;
+}
+
+.sci-checks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sci-checks li {
+    position: relative;
+    padding-left: 30px;
+    color: var(--paper-alt);
+    font-weight: 500;
+}
+
+.sci-checks li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .2em;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+}
+
+.sci-converge {
+    display: block;
+    width: 100%;
+    height: 72px;
+    margin: 4px 0;
+    overflow: visible;
+}
+
+.sci-converge path {
+    fill: none;
+    stroke: var(--orange);
+    stroke-width: 2;
+    stroke-dasharray: 6 7;
+    vector-effect: non-scaling-stroke;
+}
+
+.sci-converge circle {
+    fill: var(--orange);
+}
+
+.sci-outcome {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--paper);
+    border-radius: 16px;
+    padding: 32px 36px;
+    text-align: center;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, .25);
+}
+
+.sci-page .stop.blue .sci-outcome h3 {
+    color: var(--blue-dk);
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    margin: 6px 0 12px;
+}
+
+.sci-outcome p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+}
+
+/* ---------- 03 CLINICAL BENEFITS ---------- */
+.sci-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.sci-benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 30px 22px 26px;
+    box-shadow: 0 14px 30px rgba(14, 49, 73, .06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.sci-benefit:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(14, 49, 73, .12);
+}
+
+.sci-benefit__icon {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 96px;
+    margin-bottom: 20px;
+}
+
+.sci-benefit__icon img {
+    height: 100%;
+    width: auto;
+    border-radius: 0;
+}
+
+.sci-benefit h3 {
+    font-size: 1.1rem;
+    margin: 0 0 10px;
+    color: var(--blue-dk);
+}
+
+.sci-benefit p {
+    font-size: .95rem;
+    margin: 0;
+}
+
+.sci-study-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 24px;
+    flex-wrap: wrap;
+    margin: 36px auto 0;
+    max-width: 820px;
+    text-align: center;
+}
+
+.sci-study-note p {
+    margin: 0;
+    font-size: .92rem;
+    color: var(--grey);
+}
+
+.sci-link {
+    font-weight: 600;
+    color: var(--orange-dk);
+    border-bottom: 1.5px solid transparent;
+    transition: border-color .15s ease;
+}
+
+.sci-link:hover {
+    border-color: var(--orange-dk);
+}
+
+/* ---------- 04 PARTICIPANT VOICES ---------- */
+.sci-voices {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 360px);
+    gap: clamp(36px, 7vw, 96px);
+    align-items: center;
+}
+
+.sci-voices__copy h2 {
+    margin-bottom: 18px;
+}
+
+.sci-voices__copy .eyebrow {
+    margin-bottom: 14px;
+}
+
+.sci-voices__copy .stop-sub {
+    margin-bottom: 26px;
+}
+
+.sci-voices__copy .cta-row {
+    justify-content: flex-start;
+    margin-top: 32px;
+}
+
+.sci-voices .video-playlist {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+}
+
+/* Shorts are vertical, so the player is portrait on this page. */
+.sci-voices .video-playlist-frame {
+    aspect-ratio: 9 / 16;
+}
+
+/* ---------- 05 RESEARCH LIBRARY ---------- */
+.sci-papers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    counter-reset: paper;
+}
+
+.sci-paper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 24px 22px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.sci-paper:hover {
+    transform: translateY(-4px);
+    border-color: var(--orange-lt);
+    box-shadow: 0 18px 36px rgba(14, 49, 73, .1);
+}
+
+.sci-paper__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.sci-paper__year {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--orange);
+}
+
+.sci-paper__type {
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--blue-lt);
+    color: var(--blue);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.sci-paper__type--trial {
+    background: var(--orange-vlt);
+    color: var(--orange-dk);
+}
+
+.sci-paper h3 {
+    font-size: 1.12rem;
+    color: var(--blue-dk);
+    margin: 0 0 10px;
+}
+
+.sci-paper p {
+    font-size: .93rem;
+    margin: 0 0 18px;
+}
+
+.sci-paper__journal {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: .85rem;
+}
+
+.sci-paper__journal em {
+    font-style: normal;
+    font-family: var(--font-mono);
+    color: var(--grey);
+    font-size: .78rem;
+    line-height: 1.35;
+}
+
+.sci-paper__journal .sci-link {
+    white-space: nowrap;
+}
+
+/* the whole card is clickable via the "Read" link */
+.sci-paper__journal .sci-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+}
+
+.sci-more {
+    text-align: center;
+    margin: 32px 0 0;
+    color: var(--ink-soft);
+}
+
+/* ---------- 06 SCIENTIST QUOTE ---------- */
+.sci-quote {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.sci-quote__photo {
+    width: 220px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--paper);
+    box-shadow: 0 20px 40px rgba(14, 49, 73, .15);
+}
+
+.sci-quote blockquote {
+    position: relative;
+    isolation: isolate;
+    margin: 14px 0 0;
+    padding: 0;
+}
+
+.sci-quote blockquote::before {
+    content: "\201C";
+    position: absolute;
+    top: -.14em;
+    left: -.48em;
+    font-family: var(--font-hero);
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--orange-lt);
+    z-index: -1;
+}
+
+.sci-quote blockquote p {
+    font-family: var(--font-hero);
+    font-size: clamp(1.15rem, 1.9vw, 1.45rem);
+    line-height: 1.5;
+    color: var(--blue-dk);
+    margin: 0;
+}
+
+.sci-quote__who {
+    display: block;
+    margin-top: 22px;
+    font-style: normal;
+    color: var(--ink-soft);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+.sci-quote__who strong {
+    display: block;
+    color: var(--blue-dk);
+    font-size: 1.05rem;
+}
+
+.sci-quote .sci-link {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+/* ---------- 07 RESEARCH COMMITMENT ---------- */
+.sci-commit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sci-commit__item {
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 30px 26px;
+    text-align: center;
+    box-shadow: 0 14px 30px rgba(14, 49, 73, .06);
+}
+
+.sci-commit__big {
+    display: block;
+    font-family: var(--font-hero);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 3.6vw, 3rem);
+    line-height: 1.05;
+    color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.sci-commit__item h3 {
+    font-size: 1.1rem;
+    color: var(--blue-dk);
+    margin: 0 0 8px;
+}
+
+.sci-commit__item p {
+    font-size: .95rem;
+    margin: 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+    .sci-benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sci-papers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .sci-hero__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sci-hero__copy {
+        text-align: center;
+    }
+
+    .sci-hero__sub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sci-hero__ctas,
+    .sci-hero__trust {
+        justify-content: center;
+    }
+
+    .sci-hero__trust {
+        text-align: left;
+    }
+
+    .sci-hero__panel {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sci-stat:nth-child(2) {
+        margin-left: 0;
+    }
+
+    .sci-hero {
+        padding-bottom: 64px;
+    }
+
+    .sci-voices {
+        grid-template-columns: 1fr;
+    }
+
+    .sci-voices__copy {
+        text-align: center;
+    }
+
+    .sci-voices__copy .cta-row {
+        justify-content: center;
+    }
+
+    .sci-quote {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sci-quote__photo {
+        width: 170px;
+        margin: 0 auto;
+    }
+
+    .sci-quote blockquote::before {
+        display: none;
+    }
+
+    .sci-commit {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .sci-paths,
+    .sci-benefits,
+    .sci-papers {
+        grid-template-columns: 1fr;
+    }
+
+    .sci-converge {
+        height: 48px;
+    }
+
+    .sci-path,
+    .sci-outcome {
+        padding: 24px 22px;
+    }
+
+    .sci-stat {
+        grid-template-columns: 84px 1fr;
+        padding: 18px;
+    }
+
+    .sci-hero__ctas .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sci-benefit,
+    .sci-paper {
+        transition: none;
+    }
+
+    .sci-benefit:hover,
+    .sci-paper:hover {
+        transform: none;
+    }
+}
