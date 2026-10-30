@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us — Ren-Nu™</title>
+    <meta name="description"
+        content="Ren-Nu™, part of Santa Barbara Nutrients, is built by kidney researchers, clinicians, nutrition experts, and patients working to improve kidney health.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="ren-nu-sales-funnel.css">
+    <link rel="stylesheet" href="ren-nu-about-us.css">
 </head>
 
-<body>
+<body class="about-page">
     <!-- ============ STICKY HEADER / JUMP NAV ============ -->
     <header id="siteHeader">
         <div class="wrap nav-inner">
@@ -40,49 +43,224 @@
     <main>
         <!-- PREVIEW WRAPPER END -->
 
-        <section class="stop" id="who-we-are">
+        <!-- ============ SECTION 1 — HERO ============ -->
+
+        <section class="stop alt" id="hero">
+            <div class="wrap">
+                <span class="section-tag-hero">Section 01</span>
+                <div class="hero-split__grid">
+                    <div class="hero-split__copy">
+                        <span class="eyebrow">Who we are</span>
+                        <h1 class="hero-split__title">Built by researchers, clinicians and <span
+                                class="orange">patients.</span></h1>
+                        <p class="stop-hero-sub">PKD care often stops at diagnosis — but a team of scientists and
+                            patients came together to go further, building the nutrition support that was missing.
+                            Backed by research and lived experience, our program helps you manage PKD proactively, one
+                            meal at a time.</p>
+                        <div class="hero-split__ctas">
+                            <a href="#" class="btn btn-primary">Apply</a>
+                            <a href="#" class="btn btn-outline btn-sm">Book a call</a>
+                        </div>
+                    </div>
+                    <div class="hero-split__media about-hero__media">
+                        <img class="about-hero__photo" src="Images/The_Team.png"
+                            alt="The Ren-Nu team at a conference booth">
+                    </div>
+                </div>
+                <div class="hero-wave-divider" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- ============ SECTION 2 — OUR STORY ============ -->
+
+        <section class="stop blue" id="our-story">
+            <div class="wrap">
+                <span class="section-tag">Section 02</span>
+                <div class="team-intro" data-reveal>
+                    <div class="team-intro__copy">
+                        <span class="eyebrow">Why we build this</span>
+                        <h2>Our Story</h2>
+                        <p class="stop-sub lite">At Ren-Nu™, part of Santa Barbara Nutrients (SBN), our mission is to
+                            improve kidney health and enhance the lives of those affected by kidney disease. Founded on
+                            cutting-edge research and innovative thinking, our team of kidney researchers,
+                            nutritionists, and advocates works together to provide real-world solutions.</p>
+                        <p class="stop-sub lite">SBN, established as a benefit corporation by leading kidney researchers
+                            from the University of California, Santa Barbara, includes many team members who are
+                            personally affected by kidney disease.</p>
+                        <p class="stop-sub lite">Through personalized renal nutrition and lifestyle programs, we empower
+                            individuals to do something about their kidney disease and live healthier, more fulfilling
+                            lives. Our commitment extends beyond clinical solutions—we are deeply invested in the
+                            communities we serve, providing education, support, and practical tools for long-term
+                            health.</p>
+                    </div>
+                    <figure class="team-intro__media">
+                        <video class="team-intro__video team-video" controls preload="metadata" data-start-time="1"
+                            poster="Images/PKD-Team.png">
+                            <source src="Videos/Living_with_PKD.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </figure>
+                </div>
+
+                <span class="eyebrow">Our mission</span>
+                <ul class="about-mission" data-reveal>
+                    <li>Support kidney health</li>
+                    <li>Raise awareness about PKD and CKD</li>
+                    <li>Create innovative science-backed solutions</li>
+                    <li>Empower individuals to take control of their kidney health</li>
+                    <li>Collaborate with the community</li>
+                </ul>
+            </div>
+            <div class="hero-wave-divider paper" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 3 — OUR TEAM ============ -->
+
+        <section class="stop" id="team">
+            <div class="wrap">
+                <span class="section-tag">Section 03</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Our team</span>
+                    <h2>Get to know us</h2>
+                    <p class="stop-sub">At Ren-Nu™, our team goes beyond just science—we’re a diverse group of experts,
+                        advocates, and dedicated individuals who bring the program to life. From researchers and renal
+                        nutrition specialists to those working behind the scenes, we’re united by one mission: to
+                        support your journey to better kidney health. Together, we ensure that you have the guidance and
+                        resources you need to thrive.</p>
+                </div>
+
+                <div class="about-team" data-reveal>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2026/07/signal-2026-07-21-19-17-49-241_002-e1784658280782.jpg"
+                            alt="Melina Messing, PhD" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Melina Messing, PhD</h3>
+                            <p class="about-member__role">Scientific Director, Ren-Nu</p>
+                            <p>Postdoctoral Researcher at the University of California Santa Barbara</p>
+                            <p>Scientist and PKD patient herself</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2025/08/Turban300x300.jpg"
+                            alt="Sharon Turban, MD, MHS" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Sharon Turban, MD, MHS</h3>
+                            <p class="about-member__role">Medical Director, Ren-Nu</p>
+                            <p>Board-certified nephrologist specializing in autosomal dominant polycystic kidney disease
+                                (ADPKD)</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/12/kathy2-1.webp"
+                            alt="Kathy Jensen, MS RDN" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Kathy Jensen, MS RDN</h3>
+                            <p class="about-member__role">Director of Nutrition, Ren-Nu</p>
+                            <p>Registered Dietitian Nutritionist</p>
+                            <p>Decades in renal dietetics</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/09/Jacob-Kingaard-MS_480x480.jpeg"
+                            alt="Jacob Kingaard, MS" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Jacob Kingaard, MS</h3>
+                            <p class="about-member__role">Director of Manufacturing and Product Development at Santa
+                                Barbara Nutrients</p>
+                            <p>MS in Human Nutrition</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/09/EmilyMuensterman300x300_480x480.webp"
+                            alt="Emily Muensterman, BS" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Emily Muensterman, BS</h3>
+                            <p class="about-member__role">Clinical Research Manager at Santa Barbara Nutrients</p>
+                            <p>BS in Public Health</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/09/Weimbs-portrait-April-2023_ERK7935-web-crop.jpg"
+                            alt="Thomas Weimbs, PhD" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Thomas Weimbs, PhD</h3>
+                            <p class="about-member__role">President &amp; Chief Scientific Officer at Santa Barbara
+                                Nutrients</p>
+                            <p>Professor of Molecular, Cellular, and Developmental Biology at the University of
+                                California Santa Barbara</p>
+                            <p>Founder · among the world's leading PKD researchers</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/09/Jacob_torres-square.png"
+                            alt="Jacob Torres, PhD" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Jacob Torres, PhD</h3>
+                            <p class="about-member__role">Research Scientist at Santa Barbara Nutrients</p>
+                            <p>Associate Project Scientist at the University of California Santa Barbara</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2026/08/steph-e1788020359641.jpg"
+                            alt="Stephanie Mynahan, BA" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Stephanie Mynahan, BA</h3>
+                            <p class="about-member__role">Ren-Nu Program Administrator</p>
+                            <p>BA in Economics</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2026/07/Wakana-Koizumi-e1784666890181.png"
+                            alt="Wakana Koizumi" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Wakana Koizumi</h3>
+                            <p class="about-member__role">Research Dietitian</p>
+                            <p>Registered Dietitian, PhD student at Juntendo University</p>
+                        </div>
+                    </article>
+                    <article class="team-member about-member">
+                        <img class="about-member__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2026/10/Derrera-e1791016127728.jpg"
+                            alt="Leah Derrera, MS RDN" loading="lazy">
+                        <div class="about-member__body">
+                            <h3>Leah Derrera, MS RDN</h3>
+                            <p class="about-member__role">Ren-Nu Registered Dietitian Nutritionist</p>
+                            <p>Health Coach</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="about-sbn" data-reveal>
+                    <img src="https://ren-nu.org/wp-content/uploads/2024/09/Santa-Barbara-Seal-logo-Secondary-1-3_430x.webp"
+                        alt="" aria-hidden="true" loading="lazy">
+                    <h2>Powered by the <a href="https://santabarbaranutrients.com/pages/sbn-team" target="_blank"
+                            rel="noopener">Santa Barbara Nutrients Team</a></h2>
+                </div>
+            </div>
+            <div class="hero-wave-divider blue-lt" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 4 — STAY CONNECTED ============ -->
+
+        <section class="stop blue-lt" id="stay-connected">
             <div class="wrap">
                 <span class="section-tag">Section 04</span>
                 <div class="stop-head" data-reveal>
-                    <span class="eyebrow">Who we are</span>
-                    <h2>Build by researchers, clinitians and patients</h2>
-                    <p class="stop-sub">PKD care often stops at diagnosis — but a team of scientists and patients came
-                        together to go further, building the nutrition support that was missing. Backed by research and
-                        lived experience, our program helps you manage PKD proactively, one meal at a time.</p>
+                    <h2>Stay connected</h2>
+                    <p class="stop-sub">Subscribe to our <strong>newsletter</strong> to stay informed about the Ren-Nu™
+                        program and get all the latest updates and announcements.</p>
                 </div>
-
-                <div class="team-grid" data-reveal>
-                    <div class="team-list">
-                        <article class="team-member">
-                            <h3>Thomas Weimbs, PhD</h3>
-                            <p>Founder · among the world's leading PKD researchers, UCSB professor</p>
-                        </article>
-                        <article class="team-member">
-                            <h3>Sharon Turban, MD</h3>
-                            <p>Medical director · board-certified nephrologist, ADPKD specialist</p>
-                        </article>
-                        <article class="team-member">
-                            <h3>Kathy Jensen, MS RND</h3>
-                            <p>Director of nutrition · decades in renal dietetics</p>
-                        </article>
-                        <article class="team-member">
-                            <h3>Melina Messing, PhD</h3>
-                            <p>Scientific director · scientist and PKD patient herself</p>
-                        </article>
-
-                        <div class="cta-row team-cta">
-                            <a href="https://ren-nu.org/about-us/" class="btn btn-ghost" target="_blank"
-                                rel="noopener">Meet the full team</a>
-                        </div>
-                    </div>
-
-                    <figure class="team-video-card">
-                        <video class="team-video" controls preload="metadata" data-start-time="1">
-                            <source src="Ren-Nu_Welcome_Message_2_komprimiert.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <figcaption class="team-video-caption">Why we build this</figcaption>
-                    </figure>
+                <div class="about-connect__form" data-reveal>
+                    <div class="klaviyo-form-UUpBXz"></div>
                 </div>
             </div>
         </section>

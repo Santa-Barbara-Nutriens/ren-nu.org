@@ -1679,15 +1679,28 @@ header {
     margin-right: auto;
 }
 
+#cta-final.blue-lt [data-reveal],
+#cta-final.blue-lt h2,
+#cta-final.blue-lt p {
+    color: var(--blue-dk);
+}
+
 .section-divider-band {
-    height: 56px;
+    height: 28px;
     width: 100%;
+}
+
+.section-divider-band--blue-to-paper {
     background: linear-gradient(to bottom,
             var(--blue-dk) 0%,
-            var(--blue-dk) 25%,
-            /* var(--paper-alt) 40%, */
-            var(--paper-alt) 50%,
-            var(--blue-dk) 75%,
+            var(--blue-dk) 50%,
+            var(--paper-alt) 100%);
+}
+
+.section-divider-band--paper-to-blue {
+    background: linear-gradient(to bottom,
+            var(--paper-alt) 0%,
+            var(--blue-dk) 50%,
             var(--blue-dk) 100%);
 }
 
@@ -2242,10 +2255,14 @@ footer {
 .rn-pricing-intro h1,
 .rn-comparison h2 {
     margin: 0.65rem 0 0;
-    color: var(--rn-ink);
+    color: var(--blue);
     font-family: var(--font-display);
     font-weight: 600;
     line-height: 1.1;
+}
+
+#pricing h2 {
+    color: var(--blue);
 }
 
 .rn-pricing-intro h1 {
@@ -2282,7 +2299,7 @@ footer {
 .rn-option-price,
 .rn-option-title {
     margin: 0.75rem 0 0.85rem;
-    color: var(--rn-ink);
+    color: var(--blue);
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 600;
@@ -2621,9 +2638,9 @@ footer {
 }
 
 .hero-split__title {
-    font-family: var(--font-hero);
+    font-family: var(--font-display);
     font-weight: bold;
-    font-size: clamp(2.1rem, 4vw, 3.4rem);
+    /* font-size: clamp(2.1rem, 4vw, 3.4rem); */
     line-height: 1.18;
     color: var(--blue);
     margin: 0;
@@ -2800,12 +2817,11 @@ footer {
    <div class="hero-wave-divider" aria-hidden="true"></div>.
    The SVG is used as a mask so the fill colour stays a CSS token
    (background-color) instead of being baked into the data URI.
-   Key points (x): start 240, crests 480 / 960, dip 720, end 1200 —
-   symmetric around the centre, with horizontal tangents at every
-   crest, dip and end for smooth joins. The element is mirrored
-   (scaleX(-1)), so the 960 crest appears on the left on screen. */
+   Key points (x): crest 360, dip 1080 — one full sine period, so the
+   edges sit at mid-height (y 134) with horizontal tangents at the
+   crest and dip for smooth joins. */
 :root {
-    --hero-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 240' preserveAspectRatio='none'%3E%3Cpath d='M0,195 L240,195 C360,195 360,160 480,160 C600,160 600,215 720,215 C840,215 840,100 960,100 C1080,100 1080,195 1200,195 L1440,195 L1440,240 L0,240 Z'/%3E%3C/svg%3E");
+    --hero-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 240' preserveAspectRatio='none'%3E%3Cpath d='M0,134 C117,112 230,90 360,90 C622,90 818,178 1080,178 C1210,178 1323,156 1440,134 L1440,240 L0,240 Z'/%3E%3C/svg%3E");
 }
 
 .hero-wave-divider {
@@ -2817,10 +2833,17 @@ footer {
     height: clamp(58px, 7.6vw, 116px);
     z-index: 3;
     pointer-events: none;
-    transform: scaleX(-1);
     background-color: var(--blue-dk);
     -webkit-mask: var(--hero-wave) center / 100% 100% no-repeat;
     mask: var(--hero-wave) center / 100% 100% no-repeat;
+}
+
+.hero-wave-divider.paper {
+    background-color: var(--paper-alt);
+}
+
+.hero-wave-divider.blue-lt {
+    background-color: var(--blue-lt);
 }
 
 #problem .wrap {

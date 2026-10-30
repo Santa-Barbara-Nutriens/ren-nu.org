@@ -1,0 +1,207 @@
+/* =====================================================================
+   ABOUT US — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .stop-head, .eyebrow, .btn, #hero and [data-reveal] behaviour.
+   Everything here is prefixed about- (or scoped to .about-page) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* [data-reveal] in the shared sheet sets color: --paper-alt, so text that
+   doesn't set its own colour turns white. Light sections reset it here. */
+.about-page .stop:not(.blue) [data-reveal] {
+    color: var(--ink);
+}
+
+.about-page .stop.blue-lt h2,
+.about-page .stop.blue-lt p {
+    color: var(--blue-dk);
+}
+
+/* Room for the wave that closes these sections */
+#our-story,
+#team {
+    padding-bottom: clamp(96px, 11vw, 160px);
+}
+
+/* ---------- 01 HERO ---------- */
+.about-page #hero .eyebrow {
+    margin-bottom: 14px;
+}
+
+.about-page #hero .stop-hero-sub {
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.5;
+}
+
+.about-hero__media {
+    cursor: default;
+}
+
+/* The shared fade is sized for a landscape scene; keep it off the people */
+.about-page #hero .about-hero__media::before {
+    width: clamp(16px, 2vw, 40px);
+}
+
+.about-hero__photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    border-radius: 0;
+}
+
+/* ---------- 02 OUR STORY ---------- */
+#our-story .team-intro {
+    margin-bottom: 52px;
+}
+
+#our-story .team-intro__copy p:last-child {
+    margin-bottom: 0;
+}
+
+.about-mission {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.about-mission li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: var(--paper);
+    border-radius: 14px;
+    padding: 22px 16px;
+    text-align: center;
+    font-weight: 600;
+    font-size: .95rem;
+    line-height: 1.35;
+    color: var(--blue-dk);
+}
+
+.about-mission li::before {
+    content: "\2713";
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: var(--paper);
+    font-weight: 700;
+}
+
+/* ---------- 03 TEAM ---------- */
+.about-team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.about-member {
+    display: grid;
+    grid-template-columns: 104px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.about-member__photo {
+    width: 104px;
+    height: 104px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+}
+
+.about-member .about-member__role {
+    font-weight: 600;
+    color: var(--blue-dk);
+}
+
+.about-member__body p+p {
+    margin-top: 6px;
+}
+
+.about-sbn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 48px;
+}
+
+.about-sbn img {
+    width: 76px;
+    height: auto;
+    flex: 0 0 auto;
+    border-radius: 0;
+}
+
+.about-sbn h2 {
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 1.6rem);
+    color: var(--blue-dk);
+}
+
+.about-sbn h2 a {
+    color: var(--orange-dk);
+}
+
+/* ---------- 04 STAY CONNECTED ---------- */
+#stay-connected .stop-head {
+    margin-bottom: 24px;
+}
+
+.about-connect__form {
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+
+    /* The wave dividers are hidden on mobile, so the extra room goes too */
+    #our-story,
+    #team {
+        padding-bottom: 56px;
+    }
+
+    .about-mission {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-team {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page #hero .eyebrow {
+        display: block;
+    }
+}
+
+@media (max-width: 560px) {
+    .about-mission {
+        grid-template-columns: 1fr;
+    }
+
+    .about-member {
+        grid-template-columns: 76px 1fr;
+        gap: 16px;
+    }
+
+    .about-member__photo {
+        width: 76px;
+        height: 76px;
+    }
+
+    .about-sbn {
+        flex-direction: column;
+        text-align: center;
+    }
+}
