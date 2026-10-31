@@ -1,0 +1,127 @@
+/* =====================================================================
+   RESOURCES — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .page-hero, .hero-wave-divider and [data-reveal] behaviour.
+   Everything here is prefixed res- (or scoped to .res-page) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 02 LIBRARY ---------- */
+.res-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.res-filter {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 9px 18px;
+    border: 1.5px solid rgba(255, 255, 255, .35);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--paper);
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.res-filter:hover {
+    border-color: var(--orange);
+}
+
+.res-filter[aria-pressed="true"] {
+    background: var(--paper);
+    border-color: var(--paper);
+    color: var(--blue-dk);
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* data-reveal sits on each card, not on .res-grid: the grid is too tall on
+   phones to ever reach the reveal threshold */
+.res-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.res-card[hidden] {
+    display: none;
+}
+
+.res-card__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.res-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px 22px 24px;
+}
+
+.res-card__tag {
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--orange-vlt);
+    color: var(--orange-dk);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+.res-card h2 {
+    font-size: 1.12rem;
+    color: var(--blue-dk);
+    margin: 0 0 8px;
+}
+
+.res-card p {
+    font-size: .93rem;
+    margin: 0;
+}
+
+.res-card:hover .res-card__link {
+    color: var(--orange-dk);
+}
+
+/* the whole card is clickable via the title link */
+.res-card__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+/* The navy section runs straight into the navy footer, so mark the seam */
+.res-page footer {
+    border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .res-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .res-grid {
+        grid-template-columns: 1fr;
+    }
+}

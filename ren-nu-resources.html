@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources — Ren-Nu</title>
+    <meta name="description"
+        content="Ren-Nu™ research papers, videos and webinars, and quick guides.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="ren-nu-sales-funnel.css">
+    <link rel="stylesheet" href="ren-nu-resources.css">
 </head>
 
-<body>
+<body class="res-page">
     <!-- ============ STICKY HEADER / JUMP NAV ============ -->
     <header id="siteHeader">
         <div class="wrap nav-inner">
@@ -25,14 +28,14 @@
                 <a href="ren-nu-the-science.html" data-jump>The Science</a>
                 <a href="ren-nu-for-clinicians.html" data-jump>For Clinicians</a>
                 <a href="ren-nu-about-us.html" data-jump>About Us</a>
-                <a href="ren-nu-resources.html" data-jump>Resources</a>
+                <a href="ren-nu-resources.html" class="active" data-jump>Resources</a>
                 <a href="ren-nu-pricing.html" data-jump>Pricing</a>
-                <a href="ren-nu-shop.html" data-jump>Shop</a>
+                <a href="ren-nu-market.html" data-jump>Market</a>
                 <a href="ren-nu-faq.html" data-jump>FAQs</a>
             </nav>
             <div class="nav-ctas">
                 <a href="#" class="btn btn-outline btn-sm">Book a Call</a>
-                <a href="#" class="btn btn-primary btn-sm">Apply</a>
+                <a href="#" class="btn btn-primary btn-sm sg-popup-id-850">Apply</a>
             </div>
         </div>
     </header>
@@ -40,12 +43,257 @@
     <main>
         <!-- PREVIEW WRAPPER END -->
 
-        <!-- ============ SECTION Resources ============ -->
-        <section class="stop" id="resources">
+        <!-- ============ SECTION 1 — HERO ============ -->
+
+        <section class="stop alt page-hero" id="resources">
             <div class="wrap">
-                <h1 class="orange">Resources</h1>
+                <h1 class="page-hero__title" data-reveal><span class="orange">Resources</span></h1>
+            </div>
+            <div class="hero-wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 2 — LIBRARY ============ -->
+
+        <section class="stop blue" id="resource-library">
+            <div class="wrap">
+                <span class="section-tag">Section 02</span>
+                <div class="res-filters" role="group" aria-label="Filter resources">
+                    <button type="button" class="res-filter" data-res-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="res-filter" data-res-filter="research" aria-pressed="false">Research Papers</button>
+                    <button type="button" class="res-filter" data-res-filter="videos" aria-pressed="false">Videos and Webinars</button>
+                    <button type="button" class="res-filter" data-res-filter="guides" aria-pressed="false">Quick Guides</button>
+                </div>
+
+                <div class="res-grid">
+                    <article class="res-card" data-category="videos" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-14.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Videos and Webinars</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ketocitra-manufacturing-and-quality-control/">KetoCitra®
+                                Manufacturing and Quality Control</a></h2>
+                            <p>What sets KetoCitra® apart from supplements? SBN’s Jacob Kingaard shares that it’s
+                                made in a US FDA-registered facility with rigorous sourcing, quality control, and
+                                independent 3rd-party testing for every batch, ensuring top-tier safety and
+                                compliance.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-13.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/carrageenan-and-insulin-resistance-in-humans-a-randomised-double-blind-cross-over-trial/">Carrageenan
+                                and insulin resistance in humans: a randomised double-blind cross-over
+                                trial</a></h2>
+                            <p>Carrageenan, a food additive, may increase gut permeability and inflammation, raising
+                                risks for chronic conditions. Caution is advised, especially for those with
+                                metabolic concerns.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-12.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/a-%ce%b2-hydroxybutyrate-shunt-pathway-generates-anti-obesity-ketone-metabolites/">A
+                                β-hydroxybutyrate shunt pathway generates anti-obesity ketone metabolites</a></h2>
+                            <p>Researchers have uncovered a new metabolic pathway for β-hydroxybutyrate (BHB)—a key
+                                ketone body—through its enzymatic pairing with amino acids like phenylalanine.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-9.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/host-metabolite-from-diet-shapes-gut-microbiota-aiding-autoimmunity-defense/">Host
+                                metabolite from diet shapes gut microbiota, aiding autoimmunity defense</a></h2>
+                            <p>Study reveals beta-hydroxybutyrate (BHB) slows ADPKD progression, mimicking fasting
+                                benefits without strict diets.Ketogenic diets protect against autoimmunity by
+                                altering gut bacteria, with BHB and indole lactate reducing inflammation and harmful
+                                immune responses.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="guides" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-7.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Quick Guides</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/harvard-oxalate-table-2023/">Harvard Oxalate Table
+                                2023</a></h2>
+                            <p>Understanding the oxalate content of foods can help individuals manage their dietary
+                                intake and support kidney health. Below is a comprehensive table listing the oxalate
+                                content of various foods, compiled through research and expert analysis. It serves
+                                as a helpful resource for making informed nutritional choices.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-6.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/%ce%b2-hydroxybutyrate-mimics-ketogenic-therapy-benefits-in-pkd/">β-hydroxybutyrate
+                                mimics ketogenic therapy benefits in PKD</a></h2>
+                            <p>Study reveals beta-hydroxybutyrate (BHB) slows ADPKD progression, mimicking fasting
+                                benefits without strict diets.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="videos" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-3.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Videos and Webinars</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/first-in-the-family-with-adpkd-and-what-to-do-about-it/">First
+                                in the family with ADPKD, and what to do about it</a></h2>
+                            <p>Dr. Thomas Weimbs, President of Santa Barbara Nutrients, sits down with Dominic
+                                Hürbin, a personal trainer and nutritionist based in Switzerland, to discuss his
+                                wife Jackie’s battle with polycystic kidney disease (PKD).</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/9.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ketogenic-diet-in-adpkd-safety-effects/">Ketogenic Diet in
+                                ADPKD: Safety &amp; Effects</a></h2>
+                            <p>Ketogenic dietary interventions in autosomal dominant polycystic kidney disease—a
+                                retrospective case series study: first insights into feasibility, safety and
+                                effects</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/8.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ketogenic-therapy-for-chronic-kidney-disease/">Ketogenic
+                                Therapy for Chronic Kidney Disease</a></h2>
+                            <p>Ketogenic Metabolic Therapy (KMT) is a safe, effective nutrition approach for CKD,
+                                improving renal function through carbohydrate restriction. Plant-dominant KMT offers
+                                a promising alternative to standard treatments, addressing metabolic conditions like
+                                obesity and polycystic kidney disease.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/7.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ketogenic-diet-for-kidney-disease-a-review/">Ketogenic Diet
+                                for Kidney Disease: A Review</a></h2>
+                            <p>The case for a ketogenic diet in the management of kidney disease</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/6-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ketosis-and-kidney-volume-keto-adpkd/">Ketosis and Kidney
+                                Volume: KETO ADPKD</a></h2>
+                            <p>Ketosis moderates the effect on kidney volume in dietary interventions for ADPKD—more
+                                insights on the KETO ADPKD trial</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/5-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/keto-adpkd-clinical-trial/">KETO-ADPKD Clinical
+                                Trial</a></h2>
+                            <p>Feasibility and impact of ketogenic dietary interventions in polycystic kidney
+                                disease: KETO-ADPKD—a randomized controlled trial</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/4-2.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/ren-nu-program-and-outcomes/">Ren-Nu™ Program and
+                                Outcomes</a></h2>
+                            <p>Ren-Nu, a Dietary Program for Individuals with Autosomal-Dominant Polycystic Kidney
+                                Disease Implementing a Sustainable, Plant-Focused, Kidney-Safe, Ketogenic Approach
+                                with Avoidance of Renal Stressors</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="videos" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Videos and Webinars</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/what-is-damaging-most-peoples-kidneys/">Kidney Scientist
+                                Reveals What is Damaging Most People’s Kidneys</a></h2>
+                            <p>In this video, Thomas DeLauer and Dr. Jacob Torres discuss the relationship between
+                                diet and kidney health, with a focus on ketogenic diets. They explore topics such as
+                                how kidneys influence metabolic health, the effects of low-carb diets and ketones on
+                                kidney function, and strategies for improving kidney health.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="videos" data-reveal>
+                        <img class="res-card__img" src="Images/resources/Blog-post-for-website-gallery.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Videos and Webinars</span>
+                            <h2><a class="res-card__link" href="https://ren-nu.org/kidney-biology-podcast/">Simple
+                                Diet &amp; Lifestyle Practices for Kidney Health</a></h2>
+                            <p>Nick and Dr. Weimbs discuss kidney biology, causes of kidney stones, the
+                                kidney-damaging effects of common pharmaceuticals, benefits of BHB and ketosis for
+                                kidney health, myths about high protein intake, and causes of kidney diseases.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="guides" data-reveal>
+                        <img class="res-card__img" src="Images/resources/2-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Quick Guides</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/top-6-dietary-and-lifestyle-changes/">Top 6 Dietary and
+                                Lifestyle Changes for PKD Patients</a></h2>
+                            <p>This guide outlines six key dietary changes to support kidney health in individuals
+                                with polycystic kidney disease (PKD). Each tip is crafted to help manage PKD
+                                symptoms and improve overall kidney health.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="guides" data-reveal>
+                        <img class="res-card__img" src="Images/resources/1-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Quick Guides</span>
+                            <h2><a class="res-card__link" href="https://ren-nu.org/cheat-sheet-on-the-go/">Cheat
+                                sheet: While on the go</a></h2>
+                            <p>Stay on track wherever you are with smart swaps and simple prep! Discover easy snack
+                                options, restaurant tips, and a handy travel hack for a lifestyle that’s as flexible
+                                as you need it to be. On-the-Go Cheat Sheet for kidney-friendly living.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="videos" data-reveal>
+                        <img class="res-card__img" src="Images/resources/4-1.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Videos and Webinars</span>
+                            <h2><a class="res-card__link" href="https://ren-nu.org/asn-recap-ren-nu-results/">ASN
+                                Recap and Exciting Ren-Nu Results</a></h2>
+                            <p>At ASN Kidney Week 2024, Ren-Nu showcased powerful results: weight loss, improved
+                                kidney function, consistent ketosis, reduced medication needs, and less pain,
+                                proving nutrition’s impact on kidney health.</p>
+                        </div>
+                    </article>
+                    <article class="res-card" data-category="research" data-reveal>
+                        <img class="res-card__img" src="Images/resources/3-2.png" alt="" loading="lazy">
+                        <div class="res-card__body">
+                            <span class="res-card__tag">Research Papers</span>
+                            <h2><a class="res-card__link"
+                                href="https://ren-nu.org/how-diet-and-lifestyle-drive-pkd-progression/">How Diet and
+                                Lifestyle Drive PKD Progression</a></h2>
+                            <p>Messing et al. highlight that low-carb, low-oxalate diets and ketogenic strategies
+                                can help slow cyst growth, showing that lifestyle changes may significantly impact
+                                ADPKD management.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
+
         <!-- PREVIEW WRAPPER START -->
     </main>
     <footer>

@@ -166,12 +166,6 @@
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
 
-    /* The wave dividers are hidden on mobile, so the extra room goes too */
-    #our-story,
-    #team {
-        padding-bottom: 56px;
-    }
-
     .about-mission {
         grid-template-columns: repeat(2, 1fr);
     }

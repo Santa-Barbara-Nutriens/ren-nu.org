@@ -1,0 +1,86 @@
+/* =====================================================================
+   FAQS — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .page-hero, .faq-accordion, .section-divider-band and
+   [data-reveal] behaviour.
+   Everything here is prefixed faq- (or scoped to .faq-page) so it can't
+   leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 01 HERO ---------- */
+/* On its own line, the orange part stays clear of the .page-hero circle */
+.faq-page .page-hero__title .orange {
+    display: block;
+}
+
+/* ---------- 02 TOPICS ---------- */
+.faq-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.faq-topic {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 9px 18px;
+    border: 1.5px solid rgba(255, 255, 255, .35);
+    border-radius: 999px;
+    color: var(--paper);
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+
+.faq-topic:hover {
+    background: var(--paper);
+    border-color: var(--paper);
+    color: var(--blue-dk);
+}
+
+/* ---------- 03 QUESTIONS ---------- */
+/* [data-reveal] in the shared sheet sets color: --paper-alt, which list
+   items would inherit, leaving them white on the white cards. */
+.faq-page .faq-group {
+    color: var(--ink-soft);
+}
+
+.faq-group {
+    max-width: 820px;
+    margin: 0 auto;
+    /* Clears the sticky header (94px on phones) plus the 18px that
+       [data-reveal] slides up after a topic link lands here */
+    scroll-margin-top: 128px;
+}
+
+.faq-group+.faq-group {
+    margin-top: 56px;
+}
+
+.faq-group h2 {
+    color: var(--blue-dk);
+    font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+    margin-bottom: 18px;
+}
+
+.faq-accordion details ul,
+.faq-accordion details ol {
+    margin: 14px 0 0;
+    padding-left: 22px;
+}
+
+.faq-accordion details li {
+    margin-top: 8px;
+}
+
+.faq-accordion details li ul {
+    margin-top: 8px;
+}
+
+.faq-accordion details strong {
+    color: var(--blue-dk);
+}
+
+.faq-accordion details a {
+    color: var(--orange-dk);
+    text-decoration: underline;
+}

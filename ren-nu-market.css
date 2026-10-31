@@ -1,0 +1,90 @@
+/* =====================================================================
+   MARKET — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .page-hero, .framework-card, .btn, .hero-wave-divider and
+   [data-reveal] behaviour.
+   Everything here is prefixed mkt- (or scoped to .mkt-page) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 01 HERO ---------- */
+.mkt-intro {
+    max-width: 40em;
+    margin: 22px auto 0;
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.5;
+    color: var(--blue);
+}
+
+/* Affiliate disclosure: keep it above the first product link */
+.mkt-disclosure {
+    max-width: 50em;
+    margin: 14px auto 0;
+    font-size: .9rem;
+    color: var(--ink-soft);
+}
+
+/* ---------- 02 PRODUCTS ---------- */
+.mkt-group+.mkt-group {
+    margin-top: 56px;
+}
+
+.mkt-group__title {
+    color: var(--paper);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* flex rather than grid so a short last row stays centred */
+.mkt-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mkt-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+}
+
+.mkt-card__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.mkt-card .framework-card__body {
+    flex: 1;
+}
+
+.mkt-card .mkt-card__price {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--orange-dk);
+}
+
+.mkt-card .btn {
+    align-self: center;
+}
+
+/* The navy section runs straight into the navy footer, so mark the seam */
+.mkt-page footer {
+    border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+    .mkt-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 560px) {
+    .mkt-card {
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+/* =====================================================================
+   FOR CLINICIANS — page-specific styles
+   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   sections, .page-hero, .framework-grid, .framework-card, .btn,
+   .hero-wave-divider and [data-reveal] behaviour.
+   Everything here is prefixed clin- (or scoped to .clin-page) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 02 CLINICIAN RESOURCES ---------- */
+.clin-card {
+    justify-content: space-between;
+}
+
+.clin-card .framework-card__body h2 {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+}
+
+.clin-card .btn {
+    align-self: center;
+}
+
+/* The navy section runs straight into the navy footer, so mark the seam */
+.clin-page footer {
+    border-top: 1px solid rgba(255, 255, 255, .14);
+}

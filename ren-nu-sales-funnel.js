@@ -466,6 +466,7 @@
 
         var ctx = canvas.getContext('2d');
         var baseSrc = gif.getAttribute('src');
+        var isGif = /\.gif$/i.test(baseSrc);
 
         function drawPoster() {
             canvas.width = gif.naturalWidth;
@@ -485,13 +486,58 @@
 
         // Reloading the src on every hover restarts the gif from frame one;
         // it plays through and, if the file loops once, stops on its own.
+        // A still image has nothing to restart, so it isn't downloaded again.
         wrap.addEventListener('mouseenter', function () {
-            gif.src = baseSrc + (baseSrc.indexOf('?') === -1 ? '?' : '&') + 'play=' + Date.now();
+            if (isGif) {
+                gif.src = baseSrc + (baseSrc.indexOf('?') === -1 ? '?' : '&') + 'play=' + Date.now();
+            }
             wrap.classList.add('is-playing');
         });
 
         wrap.addEventListener('mouseleave', function () {
             wrap.classList.remove('is-playing');
+        });
+    }
+
+    /* ===================== LAZY VIDEOS ===================== */
+    // preload="none" keeps videos from fetching anything at page load; once
+    // one nears the screen it loads its metadata and first frame as usual.
+    function initLazyVideos() {
+        var videos = document.querySelectorAll('video[data-lazy-video]');
+        function load(video) {
+            video.preload = 'metadata';
+            video.load();
+        }
+        if (!('IntersectionObserver' in window)) {
+            videos.forEach(load);
+            return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    observer.unobserve(entry.target);
+                    load(entry.target);
+                }
+            });
+        }, { rootMargin: '300px 0px' });
+        videos.forEach(function (v) { observer.observe(v); });
+    }
+
+    /* ===================== RESOURCE FILTERS ===================== */
+    function initResourceFilters() {
+        var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-res-filter]'));
+        if (!buttons.length) return;
+        var cards = document.querySelectorAll('.res-card');
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var filter = button.getAttribute('data-res-filter');
+                buttons.forEach(function (b) {
+                    b.setAttribute('aria-pressed', String(b === button));
+                });
+                cards.forEach(function (card) {
+                    card.hidden = filter !== 'all' && card.getAttribute('data-category') !== filter;
+                });
+            });
         });
     }
 
@@ -507,5 +553,7 @@
         initPlaylistRotationDelay();
         initInterestPopup();
         initHeroGifHover();
+        initResourceFilters();
+        initLazyVideos();
     });
 })();
