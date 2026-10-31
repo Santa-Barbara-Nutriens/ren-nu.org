@@ -439,8 +439,16 @@ header {
     color: var(--paper);
 }
 
+#how-it-works .stop-head h2 {
+    color: var(--blue);
+}
+
 #evidence .stop-head h2 {
     color: var(--paper-alt);
+}
+
+#experiences .stop-head h2 {
+    color: var(--blue);
 }
 
 .stop-sub {
@@ -761,9 +769,18 @@ header {
     margin: 0;
 }
 
+#meet-team {
+    padding-bottom: clamp(80px, 9vw, 112px);
+}
+
+#meet-team .team-intro {
+    grid-template-columns: 1fr 1fr;
+}
+
 .team-intro__media-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     gap: 12px;
     align-items: stretch;
 }
@@ -2002,7 +2019,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .team-intro {
+    .team-intro,
+    #meet-team .team-intro {
         grid-template-columns: 1fr;
         gap: 32px;
     }
