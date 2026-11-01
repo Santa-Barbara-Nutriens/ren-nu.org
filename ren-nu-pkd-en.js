@@ -103,17 +103,22 @@
             var dotsWrap = root.querySelector('[data-dots]');
             var prevBtn = root.querySelector('[data-prev]');
             var nextBtn = root.querySelector('[data-next]');
+            var pauseBtn = root.querySelector('[data-pause]');
+            var controls = root.querySelector('.carousel-controls');
+            var paused = !!pauseBtn && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             var current = 0;
             var timer;
 
-            slides.forEach(function (_, i) {
+            slides.forEach(function (slide, i) {
                 var dot = document.createElement('button');
                 dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
                 if (i === 0) dot.classList.add('active');
+                slide.classList.toggle('active', i === 0);
                 dot.addEventListener('click', function () { goTo(i); resetTimer(); });
                 dotsWrap.appendChild(dot);
             });
             var dots = Array.prototype.slice.call(dotsWrap.children);
+            if (controls) controls.hidden = slides.length < 2;
 
             function goTo(index) {
                 slides[current].classList.remove('active');
@@ -125,11 +130,24 @@
 
             function resetTimer() {
                 clearInterval(timer);
-                timer = setInterval(function () { goTo(current + 1); }, 7000);
+                if (paused || slides.length < 2) return;
+                timer = setInterval(function () {
+                    // don't rotate a link away from someone about to use it
+                    if (root.matches(':hover') || root.querySelector(':focus-visible')) return;
+                    goTo(current + 1);
+                }, 7000);
             }
 
             if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); resetTimer(); });
             if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); resetTimer(); });
+            if (pauseBtn) {
+                pauseBtn.setAttribute('aria-pressed', String(paused));
+                pauseBtn.addEventListener('click', function () {
+                    paused = !paused;
+                    pauseBtn.setAttribute('aria-pressed', String(paused));
+                    resetTimer();
+                });
+            }
 
             resetTimer();
         });

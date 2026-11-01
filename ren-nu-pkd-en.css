@@ -1107,6 +1107,8 @@ header {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     margin-top: 20px;
+    /* keeps the card clear of the wave that closes the section */
+    margin-bottom: clamp(40px, 6.5vw, 96px);
 }
 
 .framework-card {

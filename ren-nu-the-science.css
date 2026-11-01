@@ -17,37 +17,24 @@
     color: var(--paper-alt);
 }
 
+/* the shared sheet sets --blue on this id for the sales funnel's light section */
+.sci-page #how-it-works .stop-head h2 {
+    color: var(--paper-alt);
+}
+
 .sci-page .stop-head .eyebrow {
     margin-bottom: 12px;
 }
 
 /* ---------- 01 HERO ---------- */
 .sci-hero {
-    padding: clamp(48px, 6vw, 88px) 0 clamp(120px, 13vw, 190px);
-}
-
-.sci-hero::before {
-    content: "";
-    position: absolute;
-    top: -18%;
-    right: -12%;
-    width: clamp(380px, 52vw, 760px);
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, var(--orange-vlt) 0%, var(--orange-lt) 55%, rgba(255, 217, 191, 0) 72%);
-    opacity: .7;
-    pointer-events: none;
-}
-
-.sci-hero .wrap {
-    position: relative;
-    z-index: 1;
+    padding: clamp(36px, 4.5vw, 64px) 0 clamp(96px, 10.5vw, 150px);
 }
 
 .sci-hero__grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-    gap: clamp(36px, 6vw, 88px);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: clamp(32px, 4vw, 56px);
     align-items: center;
 }
 
@@ -108,51 +95,189 @@
     color: var(--ink-soft);
 }
 
-/* stat stack ("lab card") */
-.sci-hero__panel {
+/* news feed */
+.sci-news {
+    position: relative;
+    overflow: hidden;
+    background: var(--blue-dk);
+    border-radius: 18px;
+    box-shadow: 0 24px 50px rgba(14, 49, 73, .18);
+}
+
+/* keeps the label readable on light photos */
+.sci-news::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+    z-index: 1;
+    background: linear-gradient(to bottom, rgba(14, 49, 73, .7), rgba(14, 49, 73, 0));
+    pointer-events: none;
+}
+
+.sci-news__label {
+    position: absolute;
+    top: 22px;
+    left: 26px;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--paper);
+}
+
+/* Slides share one grid cell, so the card keeps the height of the tallest
+   slide instead of jumping whenever the text length changes. */
+.sci-news__track {
+    display: grid;
+}
+
+.sci-news .carousel-slide {
+    grid-area: 1 / 1;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    justify-content: flex-end;
+    min-height: clamp(420px, 40vw, 510px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease, visibility .5s;
 }
 
-.sci-stat {
-    display: grid;
-    grid-template-columns: 112px 1fr;
-    align-items: center;
-    gap: 18px;
-    background: var(--paper);
-    border-radius: 14px;
-    padding: 20px 24px;
-    box-shadow: 0 18px 40px rgba(14, 49, 73, .08);
-    border-left: 4px solid var(--orange);
+.sci-news .carousel-slide.active {
+    visibility: visible;
+    opacity: 1;
 }
 
-.sci-stat:nth-child(2) {
-    margin-left: clamp(0px, 3vw, 36px);
+.sci-news__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
 }
 
-.sci-stat__num {
-    font-family: var(--font-hero);
-    font-weight: 700;
-    font-size: clamp(2.1rem, 3.4vw, 2.8rem);
-    line-height: 1;
+.sci-news__tag {
+    position: absolute;
+    top: 52px;
+    left: 26px;
+    z-index: 2;
+    padding: 6px 12px;
+    background: rgba(14, 49, 73, .55);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--paper);
+}
+
+/* the gradient grows with the text, so long copy stays on solid navy */
+.sci-news__body {
+    position: relative;
+    z-index: 2;
+    padding: 88px 26px 0;
+    background: linear-gradient(to top, var(--blue-dk) 60%, rgba(14, 49, 73, 0));
+}
+
+.sci-news__title {
+    font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+    line-height: 1.2;
+    margin: 0 0 8px;
+    color: var(--paper);
+}
+
+.sci-news__text {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--grey-lt);
+}
+
+.sci-news__link {
+    font-weight: 600;
     color: var(--orange);
 }
 
-.sci-stat__label {
-    margin: 0;
-    font-size: .98rem;
-    line-height: 1.4;
-    color: var(--ink-soft);
+.sci-news__link:hover {
+    color: var(--orange-lt);
 }
 
-.sci-stat__label strong {
-    display: block;
-    color: var(--blue-dk);
-    font-weight: 700;
+.sci-news__controls {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 0;
+    padding: 14px 26px 20px;
+}
+
+.sci-news__controls[hidden] {
+    display: none;
+}
+
+.sci-news__btns {
+    display: flex;
+    gap: 10px;
+}
+
+.sci-news .carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, .7);
+    color: var(--paper);
+}
+
+.sci-news .carousel-btn:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.sci-news .carousel-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sci-news .carousel-btn[aria-pressed="false"] .sci-news__icon-play,
+.sci-news .carousel-btn[aria-pressed="true"] .sci-news__icon-pause {
+    display: none;
+}
+
+.sci-news .carousel-dots button.active {
+    background: var(--orange);
+}
+
+/* the shared orange outline is too faint on navy */
+.sci-news a:focus-visible,
+.sci-news button:focus-visible {
+    outline-color: var(--paper);
 }
 
 /* ---------- 02 HOW IT WORKS (two pathways -> one outcome) ---------- */
+/* extra room so the wave doesn't cut into the cards */
+.sci-page #how-it-works,
+.sci-page #benefits,
+.sci-page #research,
+.sci-page #voices {
+    padding-bottom: clamp(96px, 10.5vw, 150px);
+}
+
 .sci-paths {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -160,78 +285,52 @@
 }
 
 .sci-path {
-    background: rgba(255, 255, 255, .06);
-    border: 1px solid rgba(255, 255, 255, .14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--paper);
     border-radius: 16px;
-    padding: 30px 30px 26px;
+    padding: 32px 32px 24px;
 }
 
-.sci-path__head {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 18px;
-}
-
-.sci-path__num {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    flex: 0 0 auto;
-    border-radius: 50%;
-    border: 2px solid var(--orange);
-    color: var(--orange);
-    font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 1.05rem;
+.sci-path__icon {
+    width: 136px;
+    height: 136px;
+    margin-bottom: 20px;
+    border-radius: 0;
 }
 
 .sci-path__label {
-    font-family: var(--font-mono);
     font-size: 12.5px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: .12em;
     text-transform: uppercase;
-    color: var(--orange-lt);
+    color: var(--orange-dk);
 }
 
-.sci-path h3 {
-    font-size: 1.4rem;
-    margin: 0 0 10px;
+.sci-page .stop.blue .sci-path h3 {
+    font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+    margin: 10px 0 10px;
+    color: var(--blue-dk);
 }
 
 .sci-path p {
-    color: var(--grey-lt);
-    margin: 0 0 18px;
+    max-width: 30em;
+    margin: 0 0 22px;
+    color: var(--ink-soft);
+    text-wrap: balance;
 }
 
-.sci-checks {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.sci-checks li {
-    position: relative;
-    padding-left: 30px;
-    color: var(--paper-alt);
-    font-weight: 500;
-}
-
-.sci-checks li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: .2em;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 14px no-repeat;
+/* margin-top:auto lines the rule up across cards of different text lengths */
+.sci-path .sci-path__focus {
+    align-self: stretch;
+    max-width: none;
+    margin: auto 0 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    font-size: .92rem;
+    color: var(--blue);
 }
 
 .sci-converge {
@@ -276,7 +375,25 @@
     font-size: 1.05rem;
 }
 
-/* ---------- 03 CLINICAL BENEFITS ---------- */
+/* ---------- 03 PUBLISHED RESEARCH ---------- */
+/* the default 720px would break the heading and study facts over two lines */
+.sci-page #benefits .stop-head {
+    max-width: 960px;
+}
+
+.sci-page #benefits .stop-head h2 {
+    color: var(--blue-dk);
+}
+
+.sci-page #benefits .stop-sub {
+    color: var(--ink-soft);
+    text-wrap: balance;
+}
+
+.sci-nowrap {
+    white-space: nowrap;
+}
+
 .sci-benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -289,9 +406,9 @@
     align-items: center;
     text-align: center;
     background: var(--paper);
+    border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 30px 22px 26px;
-    box-shadow: 0 14px 30px rgba(14, 49, 73, .06);
+    padding: 24px 22px 26px;
     transition: transform .2s ease, box-shadow .2s ease;
 }
 
@@ -302,10 +419,9 @@
 
 .sci-benefit__icon {
     display: flex;
-    align-items: flex-end;
     justify-content: center;
-    height: 96px;
-    margin-bottom: 20px;
+    height: 128px;
+    margin-bottom: 18px;
 }
 
 .sci-benefit__icon img {
@@ -316,6 +432,7 @@
 
 .sci-benefit h3 {
     font-size: 1.1rem;
+    font-weight: 700;
     margin: 0 0 10px;
     color: var(--blue-dk);
 }
@@ -323,23 +440,24 @@
 .sci-benefit p {
     font-size: .95rem;
     margin: 0;
+    text-wrap: balance;
 }
 
 .sci-study-note {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px 24px;
-    flex-wrap: wrap;
+    gap: 14px;
     margin: 36px auto 0;
-    max-width: 820px;
+    max-width: 680px;
     text-align: center;
 }
 
 .sci-study-note p {
     margin: 0;
     font-size: .92rem;
-    color: var(--grey);
+    color: var(--ink-soft);
+    text-wrap: balance;
 }
 
 .sci-link {
@@ -391,12 +509,74 @@
     aspect-ratio: 9 / 16;
 }
 
-/* ---------- 05 RESEARCH LIBRARY ---------- */
+/* ---------- 04 RESEARCH LIBRARY ---------- */
+.sci-page #research .stop-head {
+    margin-bottom: 24px;
+}
+
+.sci-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sci-filter__btn {
+    padding: 9px 18px;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, .6);
+    border-radius: 22px;
+    font: inherit;
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--paper);
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+}
+
+.sci-filter__btn:hover {
+    border-color: var(--orange);
+}
+
+.sci-filter__btn[aria-pressed="true"] {
+    background: var(--orange-dk);
+    border-color: var(--orange-dk);
+}
+
+/* the shared orange outline is too faint on navy */
+.sci-filter__btn:focus-visible {
+    outline-color: var(--paper);
+}
+
+.sci-filter__note {
+    margin: 12px 0 0;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--grey-lt);
+}
+
+.sci-lib__group {
+    margin-top: 44px;
+}
+
+.sci-lib__title {
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    margin: 0 0 16px;
+}
+
+.sci-lib__title::before {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-bottom: 14px;
+    background: var(--orange);
+}
+
 .sci-papers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    counter-reset: paper;
 }
 
 .sci-paper {
@@ -406,7 +586,7 @@
     background: var(--paper);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 26px 24px 22px;
+    padding: 22px 22px 18px;
     transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
@@ -419,17 +599,14 @@
 .sci-paper__meta {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 16px;
+    gap: 12px;
+    margin-bottom: 14px;
 }
 
 .sci-paper__year {
-    font-family: var(--font-mono);
-    font-weight: 500;
-    font-size: 1.5rem;
+    font-weight: 700;
     line-height: 1;
-    color: var(--orange);
+    color: var(--orange-dk);
 }
 
 .sci-paper__type {
@@ -443,20 +620,17 @@
     white-space: nowrap;
 }
 
-.sci-paper__type--trial {
-    background: var(--orange-vlt);
-    color: var(--orange-dk);
-}
-
-.sci-paper h3 {
-    font-size: 1.12rem;
+.sci-paper h4 {
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.25;
     color: var(--blue-dk);
-    margin: 0 0 10px;
+    margin: 0 0 8px;
 }
 
 .sci-paper p {
     font-size: .93rem;
-    margin: 0 0 18px;
+    margin: 0 0 16px;
 }
 
 .sci-paper__journal {
@@ -472,9 +646,8 @@
 
 .sci-paper__journal em {
     font-style: normal;
-    font-family: var(--font-mono);
-    color: var(--grey);
-    font-size: .78rem;
+    color: var(--ink-soft);
+    font-size: .8rem;
     line-height: 1.35;
 }
 
@@ -492,8 +665,17 @@
 
 .sci-more {
     text-align: center;
-    margin: 32px 0 0;
-    color: var(--ink-soft);
+    margin: 36px 0 0;
+    font-size: .85rem;
+    color: var(--grey-lt);
+}
+
+.sci-more .sci-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: .95rem;
+    color: var(--orange);
+    border-color: var(--orange);
 }
 
 /* ---------- 06 SCIENTIST QUOTE ---------- */
@@ -506,13 +688,23 @@
     margin: 0 auto;
 }
 
-.sci-quote__photo {
+/* The square portrait has almost no room above the hair, so it sits lower in
+   the circle. The gradient carries the photo's backdrop up into that gap. */
+.sci-quote__frame {
+    display: block;
     width: 220px;
     aspect-ratio: 1;
+    overflow: hidden;
     border-radius: 50%;
-    object-fit: cover;
     border: 6px solid var(--paper);
     box-shadow: 0 20px 40px rgba(14, 49, 73, .15);
+    background: linear-gradient(to right, #c6c1bd, #d7d4d3 50%, #ded9d5);
+}
+
+.sci-quote__photo {
+    width: 100%;
+    margin-top: 16px;
+    border-radius: 0;
 }
 
 .sci-quote blockquote {
@@ -562,40 +754,133 @@
     margin-top: 18px;
 }
 
-/* ---------- 07 RESEARCH COMMITMENT ---------- */
-.sci-commit {
+/* ---------- 05 RESEARCH COMMITMENT ---------- */
+.sci-page #commitment .stop-head {
+    margin-bottom: 32px;
+}
+
+.sci-page #commitment .stop-head h2 {
+    color: var(--blue-dk);
+}
+
+.sci-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px 28px;
+    margin-bottom: 20px;
+    padding: 22px 28px;
+    background: var(--blue-lt);
+    border-radius: 16px;
+}
+
+.sci-count__icon {
+    width: 88px;
+    height: 88px;
+    flex: 0 0 auto;
+    border-radius: 0;
+}
+
+.sci-count__num {
+    padding-left: 28px;
+    border-left: 1px solid var(--line-dk);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--orange-dk);
+}
+
+.sci-count h3 {
+    font-size: 1.3rem;
+    margin: 0 0 4px;
+    color: var(--blue-dk);
+}
+
+.sci-count p {
+    margin: 0;
+}
+
+.sci-studies {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.sci-commit__item {
+.sci-study {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background: var(--paper);
+    border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 30px 26px;
-    text-align: center;
-    box-shadow: 0 14px 30px rgba(14, 49, 73, .06);
+    padding: 22px 26px 20px;
 }
 
-.sci-commit__big {
-    display: block;
-    font-family: var(--font-hero);
-    font-weight: 700;
-    font-size: clamp(2.2rem, 3.6vw, 3rem);
-    line-height: 1.05;
-    color: var(--orange);
+.sci-study__icon {
+    width: 72px;
+    height: 72px;
     margin-bottom: 12px;
+    border-radius: 0;
 }
 
-.sci-commit__item h3 {
-    font-size: 1.1rem;
+.sci-study__place {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--orange-dk);
+}
+
+.sci-study h3 {
+    font-size: 1.3rem;
+    margin: 6px 0 10px;
     color: var(--blue-dk);
-    margin: 0 0 8px;
 }
 
-.sci-commit__item p {
+.sci-study__type {
+    padding: 5px 14px;
+    border-radius: 20px;
+    background: var(--blue-lt);
+    color: var(--blue);
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.sci-study p {
+    margin: 12px 0 16px;
     font-size: .95rem;
-    margin: 0;
+}
+
+.sci-study__detail {
+    align-self: stretch;
+    margin-bottom: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: .95rem;
+    color: var(--blue-dk);
+}
+
+.sci-study__detail p {
+    margin: 2px 0 0;
+}
+
+.sci-study__id {
+    margin-top: auto;
+    font-family: var(--font-mono);
+    font-size: .78rem;
+    letter-spacing: .06em;
+    color: var(--ink-soft);
+}
+
+.sci-study__id:hover {
+    color: var(--orange-dk);
+}
+
+.sci-page #commitment .sci-study-foot {
+    margin: 24px 0 0;
+    text-align: center;
+    font-size: .85rem;
+    color: var(--ink-soft);
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -632,14 +917,10 @@
         text-align: left;
     }
 
-    .sci-hero__panel {
-        max-width: 520px;
+    .sci-news {
+        max-width: 600px;
         width: 100%;
         margin: 0 auto;
-    }
-
-    .sci-stat:nth-child(2) {
-        margin-left: 0;
     }
 
     .sci-hero {
@@ -663,19 +944,21 @@
         text-align: center;
     }
 
-    .sci-quote__photo {
+    .sci-quote__frame {
         width: 170px;
         margin: 0 auto;
+    }
+
+    .sci-quote__photo {
+        margin-top: 12px;
     }
 
     .sci-quote blockquote::before {
         display: none;
     }
 
-    .sci-commit {
+    .sci-studies {
         grid-template-columns: 1fr;
-        max-width: 520px;
-        margin: 0 auto;
     }
 }
 
@@ -695,9 +978,14 @@
         padding: 24px 22px;
     }
 
-    .sci-stat {
-        grid-template-columns: 84px 1fr;
-        padding: 18px;
+    .sci-count {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sci-count__num {
+        padding-left: 0;
+        border-left: 0;
     }
 
     .sci-hero__ctas .btn {
@@ -709,7 +997,8 @@
 @media (prefers-reduced-motion: reduce) {
 
     .sci-benefit,
-    .sci-paper {
+    .sci-paper,
+    .sci-news .carousel-slide {
         transition: none;
     }
 
