@@ -11,6 +11,8 @@
     --rn-hill-2: #7FA79E;
     --rn-brand: #1F5E52;
     --rn-brand-accent: #E1785B;
+    --rn-brand-blue: #186079;
+    --rn-brand-coral: coral;
 
     --rn-pkd-bg: #F6D9CE;
     --rn-pkd-icon: #D9694B;
@@ -30,7 +32,6 @@
 
     --rn-blue: #186079;
 
-    --font-hero: 'Fraunces', serif;
     --font-display: 'Montserrat', sans-serif;
 
     position: relative;
@@ -76,14 +77,14 @@
 
 .rn-headline {
     max-width: 18ch;
-    margin: 0;
+    margin-bottom: 25px;
     color: var(--rn-brand);
-    /* font-family: var(--font-hero); */
     font-family: var(--font-display);
     font-size: 3.5rem;
-    font-weight: 600;
-    /* transform: scaleX(1.1); */
-    line-height: 1.15;
+    font-weight: 650;
+    color: var(--rn-brand-blue);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .rn-inner {
@@ -126,6 +127,14 @@
 
 .rn-card-label.small {
     transform: scaleX(0.85);
+}
+
+/* negative top margin pulls it closer to the label than the card's flex gap */
+.rn-card-lang {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: -0.7rem 0 0;
 }
 
 /* flex + align-items:center shrinks an <hr> to 0 width, so give it one */
@@ -237,7 +246,7 @@
     /* text-transform: uppercase; */
     color: var(--rn-blue);
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
 }
 
 @media (max-width: 780px) {

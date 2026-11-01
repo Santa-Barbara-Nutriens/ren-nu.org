@@ -1,0 +1,185 @@
+/* =====================================================================
+   FOR CKD — page-specific styles
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   sections, .hero-split, .team-intro, .framework-card, .price-card,
+   .journey-timeline, .btn, .hero-wave-divider and [data-reveal]
+   behaviour.
+   Everything here is prefixed ckd- so it can't leak into the sales
+   funnel.
+   ===================================================================== */
+
+/* ---------- HEADER ---------- */
+/* Only one button here, so the two equal columns would leave a gap */
+.nav-ctas {
+    grid-template-columns: 1fr;
+}
+
+/* ---------- 01 HERO ---------- */
+.hero-split__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ckd-nowrap {
+    white-space: nowrap;
+}
+
+/* ---------- SHARED ---------- */
+/* Same extra room #meet-team gets, so the wave doesn't cover the content */
+.ckd-wave-section {
+    padding-bottom: clamp(80px, 9vw, 112px);
+}
+
+.ckd-head--light h2 {
+    color: var(--paper);
+}
+
+.ckd-link {
+    color: var(--orange-dk);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* .framework-card's own text colour is too pale for list items on white */
+.ckd-panel {
+    max-width: var(--head-max);
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    color: var(--ink);
+}
+
+.ckd-panel--wide {
+    max-width: none;
+}
+
+.ckd-list {
+    margin: 0;
+}
+
+.ckd-list li {
+    font-size: 1rem;
+}
+
+.ckd-list--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+}
+
+/* ---------- 02 INTRO ---------- */
+.ckd-intro {
+    grid-template-columns: 1fr 1fr;
+}
+
+.ckd-lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ---------- 03 PHOTOS ---------- */
+.ckd-photos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.ckd-photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* ---------- 05 RATE ---------- */
+.ckd-price {
+    margin-bottom: 0;
+}
+
+.ckd-price-title {
+    margin: 0 0 14px;
+}
+
+.ckd-price-title .price-name,
+.ckd-price-title .price-amt {
+    display: block;
+}
+
+/* ---------- 06 STEPS ---------- */
+.ckd-steps {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ckd-steps::before {
+    left: 17%;
+    right: 17%;
+}
+
+/* ---------- 07 VIDEO ---------- */
+.ckd-video {
+    max-width: 820px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.ckd-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.ckd-outcomes {
+    max-width: var(--head-max);
+    margin: 32px auto 0;
+    text-align: center;
+}
+
+/* ---------- 08 MORE INFORMATION ---------- */
+.ckd-card {
+    border: 1px solid var(--line);
+    justify-content: space-between;
+}
+
+.ckd-card .btn {
+    align-self: center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px) {
+    .ckd-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .ckd-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:640px) {
+    .ckd-lead {
+        font-size: 1.1rem;
+    }
+
+    .ckd-list--split {
+        grid-template-columns: 1fr;
+    }
+
+    .ckd-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Five photos in two columns: the last one takes a full row */
+    .ckd-photos img:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .price-card {
+        padding: 28px 20px;
+    }
+}

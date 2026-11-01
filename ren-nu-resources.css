@@ -1,6 +1,6 @@
 /* =====================================================================
    RESOURCES — page-specific styles
-   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
    sections, .page-hero, .hero-wave-divider and [data-reveal] behaviour.
    Everything here is prefixed res- (or scoped to .res-page) so it
    can't leak into the sales funnel.

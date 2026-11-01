@@ -1,0 +1,246 @@
+/* =====================================================================
+   PKD DEUTSCH — page-specific styles
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   sections, .hero-split, .team-intro, .framework-card, .price-card,
+   .btn, .hero-wave-divider and [data-reveal] behaviour.
+   Everything here is prefixed de- (or grw- for the waitlist form) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 01 HERO ---------- */
+#hero .eyebrow {
+    margin-top: 6px;
+}
+
+.hero-split__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* ---------- SHARED ---------- */
+/* Same extra room #meet-team gets, so the wave doesn't cover the content */
+.de-wave-section {
+    padding-bottom: clamp(80px, 9vw, 112px);
+}
+
+.de-head--light h2 {
+    color: var(--paper);
+}
+
+.de-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.de-note {
+    max-width: var(--head-max);
+    margin: 28px auto 0;
+    text-align: center;
+    color: var(--grey-lt);
+}
+
+/* ---------- 02 INTRO ---------- */
+.de-intro {
+    grid-template-columns: 1fr 1fr;
+}
+
+.de-lead {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ---------- 04 DAS ERWARTET DICH ---------- */
+.de-panel {
+    max-width: var(--head-max);
+    margin: 0 auto;
+    color: var(--ink);
+}
+
+.de-list {
+    margin: 0;
+}
+
+.de-list li {
+    font-size: 1rem;
+}
+
+/* ---------- 05 TEILNAHMEGEBÜHR ---------- */
+.de-price-title {
+    margin: 0 0 14px;
+}
+
+.de-price-title .price-name,
+.de-price-title .price-amt {
+    display: block;
+}
+
+.de-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.de-photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* ---------- 07 WEITERE INFORMATIONEN ---------- */
+.de-card {
+    border: 1px solid var(--line);
+    justify-content: space-between;
+}
+
+.de-card .btn {
+    align-self: center;
+}
+
+/* ---------- WAITLIST POPUP ---------- */
+/* opacity alone leaves the closed form reachable with the Tab key */
+.sgpb-main-popup-data-container-850 {
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s;
+}
+
+/* visibility must flip at once on open, or the first field can't take focus */
+.sgpb-main-popup-data-container-850.sgpb-popup-open {
+    visibility: visible;
+    transition: opacity .25s ease, visibility 0s;
+}
+
+.grw-dialog {
+    padding: 32px 24px;
+}
+
+.grw-dialog h2 {
+    font-size: 1.35rem;
+    color: var(--blue);
+    margin-right: 16px;
+}
+
+.grw-intro {
+    font-size: 14px;
+    margin: 0 0 16px;
+}
+
+.grw-form label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: var(--ink);
+}
+
+/* display:block above would otherwise override the hidden attribute */
+.grw-form label[hidden] {
+    display: none;
+}
+
+.grw-form input,
+.grw-form select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 10px;
+    font: inherit;
+    font-size: 15px;
+    border: 1px solid var(--line-dk);
+    border-radius: 6px;
+}
+
+.grw-form label.grw-consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 10px 0 18px;
+}
+
+.grw-form .grw-consent input {
+    width: auto;
+    flex: none;
+    margin: 3px 0 0;
+    padding: 0;
+}
+
+.grw-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.grw-form .grw-hp {
+    display: block;
+    width: 1px;
+}
+
+.grw-submit-btn:disabled {
+    opacity: .6;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+}
+
+.grw-privacy-notice {
+    font-size: 12px;
+    margin: 14px 0 0;
+}
+
+.grw-form-message {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.grw-form-message.grw-success {
+    color: var(--green);
+}
+
+.grw-form-message.grw-error {
+    color: #b42318;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px) {
+    .de-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width:640px) {
+    .de-lead {
+        font-size: 1.1rem;
+    }
+
+    .de-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .framework-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card {
+        padding: 28px 20px;
+    }
+
+    .price-amt {
+        font-size: 2.4rem;
+    }
+}
+
+/* "nierenbewussten" can't break, so the title has to fit it on small phones */
+@media (max-width:380px) {
+    #hero h1.hero-split__title {
+        font-size: clamp(1.55rem, 7.4vw, 2.15rem);
+    }
+}

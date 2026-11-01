@@ -1,6 +1,6 @@
 /* =====================================================================
    ABOUT US — page-specific styles
-   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
    sections, .stop-head, .eyebrow, .btn, #hero and [data-reveal] behaviour.
    Everything here is prefixed about- (or scoped to .about-page) so it
    can't leak into the sales funnel.
@@ -111,12 +111,22 @@
     align-items: start;
 }
 
+.about-member__link {
+    display: block;
+    border-radius: 50%;
+}
+
 .about-member__photo {
     width: 104px;
     height: 104px;
     object-fit: cover;
     object-position: center 20%;
     border-radius: 50%;
+    transition: box-shadow .2s ease;
+}
+
+.about-member__link:hover .about-member__photo {
+    box-shadow: 0 0 0 3px var(--orange);
 }
 
 .about-member .about-member__role {

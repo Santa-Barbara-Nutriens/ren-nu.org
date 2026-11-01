@@ -1,6 +1,6 @@
 /* =====================================================================
    THE SCIENCE — page-specific styles
-   Loaded after ren-nu-sales-funnel.css and reuses its tokens, .stop
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
    sections, .stop-head, .eyebrow, .btn and [data-reveal] behaviour.
    Everything here is prefixed sci- (or scoped to .sci-page) so it can't
    leak into the sales funnel.

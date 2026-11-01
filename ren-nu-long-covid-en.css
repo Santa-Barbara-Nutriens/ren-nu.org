@@ -1,0 +1,345 @@
+/* =====================================================================
+   FOR LONG COVID — page-specific styles
+   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   sections, .hero-split, .team-intro, .framework-card, .price-card,
+   .journey-timeline, .faq-accordion, .btn, .hero-wave-divider and
+   [data-reveal] behaviour.
+   Everything here is prefixed lc- (or lcw- for the waitlist form) so it
+   can't leak into the sales funnel.
+   ===================================================================== */
+
+/* ---------- 01 HERO ---------- */
+#hero .eyebrow {
+    margin-top: 6px;
+}
+
+.hero-split__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* ---------- SHARED ---------- */
+/* Same extra room #meet-team gets, so the wave doesn't cover the content */
+.lc-wave-section {
+    padding-bottom: clamp(80px, 9vw, 112px);
+}
+
+/* In-page links land below the sticky header */
+#get-started,
+#studies {
+    scroll-margin-top: 90px;
+}
+
+.lc-head--light h2 {
+    color: var(--paper);
+}
+
+.lc-link {
+    color: var(--orange-dk);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.lc-prose {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* .framework-card's own text colour is too pale for list items on white */
+.lc-panel {
+    max-width: var(--head-max);
+    margin: 0 auto;
+    border: 1px solid var(--line);
+    color: var(--ink);
+}
+
+.lc-panel--wide {
+    max-width: none;
+}
+
+.lc-list {
+    margin: 0;
+}
+
+.lc-list li {
+    font-size: 1rem;
+}
+
+.lc-list--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 32px;
+}
+
+.lc-note {
+    max-width: 820px;
+    margin: 28px auto 0;
+    padding: 18px 22px;
+    background: var(--card);
+    border-left: 5px solid var(--orange);
+    border-radius: 8px;
+}
+
+.lc-note p {
+    margin: 0;
+    color: var(--ink);
+}
+
+/* ---------- 02 INTRO ---------- */
+.lc-intro {
+    grid-template-columns: 1fr 1fr;
+}
+
+.lc-lead {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+/* ---------- 03 WHY THIS PROGRAM EXISTS ---------- */
+.lc-founder {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-bottom: 8px;
+}
+
+.lc-founder figure {
+    margin: 0;
+    text-align: center;
+    font-size: .9rem;
+    color: var(--ink-soft);
+}
+
+.lc-founder img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+/* ---------- 04 PHOTOS ---------- */
+.lc-photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.lc-photos img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* ---------- 06 RATE ---------- */
+.lc-price {
+    margin-bottom: 0;
+}
+
+.lc-price-title {
+    margin: 0 0 14px;
+}
+
+.lc-price-title .price-name,
+.lc-price-title .price-amt {
+    display: block;
+}
+
+/* ---------- 07 STEPS ---------- */
+.lc-steps {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lc-steps::before {
+    left: 17%;
+    right: 17%;
+}
+
+/* ---------- 08 SCIENCE ---------- */
+.lc-studies-intro {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lc-subhead {
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+
+.lc-acc-meta {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--orange-dk);
+}
+
+.lc-acc-body dl {
+    margin: 14px 0 0;
+}
+
+.lc-acc-body dt {
+    margin-top: 12px;
+    font-weight: 600;
+    color: var(--blue-dk);
+}
+
+.lc-acc-body dd {
+    margin: 2px 0 0;
+    color: var(--ink-soft);
+}
+
+.lc-acc-body ul {
+    margin: 6px 0 0;
+    padding-left: 20px;
+}
+
+.lc-acc-body li+li {
+    margin-top: 6px;
+}
+
+.faq-accordion details p.lc-cite {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+}
+
+.lc-cite a {
+    word-break: break-word;
+}
+
+/* ---------- 09 MORE INFORMATION ---------- */
+.lc-card {
+    border: 1px solid var(--line);
+    justify-content: space-between;
+}
+
+.lc-card .btn {
+    align-self: center;
+}
+
+/* ---------- WAITLIST POPUP ---------- */
+/* opacity alone leaves the closed form reachable with the Tab key */
+.sgpb-main-popup-data-container-850 {
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s;
+}
+
+/* visibility must flip at once on open, or the first field can't take focus */
+.sgpb-main-popup-data-container-850.sgpb-popup-open {
+    visibility: visible;
+    transition: opacity .25s ease, visibility 0s;
+}
+
+.lcw-dialog {
+    padding: 32px 24px;
+}
+
+.lcw-dialog h2 {
+    font-size: 1.35rem;
+    color: var(--blue);
+    margin-right: 16px;
+}
+
+.lcw-form label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: var(--ink);
+}
+
+/* display:block above would otherwise override the hidden attribute */
+.lcw-form label[hidden] {
+    display: none;
+}
+
+.lcw-form input,
+.lcw-form select {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 8px 10px;
+    font: inherit;
+    font-size: 15px;
+    border: 1px solid var(--line-dk);
+    border-radius: 6px;
+}
+
+.lcw-form .lcw-hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.lcw-submit-btn:disabled {
+    opacity: .6;
+    cursor: default;
+    transform: none;
+    box-shadow: none;
+}
+
+.lcw-privacy-notice {
+    font-size: 12px;
+    margin: 4px 0 18px;
+}
+
+.lcw-form-message {
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.lcw-form-message.lcw-success {
+    color: var(--green);
+}
+
+.lcw-form-message.lcw-error {
+    color: #b42318;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:900px) {
+    .lc-intro {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .lc-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:640px) {
+    .lc-lead {
+        font-size: 1.05rem;
+    }
+
+    .lc-list--split {
+        grid-template-columns: 1fr;
+    }
+
+    .lc-founder {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .lc-founder figure {
+        max-width: 180px;
+    }
+
+    .lc-photos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .price-card {
+        padding: 28px 20px;
+    }
+}
