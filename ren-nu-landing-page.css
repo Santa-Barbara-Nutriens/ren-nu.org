@@ -14,9 +14,9 @@
     --rn-brand-blue: #186079;
     --rn-brand-coral: coral;
 
-    --rn-pkd-bg: #F6D9CE;
-    --rn-pkd-icon: #D9694B;
-    --rn-pkd-btn: #D9694B;
+    --rn-pkd-bg: #DCEFDD;
+    --rn-pkd-icon: #479D58;
+    --rn-pkd-btn: #2E7D4A;
 
     --rn-ckd-bg: #DCE9EA;
     --rn-ckd-icon: #3E7078;
@@ -218,8 +218,8 @@
     background: var(--rn-mental-btn);
 }
 
-.divider.red {
-    background: red;
+.divider.green {
+    background: #479d58;
     /* Farbe */
 }
 
@@ -252,7 +252,7 @@
 @media (max-width: 780px) {
     .rn-hero {
         aspect-ratio: auto;
-        padding: 62vw 1rem 2rem;
+        padding: 0 1rem 2rem;
     }
 
     .rn-hero-background {
