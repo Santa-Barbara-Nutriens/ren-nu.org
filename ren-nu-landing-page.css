@@ -129,6 +129,45 @@
     transform: scaleX(0.85);
 }
 
+/* hover/focus tooltip spelling out an abbreviation; text comes from data-tip */
+.rn-term {
+    position: relative;
+    border-bottom: 2px dotted currentColor;
+    cursor: help;
+}
+
+.rn-term::after {
+    content: attr(data-tip);
+    position: absolute;
+    bottom: calc(100% + 0.4rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 12rem;
+    padding: .4em .7em;
+    border-radius: 6px;
+    background: var(--rn-ink);
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s;
+    z-index: 2;
+}
+
+.rn-term:hover::after,
+.rn-term:focus::after {
+    opacity: 1;
+}
+
+/* no focus ring after a tap/click, but keep it for keyboard users */
+.rn-term:focus:not(:focus-visible) {
+    outline: none;
+}
+
 /* negative top margin pulls it closer to the label than the card's flex gap */
 .rn-card-lang {
     font-size: 1rem;
