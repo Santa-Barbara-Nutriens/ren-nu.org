@@ -229,6 +229,24 @@
         });
     }
 
+    /* ===================== HEADER LOGO → LAST HOME PAGE ===================== */
+    // Pages with <body data-home> (landing + subject pages) remember themselves;
+    // shared sub pages point their header logo back to that page. Without a
+    // stored value (direct entry, storage blocked) the logo keeps its href.
+    var HOME_KEY = 'rennuHome';
+
+    function initHomeLogo() {
+        try {
+            if (document.body.hasAttribute('data-home')) {
+                sessionStorage.setItem(HOME_KEY, location.pathname);
+                return;
+            }
+            var home = sessionStorage.getItem(HOME_KEY);
+            var logo = document.querySelector('#siteHeader .logo');
+            if (home && logo) logo.setAttribute('href', home);
+        } catch (e) { /* storage unavailable — keep default href */ }
+    }
+
     /* ===================== ACCOUNT MENU TOGGLE ===================== */
     function initAccountMenu() {
         var toggle = document.getElementById('accountToggle');
@@ -566,6 +584,7 @@
         initReveal();
         initJumpNav();
         initMobileNav();
+        initHomeLogo();
         initAccountMenu();
         initTeamVideoStart();
         initPlaylistRotationDelay();
