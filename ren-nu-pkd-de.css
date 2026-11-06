@@ -1,23 +1,11 @@
 /* =====================================================================
    PKD DEUTSCH — page-specific styles
-   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   Loaded after ren-nu-common.css and reuses its tokens, .stop
    sections, .hero-split, .team-intro, .framework-card, .price-card,
    .btn, .hero-wave-divider and [data-reveal] behaviour.
    Everything here is prefixed de- (or grw- for the waitlist form) so it
    can't leak into the sales funnel.
    ===================================================================== */
-
-/* ---------- 01 HERO ---------- */
-#hero .eyebrow {
-    margin-top: 6px;
-}
-
-.hero-split__ctas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 24px;
-}
 
 /* ---------- SHARED ---------- */
 /* Same extra room #meet-team gets, so the wave doesn't cover the content */
@@ -102,25 +90,13 @@
 }
 
 /* ---------- WAITLIST POPUP ---------- */
-/* opacity alone leaves the closed form reachable with the Tab key */
-.sgpb-main-popup-data-container-850 {
-    visibility: hidden;
-    transition: opacity .25s ease, visibility .25s;
-}
-
-/* visibility must flip at once on open, or the first field can't take focus */
-.sgpb-main-popup-data-container-850.sgpb-popup-open {
-    visibility: visible;
-    transition: opacity .25s ease, visibility 0s;
-}
-
 .grw-dialog {
     padding: 32px 24px;
 }
 
 .grw-dialog h2 {
     font-size: 1.35rem;
-    color: var(--blue);
+    color: var(--sbn-blue);
     margin-right: 16px;
 }
 
@@ -227,10 +203,6 @@
 
     .framework-grid {
         grid-template-columns: 1fr;
-    }
-
-    .price-card {
-        padding: 28px 20px;
     }
 
     .price-amt {

@@ -5,34 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ren-Nu: your roadmap to metabolic health</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="ren-nu-pkd-en.css">
+  <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="ren-nu-common.css">
   <link rel="stylesheet" href="ren-nu-landing-page.css">
+  <script src="ren-nu-pkd-en.js" defer></script>
 </head>
 
-<body>
-
-  <!-- ============ STICKY HEADER / JUMP NAV ============ -->
+<body data-home>
 
   <!-- ============ STICKY HEADER / JUMP NAV ============ -->
   <!-- <header id="siteHeader">
     <div class="wrap nav-inner">
-      <a href="ren-nu-landing-page.html" class="logo"><img src="Images/Ren-Nu Logo.png" alt="Ren-Nu™"></a>
+      <a href="ren-nu-landing-page.html" class="logo"><img src="Images/optimized/ren-nu-logo.webp" width="320" height="154" alt="Ren-Nu™"></a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="jump" id="jumpNav">
-        <a href="ren-nu-the-science.html" data-jump>The Science</a>
-        <a href="ren-nu-for-clinicians.html" data-jump>For Clinicians</a>
+        <a href="ren-nu-the-science-en.html" data-jump>The Science</a>
+        <a href="ren-nu-for-clinicians-en.html" data-jump>For Clinicians</a>
         <a href="ren-nu-about-us.html" data-jump>About Us</a>
-        <a href="ren-nu-resources.html" data-jump>Resources</a>
-        <a href="ren-nu-pricing.html" data-jump>Pricing</a>
-        <a href="ren-nu-market.html" data-jump>Market</a>
-        <a href="ren-nu-faq.html" data-jump>FAQs</a>
+        <a href="ren-nu-resources-en.html" data-jump>Resources</a>
+        <a href="ren-nu-pricing-en.html" data-jump>Pricing</a>
+        <a href="ren-nu-market-en.html" data-jump>Market</a>
+        <a href="ren-nu-faq-en.html" data-jump>FAQs</a>
       </nav>
       <div class="nav-ctas">
         <a href="#" class="btn btn-outline btn-sm">Book a Call</a>
@@ -55,8 +50,8 @@
         <div class="rn-cards">
           <article class="rn-card rn-card--pkd">
             <!-- <img class="rn-icon" src="Images/Icon_kidney_green_transparent.png" alt="" aria-hidden="true"> -->
-            <p class="rn-card-lang">For</p>
             <!-- <p class="rn-card-label"><span class="rn-term" data-tip="PKD" tabindex="0">Polycystic Kidney Disease</span></p> -->
+            <p class="rn-card-lang">For</p>
             <p class="rn-card-label">Polycystic Kidney Disease</p>
             <p class="rn-card-lang">English</p>
             <hr class="divider orange">
@@ -68,10 +63,10 @@
             <p class="rn-card-lang">Für</p>
             <!-- <p class="rn-card-label" lang="de"><span class="rn-term" data-tip="Polyzystische Nierenerkrankung"
                 tabindex="0">Zystennieren</span></p><br>&nbsp; -->
-            <p class="rn-card-label" lang="de">Zystennieren<br>&nbsp;</p>
+            <p class="rn-card-label" lang="de">Zystennieren</p>
             <p class="rn-card-lang" lang="de">Deutsch</p>
             <hr class="divider orange">
-            <a class="rn-btn" href="ren-nu-pkd-de.html">Jetzt beitreten &#x2794;</a>
+            <a class="rn-btn" href="ren-nu-pkd-de.html">Zur Warteliste &#x2794;</a>
           </article>
 
           <article class="rn-card rn-card--ckd">
@@ -81,16 +76,16 @@
             <p class="rn-card-label">Chronic Kidney Disease</p>
             <p class="rn-card-lang">English</p>
             <hr class="divider orange">
-            <a class="rn-btn" href="ren-nu-ckd-en.html">Join Now &#x2794;</a>
+            <a class="rn-btn" href="ren-nu-ckd-en.html">Join Waitlist &#x2794;</a>
           </article>
 
           <article class="rn-card rn-card--covid">
             <!-- <img class="rn-icon" src="Images/Icon_lungs_red_transparent.png" alt="" aria-hidden="true"> -->
             <p class="rn-card-lang">For</p>
-            <p class="rn-card-label">Long COVID<br>&nbsp;</p>
+            <p class="rn-card-label">Long COVID</p>
             <p class="rn-card-lang">English</p>
             <hr class="divider orange">
-            <a class="rn-btn" href="ren-nu-long-covid-en.html">Join Now &#x2794;</a>
+            <a class="rn-btn" href="ren-nu-long-covid-en.html">Join Waitlist &#x2794;</a>
           </article>
 
           <!-- <article class="rn-card rn-card--mental">
@@ -153,8 +148,6 @@
     </div>
   </footer>
 
-  <script src="ren-nu-pkd-en.js"></script>
-  <script src="WindMill_socet.ts"></script>
 
   <div class="sgpb-main-popup-data-container-850">
     <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-850" data-id="850"

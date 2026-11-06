@@ -1,6 +1,6 @@
 /* =====================================================================
    ABOUT US — page-specific styles
-   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   Loaded after ren-nu-common.css and reuses its tokens, .stop
    sections, .stop-head, .eyebrow, .btn, #hero and [data-reveal] behaviour.
    Everything here is prefixed about- (or scoped to .about-page) so it
    can't leak into the sales funnel.
@@ -68,7 +68,7 @@
 }
 
 .about-video-thumb:focus-visible {
-    outline: 3px solid var(--blue);
+    outline: 3px solid var(--sbn-blue);
     outline-offset: 3px;
 }
 
@@ -84,7 +84,7 @@
     width: clamp(40px, 13%, 56px);
     aspect-ratio: 1;
     border-radius: 50%;
-    background: var(--orange);
+    background: var(--sbn-orange);
     box-shadow: 0 6px 16px rgba(30, 38, 36, .2);
     transition: background .15s ease;
 }
@@ -135,7 +135,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background: var(--orange);
+    background: var(--sbn-orange);
     color: var(--paper);
     font-weight: 700;
 }
@@ -169,7 +169,7 @@
 }
 
 .about-member__link:hover .about-member__photo {
-    box-shadow: 0 0 0 3px var(--orange);
+    box-shadow: 0 0 0 3px var(--sbn-orange);
 }
 
 .about-member .about-member__role {

@@ -120,6 +120,10 @@
 }
 
 .rn-card-label {
+    /* cards in a row share one height; the label takes the spare space so the
+       language line, divider and button sit at the same height in every card,
+       however many lines the disease name wraps to */
+    flex: 1 0 auto;
     font-weight: 600;
     font-size: 1.80rem;
     text-align: center;

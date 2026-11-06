@@ -1,6 +1,6 @@
 /* =====================================================================
    MARKET — page-specific styles
-   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   Loaded after ren-nu-common.css and reuses its tokens, .stop
    sections, .page-hero, .framework-card, .btn, .hero-wave-divider and
    [data-reveal] behaviour.
    Everything here is prefixed mkt- (or scoped to .mkt-page) so it
@@ -13,7 +13,7 @@
     margin: 22px auto 0;
     font-size: clamp(1.05rem, 1.4vw, 1.2rem);
     line-height: 1.5;
-    color: var(--blue);
+    color: var(--sbn-blue);
 }
 
 /* Affiliate disclosure: keep it above the first product link */
@@ -51,6 +51,8 @@
 .mkt-card__img {
     display: block;
     width: 100%;
+    /* the <img> width/height attributes only reserve space; the ratio comes from here */
+    height: auto;
     aspect-ratio: 4 / 3;
     object-fit: contain;
     border-radius: 0;

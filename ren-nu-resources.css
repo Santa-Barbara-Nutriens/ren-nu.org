@@ -1,6 +1,6 @@
 /* =====================================================================
    RESOURCES — page-specific styles
-   Loaded after ren-nu-pkd-en.css and reuses its tokens, .stop
+   Loaded after ren-nu-common.css and reuses its tokens, .stop
    sections, .page-hero, .hero-wave-divider and [data-reveal] behaviour.
    Everything here is prefixed res- (or scoped to .res-page) so it
    can't leak into the sales funnel.
@@ -29,7 +29,7 @@
 }
 
 .res-filter:hover {
-    border-color: var(--orange);
+    border-color: var(--sbn-orange);
 }
 
 .res-filter[aria-pressed="true"] {
@@ -62,6 +62,8 @@
 .res-card__img {
     display: block;
     width: 100%;
+    /* the <img> width/height attributes only reserve space; the ratio comes from here */
+    height: auto;
     aspect-ratio: 2 / 1;
     object-fit: cover;
     border-radius: 0;
