@@ -184,6 +184,15 @@
     color: var(--rn-brand-blue);
 }
 
+/* negative top margin pulls it closer to the label than the card's flex gap */
+.rn-card-reminder {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: -0.7rem 0 0;
+    color: var(--sbn-orange);
+}
+
 /* flex + align-items:center shrinks an <hr> to 0 width, so give it one */
 .rn-card .divider {
     width: 30%;
