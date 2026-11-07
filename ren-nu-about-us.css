@@ -118,26 +118,23 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    background: var(--paper);
+    background: var(--blue-dk);
     border-radius: 14px;
     padding: 22px 16px;
     text-align: center;
     font-weight: 600;
     font-size: .95rem;
     line-height: 1.35;
-    color: var(--blue-dk);
+    color: var(--paper-alt);
 }
 
-.about-mission li::before {
-    content: "\2713";
-    display: grid;
-    place-items: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--sbn-orange);
-    color: var(--paper);
-    font-weight: 700;
+/* The icons have different aspect ratios, so they share one box and
+   are scaled to fit it; that keeps the labels lined up across cards */
+.about-mission__icon {
+    width: 64px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 /* ---------- 03 TEAM ---------- */
