@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 6 168 104" fill="none" stroke="#355366" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+  <title>Gruppe</title>
+  <!-- Köpfe -->
+  <circle cx="94" cy="32" r="17"/>
+  <circle cx="46" cy="43" r="14.5"/>
+  <circle cx="142" cy="43" r="14.5"/>
+  <!-- Mittlere Person -->
+  <path d="M58 104 V88 A36 26 0 0 1 130 88 V104 Z"/>
+  <!-- Seitliche Personen -->
+  <path d="M19 104 V90 A26 21 0 0 1 45 69 H61"/>
+  <path d="M169 104 V90 A26 21 0 0 0 143 69 H127"/>
+</svg>

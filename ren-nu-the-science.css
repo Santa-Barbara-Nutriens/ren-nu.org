@@ -877,11 +877,15 @@
     font-family: var(--font-mono);
     font-size: .78rem;
     letter-spacing: .06em;
-    color: var(--ink-soft);
+    color: var(--sbn-blue);
+    border-bottom: 1.5px solid transparent;
+    transition: color .15s ease, border-color .15s ease;
 }
 
-.sci-study__id:hover {
+.sci-study__id:hover,
+.sci-study__id:focus-visible {
     color: var(--orange-dk);
+    border-bottom-color: currentColor;
 }
 
 .sci-page #commitment .sci-study-foot {
@@ -925,7 +929,10 @@
         text-align: left;
     }
 
+    /* single column: show the news carousel above the headline
+       (visual order only, the HTML order stays copy first) */
     .sci-news {
+        order: -1;
         max-width: 600px;
         width: 100%;
         margin: 0 auto;

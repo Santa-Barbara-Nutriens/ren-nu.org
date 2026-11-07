@@ -1,0 +1,60 @@
+/* =====================================================================
+   PRICING — page-specific styles
+   Loaded after ren-nu-common.css and reuses its tokens, .stop
+   sections, .page-hero, .section-divider-band, the .rn-pricing-* /
+   .rn-comparison blocks and [data-reveal] behaviour.
+   Everything here is prefixed pr- (or scoped to .pr-page) so it can't
+   leak into the sales funnel.
+   ===================================================================== */
+
+/* The .rn-* blocks read these tokens, but the shared sheet only defines
+   them on .rn-hero, which this page doesn't use. */
+.pr-page {
+    --rn-paper: #f8f5f1;
+    --rn-ink: #1e292b;
+    --rn-muted: #60717d;
+    --rn-accent: #f05f50;
+    --rn-accent-soft: #fff0ed;
+    --rn-green: #479d58;
+}
+
+/* ---------- 01 HERO ---------- */
+/* On its own line, the orange part stays clear of the .page-hero circle */
+.pr-page .page-hero__title .orange {
+    display: block;
+}
+
+.pr-intro {
+    max-width: 34em;
+    margin: 22px auto 0;
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.5;
+    color: var(--sbn-blue);
+}
+
+.pr-intro__eyebrow {
+    display: block;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: .12em;
+    color: var(--orange-dk);
+}
+
+/* ---------- 02 PAYMENT OPTIONS / 03 VALUE ---------- */
+/* Sits inside .wrap now, which already supplies the side gutter */
+.pr-page .rn-pricing-content {
+    width: 100%;
+    max-width: 960px;
+}
+
+/* First block in its own section, so the stacked-layout gap goes */
+.pr-page .rn-comparison {
+    margin-top: 0;
+}
+
+.pr-cta {
+    margin-top: 32px;
+    text-align: center;
+}
