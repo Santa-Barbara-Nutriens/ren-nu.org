@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 70" width="120" height="70" fill="none" stroke="#F47B4F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- center person -->
+  <circle cx="60" cy="14" r="10"/>
+  <path d="M38 64 L38 52 C38 40 48 32 60 32 C72 32 82 40 82 52 L82 64 Z"/>
+  <!-- left person -->
+  <circle cx="24" cy="24" r="8"/>
+  <path d="M8 62 C8 48 16 40 26 40 C30 40 34 41 37 43"/>
+  <!-- right person -->
+  <circle cx="96" cy="24" r="8"/>
+  <path d="M112 62 C112 48 104 40 94 40 C90 40 86 41 83 43"/>
+</svg>
