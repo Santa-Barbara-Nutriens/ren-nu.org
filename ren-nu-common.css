@@ -1709,7 +1709,7 @@ footer {
 }
 
 /* Media box keeps the image's own ratio
-   (Images/optimized/Hero_santa_barbara1.webp = 1072x1024, from sbn-hero-image.png),
+   (images/optimized/hero-santa-barbara1.webp = 1072x1024, from sbn-hero-image.png),
    so the section height scales with the viewport width and the image is
    shown (almost) uncropped at every breakpoint. */
 #hero .hero-split__media {
