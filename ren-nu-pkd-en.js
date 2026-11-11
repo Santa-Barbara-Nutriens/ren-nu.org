@@ -59,6 +59,42 @@
         });
     }
 
+    /* ===================== SHORT PREVIEWS (Section 05) ===================== */
+    // Shows each short's poster image as a clean preview: native controls are
+    // hidden and nothing is downloaded until the visitor clicks the card, then
+    // the video starts with its controls. Starting one short pauses the others.
+    // Without JS the videos keep their native controls and still work.
+    function initShortPreviews() {
+        var videos = [];
+        document.querySelectorAll('.short-card--video').forEach(function (card) {
+            var video = card.querySelector('video');
+            if (!video || !video.getAttribute('poster')) return;
+            videos.push(video);
+            video.removeAttribute('data-lazy-video');
+            video.preload = 'none';
+            video.controls = false;
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'short-card__preview-play';
+            btn.setAttribute('aria-label', 'Play video');
+            card.appendChild(btn);
+
+            btn.addEventListener('click', function () {
+                btn.remove();
+                video.controls = true;
+                var attempt = video.play();
+                if (attempt && typeof attempt.catch === 'function') attempt.catch(function () {});
+            });
+
+            video.addEventListener('play', function () {
+                videos.forEach(function (other) {
+                    if (other !== video && !other.paused) other.pause();
+                });
+            });
+        });
+    }
+
     /* ===================== LAZY VIDEOS ===================== */
     // preload="none" keeps videos from fetching anything at page load; once
     // one nears the screen it loads its metadata and first frame as usual.
@@ -86,6 +122,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         initShortsRow();
         initTeamVideoStart();
+        initShortPreviews();
         initLazyVideos();
     });
 })();

@@ -1009,6 +1009,55 @@
     bottom: auto;
 }
 
+/* poster preview: until clicked, each short shows its poster image full-bleed
+   (no native control bar on top) with a play button in the bottom-right
+   corner; the whole card is clickable. Added/removed by initShortPreviews(). */
+.short-card__preview-play {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.short-card__preview-play::before {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(12, 16, 15, .6);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+    transition: background .2s ease, transform .2s ease;
+}
+
+.short-card__preview-play::after {
+    content: "";
+    position: absolute;
+    right: 31px;
+    bottom: 30px;
+    border-style: solid;
+    border-width: 10px 0 10px 16px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.short-card__preview-play:hover::before,
+.short-card__preview-play:focus-visible::before {
+    background: var(--sbn-orange);
+    transform: scale(1.08);
+}
+
+.short-card__preview-play:focus-visible {
+    outline: 3px solid var(--sbn-orange);
+    outline-offset: -3px;
+}
+
 .short-card__play {
     position: absolute;
     top: 14px;
