@@ -1,29 +1,128 @@
 /* =====================================================================
-   PKD DEUTSCH — waitlist form
-   Loaded after ren-nu-common.js, whose initInterestPopup() opens and
-   closes the popup and whose RenNu.initWaitlistForm() runs the form.
-   There is no #rennu-prefill-form on this page, so German signups stay
-   out of the English interest list.
+   PKD GERMAN — code used only by ren-nu-pkd-de.html
+   Loaded after ren-nu-common.js.
    ===================================================================== */
 (function () {
     'use strict';
 
-    var grwConfig = {
-        ajaxUrl: 'https://ren-nu.org/wp-admin/admin-ajax.php',
-        action: 'german_rennu_waitlist_submit',
-        otherValue: 'Sonstiges',
-        messages: {
-            success: 'Vielen Dank für dein Interesse! Du stehst jetzt auf unserer Warteliste für Ren-Nu auf Deutsch. Eine Bestätigung ist per E-Mail auf dem Weg zu dir. Falls du sie nicht findest, schau bitte auch in deinem Spam-Ordner nach. Wir melden uns, sobald es Neuigkeiten zum Start und zur Anmeldung gibt.',
-            required: 'Bitte fülle alle Pflichtfelder aus.',
-            other: 'Bitte gib kurz an, wie du auf uns aufmerksam geworden bist.',
-            consent: 'Bitte bestätige, dass wir dich per E-Mail informieren dürfen.',
-            generic: 'Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal.',
-            invalid: 'Bitte überprüfe deine Angaben und versuche es erneut.',
-            unavailable: 'Die Anmeldung zur Warteliste ist gerade nicht möglich. Bitte schreib uns an info@ren-nu.org.'
+    /* ===================== SHORTS ROW (Section 11) ===================== */
+    function initShortsRow() {
+        document.querySelectorAll('[data-shorts-track]').forEach(function (track) {
+            var row = track.closest('.shorts-row');
+            var prevBtn = row.querySelector('[data-shorts-prev]');
+            var nextBtn = row.querySelector('[data-shorts-next]');
+
+            function scrollByCard(direction) {
+                var card = track.querySelector('.short-card');
+                var amount = card ? card.getBoundingClientRect().width + 20 : track.clientWidth * 0.8;
+                track.scrollBy({ left: amount * direction, behavior: 'smooth' });
+            }
+
+            if (prevBtn) prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+            if (nextBtn) nextBtn.addEventListener('click', function () { scrollByCard(1); });
+        });
+    }
+
+    /* ===================== TEAM VIDEO START OFFSET ===================== */
+    function initTeamVideoStart() {
+        var video = document.querySelector('.team-video[data-start-time]');
+        if (!video) return;
+
+        var startTime = parseFloat(video.getAttribute('data-start-time'));
+        if (isNaN(startTime) || startTime < 0) return;
+
+        video.addEventListener('loadedmetadata', function () {
+            video.currentTime = startTime;
+        });
+
+        video.addEventListener('canplay', function handleCanPlay() {
+            video.removeEventListener('canplay', handleCanPlay);
+
+            var wasMuted = video.muted;
+            video.muted = true;
+
+            var playAttempt = video.play();
+            if (playAttempt && typeof playAttempt.then === 'function') {
+                playAttempt.then(function () {
+                    video.pause();
+                    video.currentTime = startTime;
+                    video.muted = wasMuted;
+                }).catch(function () {
+                    video.currentTime = startTime;
+                    video.muted = wasMuted;
+                });
+            } else {
+                video.pause();
+                video.currentTime = startTime;
+                video.muted = wasMuted;
+            }
+        });
+    }
+
+    /* ===================== SHORT PREVIEWS (Section 05) ===================== */
+    // Shows each short's poster image as a clean preview: native controls are
+    // hidden and nothing is downloaded until the visitor clicks the card, then
+    // the video starts with its controls. Starting one short pauses the others.
+    // Without JS the videos keep their native controls and still work.
+    function initShortPreviews() {
+        var videos = [];
+        document.querySelectorAll('.short-card--video').forEach(function (card) {
+            var video = card.querySelector('video');
+            if (!video || !video.getAttribute('poster')) return;
+            videos.push(video);
+            video.removeAttribute('data-lazy-video');
+            video.preload = 'none';
+            video.controls = false;
+
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'short-card__preview-play';
+            btn.setAttribute('aria-label', 'Video abspielen');
+            card.appendChild(btn);
+
+            btn.addEventListener('click', function () {
+                btn.remove();
+                video.controls = true;
+                var attempt = video.play();
+                if (attempt && typeof attempt.catch === 'function') attempt.catch(function () {});
+            });
+
+            video.addEventListener('play', function () {
+                videos.forEach(function (other) {
+                    if (other !== video && !other.paused) other.pause();
+                });
+            });
+        });
+    }
+
+    /* ===================== LAZY VIDEOS ===================== */
+    // preload="none" keeps videos from fetching anything at page load; once
+    // one nears the screen it loads its metadata and first frame as usual.
+    function initLazyVideos() {
+        var videos = document.querySelectorAll('video[data-lazy-video]');
+        function load(video) {
+            video.preload = 'metadata';
+            video.load();
         }
-    };
+        if (!('IntersectionObserver' in window)) {
+            videos.forEach(load);
+            return;
+        }
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    observer.unobserve(entry.target);
+                    load(entry.target);
+                }
+            });
+        }, { rootMargin: '300px 0px' });
+        videos.forEach(function (v) { observer.observe(v); });
+    }
 
     document.addEventListener('DOMContentLoaded', function () {
-        window.RenNu.initWaitlistForm('grw', grwConfig);
+        initShortsRow();
+        initTeamVideoStart();
+        initShortPreviews();
+        initLazyVideos();
     });
 })();

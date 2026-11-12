@@ -433,9 +433,19 @@
 
 .evidence-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 56px 32px;
     margin-bottom: 40px;
+}
+
+/* Six tracks, each item spans two: three per row, and the 4th item starts
+   at track 2 so a two-item second row sits centred */
+.evidence-grid > .evidence-item {
+    grid-column: span 2;
+}
+
+.evidence-grid > .evidence-item:nth-child(4):nth-last-child(2) {
+    grid-column: 2 / span 2;
 }
 
 .evidence-item {
@@ -1190,9 +1200,22 @@
     }
 
     .icon-grid,
-    .stat-row,
-    .evidence-grid {
+    .stat-row {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Two per row; a single leftover last item is centred */
+    .evidence-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .evidence-grid > .evidence-item,
+    .evidence-grid > .evidence-item:nth-child(4):nth-last-child(2) {
+        grid-column: span 2;
+    }
+
+    .evidence-grid > .evidence-item:last-child:nth-child(odd) {
+        grid-column: 2 / span 2;
     }
 }
 
@@ -1209,6 +1232,12 @@
     .stat-row,
     .evidence-grid {
         grid-template-columns: 1fr;
+    }
+
+    .evidence-grid > .evidence-item,
+    .evidence-grid > .evidence-item:nth-child(4):nth-last-child(2),
+    .evidence-grid > .evidence-item:last-child:nth-child(odd) {
+        grid-column: auto;
     }
 
     .evidence-item {

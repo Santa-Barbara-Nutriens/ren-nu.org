@@ -526,11 +526,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
 }
 
+/* Tighter horizontal padding + no label wrapping so all seven buttons fit
+   one row in the 1064px content width; still wraps on narrower screens */
 .sci-filter__btn {
-    padding: 9px 18px;
+    padding: 9px 14px;
+    white-space: nowrap;
     background: transparent;
     border: 1.5px solid rgba(255, 255, 255, .6);
     border-radius: 22px;
