@@ -21,6 +21,14 @@
     align-self: center;
 }
 
+@media (min-width:641px) {
+    #clinician-resources .framework-grid > .clin-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 10px);
+        justify-self: center;
+    }
+}
+
 /* The navy section runs straight into the navy footer, so mark the seam */
 .clin-page footer {
     border-top: 1px solid rgba(255, 255, 255, .14);
