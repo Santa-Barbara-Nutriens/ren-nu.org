@@ -22,7 +22,8 @@
 }
 
 @media (min-width:641px) {
-    #clinician-resources .framework-grid > .clin-card:last-child {
+    /* two per row; a lone card in the last row (odd count) is centered */
+    #clinician-resources .framework-grid > .clin-card:last-child:nth-child(odd) {
         grid-column: 1 / -1;
         width: calc(50% - 10px);
         justify-self: center;

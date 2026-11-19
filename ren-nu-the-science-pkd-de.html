@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Wissenschaft — Ren-Nu</title>
+    <meta name="description"
+        content="Die Forschung hinter Ren-Nu: eine nierenschonende, kohlenhydratarme ketogene Ernährung und KetoCitra®, die auf das gestörte Stoffwechselgleichgewicht und renale Mikrokristalle bei der polyzystischen Nierenerkrankung (PKD) abzielen.">
+    <link rel="preload" href="fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="ren-nu-common.css">
+    <link rel="stylesheet" href="ren-nu-the-science.css">
+    <script src="ren-nu-common.js" defer></script>
+    <script src="ren-nu-the-science.js" defer></script>
+</head>
+
+<body class="sci-page">
+    <!-- ============ STICKY HEADER / JUMP NAV ============ -->
+    <header id="siteHeader">
+        <div class="wrap nav-inner">
+            <a href="ren-nu-landing-page.html" class="logo"><img src="images/optimized/ren-nu-logo.webp" width="320"
+                    height="154" alt="Ren-Nu"></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Navigation ein- und ausblenden" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="jump" id="jumpNav">
+                <a href="ren-nu-the-science-pkd-de.html" class="active" data-jump>Wissenschaft</a>
+                <a href="ren-nu-for-clinicians-pkd-de.html" data-jump>med. Fachkräfte</a>
+                <a href="ren-nu-about-us-pkd-de.html" data-jump>Über uns</a>
+                <a href="ren-nu-resources-pkd-de.html" data-jump>Ressourcen</a>
+                <a href="ren-nu-pricing-pkd-de.html" data-jump>Preise</a>
+                <a href="ren-nu-market-pkd-de.html" data-jump>Marktplatz</a>
+                <a href="ren-nu-faq-pkd-de.html" data-jump>FAQ</a>
+            </nav>
+            <div class="nav-ctas">
+                <!-- <a href="#" class="btn btn-outline btn-sm">Gespräch buchen</a> -->
+                <a href="#" class="btn btn-primary btn-sm sg-popup-id-850">Warteliste</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- header NAVIGATION End -->
+
+        <!-- CONTENT WRAPPER START -->
+
+        <!-- ============ SECTION 1 — HERO ============ -->
+
+        <section class="stop alt sci-hero" id="sci-hero">
+            <div class="wrap">
+                <div class="sci-hero__grid">
+                    <div class="sci-hero__copy" data-reveal>
+                        <!-- <span class="eyebrow">The science behind Ren-Nu</span> -->
+                        <h1 class="sci-hero__title">Wissenschaftlich fundierte Ernährung bei <span
+                                class="orange">Nieren-Erkrankungen.</span></h1>
+                        <p class="sci-hero__sub">Ren-Nu™ verbindet forschungsbasierte Ernährungs- und
+                            Lebensstilschulung, um die Nierengesundheit, das Stoffwechselwohl und die Lebensqualität zu
+                            unterstützen.</p>
+                        <div class="sci-hero__ctas">
+                            <a href="#research" class="btn btn-primary">Zur Forschung</a>
+                            <!-- <a href="#" class="btn btn-outline sg-popup-id-850">Bewerben</a> -->
+                        </div>
+                        <!-- <div class="sci-hero__trust">
+                            <img src="images/icon_scientists.svg" alt="" aria-hidden="true">
+                            <p>Developed by researchers, clinicians &amp; patients
+                                <span>Grounded in peer-reviewed science and real participant outcomes.</span>
+                            </p>
+                        </div> -->
+                    </div>
+                    <aside class="sci-news" data-reveal data-carousel aria-roledescription="carousel"
+                        aria-label="Aktuelles von Ren-Nu">
+                        <span class="sci-news__label">Aktuelles von Ren-Nu</span>
+                        <div class="sci-news__track">
+                            <!-- NEWS FEED: each <article> is one news item, shown in this order. To add one,
+                                 copy a whole <article> block and change its image, tag, title, text and link.
+                                 To remove one, delete its block. Dots and buttons update by themselves, and
+                                 the buttons disappear when only one item is left. -->
+                            <article class="carousel-slide">
+                                <img class="sci-news__img" src="images/optimized/community-event2026.webp" width="1100"
+                                    height="820" loading="lazy" decoding="async" alt="Community-Veranstaltung 2026">
+                                <span class="sci-news__tag">Live-Community-Q&amp;A</span>
+                                <div class="sci-news__body">
+                                    <h2 class="sci-news__title">Gemeinsam durch die Feiertage</h2>
+                                    <p class="sci-news__text">Ernährung, Traditionen und Gespräche rund um die
+                                        polyzystische Nierenerkrankung.</p>
+                                    <p class="sci-news__date">3. Dezember 2026 &bull; 11:00 Uhr PST / 14:00 Uhr EST</p>
+                                    <p class="sci-news__text">Live auf Zoom. Bringen Sie gern ein Familienmitglied oder
+                                        eine Freundin bzw. einen Freund mit.</p>
+                                    <a href="#" class="sci-news__link">Mehr erfahren ↗</a>
+                                </div>
+                            </article>
+
+                            <!-- <article class="carousel-slide active">
+                                <img class="sci-news__img" src="images/optimized/team-conference-photo.webp"
+                                    width="1100" height="825" fetchpriority="high"
+                                    alt="The Santa Barbara Nutrients team at their conference booth">
+                                <span class="sci-news__tag">Conference recap</span>
+                                <div class="sci-news__body">
+                                    <h2 class="sci-news__title">SBN at ASN: highlights &amp; takeaways</h2>
+                                    <p class="sci-news__text">Explore the conversations and research shaping the
+                                        future of kidney health.</p>
+                                    <a href="#" class="sci-news__link">Read the recap ↗</a>
+                                </div>
+                            </article> -->
+                            <!-- <article class="carousel-slide">
+                                <img class="sci-news__img" src="images/optimized/pkd-team.webp" width="1400"
+                                    height="699" loading="lazy" decoding="async" alt="">
+                                <span class="sci-news__tag">Category</span>
+                                <div class="sci-news__body">
+                                    <h2 class="sci-news__title">Your headline here</h2>
+                                    <p class="sci-news__text">One or two sentences about this news item.</p>
+                                    <a href="#" class="sci-news__link">Mehr erfahren ↗</a>
+                                </div>
+                            </article> -->
+                        </div>
+                        <div class="carousel-controls sci-news__controls">
+                            <div class="carousel-dots" data-dots></div>
+                            <div class="sci-news__btns">
+                                <button type="button" class="carousel-btn" data-prev aria-label="Vorherige Meldung">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M15 5l-7 7 7 7" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="carousel-btn" data-pause aria-pressed="false"
+                                    aria-label="Meldungen pausieren">
+                                    <svg class="sci-news__icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M8 5v14M16 5v14" />
+                                    </svg>
+                                    <svg class="sci-news__icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M8 5l11 7-11 7z" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="carousel-btn" data-next aria-label="Nächste Meldung">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+            <div class="hero-wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 2 — HOW IT WORKS ============ -->
+
+        <section class="stop blue" id="how-it-works">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 02</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Die Wissenschaft hinter Ren-Nu</span>
+                    <h2>Zwei Schwerpunkte. Ein integrierter Ansatz.</h2>
+                    <p class="stop-sub lite">Ren-Nu verbindet Ernährungs- und Lebensstilschulung mit einem Lebensmittel
+                        für besondere medizinische Zwecke – gestützt auf Forschung zu Stoffwechselgesundheit und
+                        Nierenbelastungen.</p>
+                </div>
+
+                <div class="sci-paths" data-reveal>
+                    <article class="sci-path">
+                        <img class="sci-path__icon" src="images/icons/icon-metabolic-health.svg" alt="">
+                        <span class="sci-path__label">Stoffwechselgesundheit</span>
+                        <h3>Wie der Körper Energie nutzt</h3>
+                        <p>Entdecken Sie die Stoffwechselveränderungen, die mit Nierenerkrankungen einhergehen, und die
+                            Ernährungsstrategien, die zu ihrer Behandlung untersucht werden.</p>
+                        <p class="sci-path__focus">Schwerpunkt: zelluläre Energie und Stoffwechselwege</p>
+                    </article>
+                    <article class="sci-path">
+                        <img class="sci-path__icon" src="images/icons/icon-kidney-stress.svg" alt="">
+                        <span class="sci-path__label">Nierenbelastung</span>
+                        <h3>Die Nieren entlasten</h3>
+                        <p>Faktoren angehen, die zu Nierenschäden beitragen können – darunter die Bildung von
+                            Mikrokristallen und die Bedingungen im Urin, die sie beeinflussen.</p>
+                        <p class="sci-path__focus">Schwerpunkt: Citrat, Urin-pH und kristallbildende Verbindungen</p>
+                    </article>
+                </div>
+
+                <!-- <svg class="sci-converge" viewBox="0 0 1000 72" preserveAspectRatio="none" aria-hidden="true"
+                    focusable="false" data-reveal>
+                    <path d="M250,0 C250,44 500,28 500,66" />
+                    <path d="M750,0 C750,44 500,28 500,66" />
+                    <circle cx="500" cy="66" r="5" />
+                </svg> -->
+
+                <!-- <article class="sci-outcome" data-reveal>
+                    <span class="eyebrow">The result</span>
+                    <h3>Stronger, more resilient kidneys</h3>
+                    <p>By targeting both crystal formation and metabolic pathways, participants gain better control of
+                        their condition, experience improved symptoms, and work to slow disease progression. That is
+                        essential for long-term kidney health and well-being.</p>
+                </article> -->
+                <div class="hero-wave-divider paper" aria-hidden="true"></div>
+                <!-- <div class="cta-row" data-reveal>
+                    <a href="ren-nu-pkd-en.html" class="btn btn-primary">Explore the Ren-Nu Program</a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- ============ SECTION 3 — PUBLISHED RESEARCH ============ -->
+
+        <section class="stop" id="benefits">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 03</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Veröffentlichte Forschung</span>
+                    <h2>Ergebnisse aus der Praxis: das Ren-Nu-Programm</h2>
+                    <p>103 Teilnehmende mit ADPKD (einer genetischen Form der CKD) ausgewertet <span
+                            aria-hidden="true">•</span>
+                        <span class="sci-nowrap">3-monatige Intervention</span>
+                        <span aria-hidden="true">•</span> Veröffentlicht in Frontiers in Nutrition
+                    </p>
+                </div>
+
+                <div class="sci-benefits" data-reveal>
+                    <article class="sci-benefit">
+                        <span class="sci-benefit__icon" aria-hidden="true">
+                            <img src="images/icons/icon-kidney-outcome.svg" alt="">
+                        </span>
+                        <h3>Nierenfunktion</h3>
+                        <p>Die durchschnittlich geschätzte Nierenfunktion stieg im Verlauf des Programms.</p>
+                    </article>
+                    <article class="sci-benefit">
+                        <span class="sci-benefit__icon" aria-hidden="true">
+                            <img src="images/icons/icon-symptoms.svg" alt="">
+                        </span>
+                        <h3>Nierenschmerzen &amp; Kopfschmerzen</h3>
+                        <p>Die Teilnehmenden berichteten über niedrigere Symptomwerte.</p>
+                    </article>
+                    <article class="sci-benefit">
+                        <span class="sci-benefit__icon" aria-hidden="true">
+                            <img src="images/icons/icon-blood-pressure.svg" alt="">
+                        </span>
+                        <h3>Blutdruckmedikamente</h3>
+                        <p>Der Einsatz von Blutdruckmedikamenten ging zurück.</p>
+                    </article>
+                    <article class="sci-benefit">
+                        <span class="sci-benefit__icon" aria-hidden="true">
+                            <img src="images/icons/icon-bmi.svg" alt="">
+                        </span>
+                        <h3>Body-Mass-Index</h3>
+                        <p>Der durchschnittliche BMI sank bei den Teilnehmenden mit verfügbaren Daten.</p>
+                    </article>
+                </div>
+
+                <div class="sci-study-note" data-reveal>
+                    <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1624639/full"
+                        class="sci-link" target="_blank" rel="noopener">Zur veröffentlichten Studie ↗</a>
+                    <p>Beobachtungsbefunde; keine separate Kontrollgruppe. Die Datenverfügbarkeit variierte je nach
+                        Ergebnisparameter.<br> Individuelle Ergebnisse können abweichen. Änderungen der Medikation
+                        erfordern ärztliche Begleitung.</p>
+                </div>
+
+                <!-- <div class="cta-row" data-reveal>
+                    <a href="#" class="btn btn-primary sg-popup-id-850">Bewerben</a>
+                </div> -->
+            </div>
+            <div class="hero-wave-divider" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 4 — RESEARCH LIBRARY ============ -->
+
+        <section class="stop blue" id="research">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 04</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Forschungsbibliothek</span>
+                    <h2>Die Forschung hinter Ren-Nu</h2>
+                    <p class="stop-sub lite">Entdecken Sie die Evidenz – von grundlegenden Entdeckungen bis zu
+                        klinischen Studien.
+                    </p>
+                </div>
+
+                <div class="sci-filter" role="group" aria-label="Publikationen filtern">
+                    <button type="button" class="sci-filter__btn" data-filter="all" aria-pressed="true">Alle
+                        Publikationen</button>
+                    <!-- <button type="button" class="sci-filter__btn" data-filter="clinicalckd"
+                        aria-pressed="false">Clinical(CKD)</button> -->
+                    <button type="button" class="sci-filter__btn" data-filter="clinicalpkd"
+                        aria-pressed="false">Klinisch (PKD)</button>
+                    <button type="button" class="sci-filter__btn" data-filter="mechanisms"
+                        aria-pressed="false">Mechanismen</button>
+                    <button type="button" class="sci-filter__btn" data-filter="program"
+                        aria-pressed="false">Ren-Nu-Programm</button>
+                    <!-- <button type="button" class="sci-filter__btn" data-filter="reviewsckd" aria-pressed="false">Reviews
+                        (CKD)</button> -->
+                    <button type="button" class="sci-filter__btn" data-filter="reviewspkd"
+                        aria-pressed="false">Übersichtsarbeiten (PKD)</button>
+                </div>
+                <p class="sci-filter__note">Innerhalb jeder Kategorie die neuesten zuerst.</p>
+                <p class="sci-more" data-reveal>Titel zur besseren Lesbarkeit gekürzt dargestellt.</p>
+                <!-- <div class="sci-lib__group" data-category="clinicalckd" data-reveal>
+                    <h3 class="sci-lib__title">Clinical evidence (CKD)</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2026</span>
+                                <span class="sci-paper__type">Cohort study</span>
+                            </div>
+                            <h4>Effectiveness of Telehealth Low-Carbohydrate Intervention in Preventing Chronic Kidney
+                                Disease</h4>
+                            <p>A Real-World, Retrospective, Matched Cohort Study.</p>
+                            <div class="sci-paper__journal">
+                                <em>WILEY</em>
+                                <a href="https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.71086"
+                                    class="sci-link" target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2025</span>
+                                <span class="sci-paper__type">Post-hoc analysis</span>
+                            </div>
+                            <h4>Effects of a continuous remote care intervention including nutritional ketosis on kidney
+                                function and inflammation in adults with type 2 diabetes</h4>
+                            <p>A post-hoc latent class trajectory analysis.</p>
+                            <div class="sci-paper__journal">
+                                <em>Frontiers in Nutrition</em>
+                                <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2025.1609737/full"
+                                    class="sci-link" target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div> -->
+                <div class="sci-lib__group" data-category="clinicalpkd" data-reveal>
+                    <h3 class="sci-lib__title">Klinische Evidenz (PKD)</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2026</span>
+                                <span class="sci-paper__type">Fallserie</span>
+                            </div>
+                            <h4>Langzeit-Stoffwechseltherapie, Ketone &amp; Citrat</h4>
+                            <p>Langzeitbeobachtungen zu Zystenprogression und Nierenwachstum.</p>
+                            <div class="sci-paper__journal">
+                                <em>Frontiers in Nutrition</em>
+                                <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1843178/full"
+                                    class="sci-link" target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Studienanalyse</span>
+                            </div>
+                            <h4>Ketose und Nierenvolumen: <span class="sci-nowrap">KETO-ADPKD</span></h4>
+                            <p>Untersuchung von Ketose und Veränderungen des Nierenvolumens.</p>
+                            <div class="sci-paper__journal">
+                                <em>Nephrology Dialysis Transplantation</em>
+                                <a href="https://academic.oup.com/ndt/article-pdf/doi/10.1093/ndt/gfae069.738/57794044/gfae069-0738-2160.pdf"
+                                    class="sci-link" target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2023</span>
+                                <span class="sci-paper__type">Randomisierte Studie</span>
+                            </div>
+                            <h4>Klinische KETO-ADPKD-Studie</h4>
+                            <p>Machbarkeit und Auswirkungen von Ernährungsinterventionen.</p>
+                            <div class="sci-paper__journal">
+                                <em>Cell Reports Medicine</em>
+                                <a href="https://doi.org/10.1016/j.xcrm.2023.101283" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2022</span>
+                                <span class="sci-paper__type">Fallserie</span>
+                            </div>
+                            <h4>Ernährungsinterventionen bei ADPKD: Sicherheit &amp; Wirkung</h4>
+                            <p>Von Patientinnen und Patienten berichtete Machbarkeit, Sicherheit und Wirkung.</p>
+                            <div class="sci-paper__journal">
+                                <em>Clinical Kidney Journal</em>
+                                <a href="https://doi.org/10.1093/ckj/sfab162" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="sci-lib__group" data-category="mechanisms" data-reveal>
+                    <h3 class="sci-lib__title">Mechanismen &amp; präklinische Forschung</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Präklinische Studie</span>
+                            </div>
+                            <h4>β-hydroxybutyrate recapitulates the beneficial effects of ketogenic metabolic therapy in
+                                polycystic kidney disease</h4>
+                            <p>Test der Kombination in einem Rattenmodell der PKD.</p>
+                            <div class="sci-paper__journal">
+                                <em>iScience - a Cell Press Journal</em>
+                                <a href="https://www.cell.com/iscience/fulltext/S2589-0042(24)01998-9?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2589004224019989%3Fshowall%3Dtrue"
+                                    class="sci-link" target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Präklinische Studie</span>
+                            </div>
+                            <h4>β-Hydroxybutyrat &amp; Citrat kombiniert</h4>
+                            <p>Test der Kombination in einem Rattenmodell der PKD.</p>
+                            <div class="sci-paper__journal">
+                                <em>American Journal of Physiology – Renal Physiology</em>
+                                <a href="https://doi.org/10.1152/ajprenal.00205.2023" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2019</span>
+                                <span class="sci-paper__type">Präklinische Studie</span>
+                            </div>
+                            <h4>Ketose &amp; renales Zystenwachstum</h4>
+                            <p>Untersuchung von Stoffwechselmechanismen in Tiermodellen.</p>
+                            <div class="sci-paper__journal">
+                                <em>Cell Metabolism</em>
+                                <a href="https://doi.org/10.1016/j.cmet.2019.09.012" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2019</span>
+                                <span class="sci-paper__type">Mechanistische Studie</span>
+                            </div>
+                            <h4>Kristallablagerung, Citrat &amp; Zystenbildung</h4>
+                            <p>Untersuchung von Kristallablagerung und Zystenbildung.</p>
+                            <div class="sci-paper__journal">
+                                <em>Journal of Clinical Investigation</em>
+                                <a href="https://doi.org/10.1172/JCI128503" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="sci-lib__group" data-category="program" data-reveal>
+                    <h3 class="sci-lib__title">Das Ren-Nu-Programm</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2026</span>
+                                <span class="sci-paper__type">Programmbeschreibung</span>
+                            </div>
+                            <h4>Ren-Nu-Programm: <br>Ergebnisse aus der Praxis</h4>
+                            <p>Eine retrospektive Auswertung von 103 Teilnehmenden mit ADPKD über eine 3-monatige
+                                Intervention.
+                            </p>
+                            <div class="sci-paper__journal">
+                                <em>Frontiers in Nutrition</em>
+                                <a href="https://doi.org/10.3389/fnut.2025.1624639" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2022</span>
+                                <span class="sci-paper__type">Programmbeschreibung</span>
+                            </div>
+                            <h4>Das Ren-Nu-Ernährungs- &amp; Lebensstilprogramm</h4>
+                            <p>Das Rahmenkonzept und die Prinzipien hinter dem Programm.</p>
+                            <div class="sci-paper__journal">
+                                <em>Kidney and Dialysis</em>
+                                <a href="https://www.mdpi.com/2673-8236/2/2/20" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- <div class="sci-lib__group" data-category="reviewsckd" data-reveal>
+                    <h3 class="sci-lib__title">Reviews &amp; perspectives (CKD)</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Case study</span>
+                            </div>
+                            <h4>The case for a ketogenic diet in the management of kidney disease</h4>
+                            <p>Low carbohydrate eating patterns including a very low carbohydrate or ketogenic diet
+                                successfully used for weight loss and remitting type 2 diabetes (T2D).</p>
+                            <div class="sci-paper__journal">
+                                <em>National Library of Medicine</em>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11057262/" class="sci-link"
+                                    target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Übersichtsarbeit</span>
+                            </div>
+                            <h4>Ketogenic metabolic therapy for chronic kidney disease - the pro part</h4>
+                            <p>Ketogenic metabolic therapy is an effective medical nutrition therapy.</p>
+                            <div class="sci-paper__journal">
+                                <em>Clinical kidney journal</em>
+                                <a href="https://academic.oup.com/ckj/article/17/1/sfad273/7379588" class="sci-link"
+                                    target="_blank" rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2021</span>
+                                <span class="sci-paper__type">Übersichtsarbeit</span>
+                            </div>
+                            <h4>Renal function in patients following a low carbohydrate diet for type 2 diabetes</h4>
+                            <p>A review of the literature and analysis of routine clinical data from a primary care
+                                service over 7 years.</p>
+                            <div class="sci-paper__journal">
+                                <em>Nutrients</em>
+                                <a href="https://www.mdpi.com/2072-6643/16/19/3281" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div> -->
+                <div class="sci-lib__group" data-category="reviewspkd" data-reveal>
+                    <h3 class="sci-lib__title">Übersichtsarbeiten &amp; Perspektiven (PKD)</h3>
+                    <div class="sci-papers">
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2026</span>
+                                <span class="sci-paper__type">Narrative Übersichtsarbeit</span>
+                            </div>
+                            <h4>β-Hydroxybutyrat &amp; Nierenschutz bei PKD</h4>
+                            <p>Überblick über Mechanismen des ketonvermittelten Nierenschutzes.</p>
+                            <div class="sci-paper__journal">
+                                <em>American Journal of Physiology – Endocrinology and Metabolism</em>
+                                <a href="https://doi.org/10.1152/ajpendo.00067.2026" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Übersichtsarbeit</span>
+                            </div>
+                            <h4>Ernährung, Lebensstil &amp; Umweltfaktoren bei ADPKD</h4>
+                            <p>Faktoren, die den Krankheitsverlauf beeinflussen können.</p>
+                            <div class="sci-paper__journal">
+                                <em>Nutrients</em>
+                                <a href="https://www.mdpi.com/2072-6643/16/19/3281" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Übersichtsarbeit</span>
+                            </div>
+                            <h4>Ketogene Ernährung bei Nierenerkrankungen: ein Überblick</h4>
+                            <p>Überblick über die Evidenz bei Nierenerkrankungen.</p>
+                            <div class="sci-paper__journal">
+                                <em>BMJ Open Diabetes Research &amp; Care</em>
+                                <a href="https://doi.org/10.1136/bmjdrc-2024-004101" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                        <article class="sci-paper">
+                            <div class="sci-paper__meta">
+                                <span class="sci-paper__year">2024</span>
+                                <span class="sci-paper__type">Übersichtsarbeit</span>
+                            </div>
+                            <h4>Ketogene Therapie bei chronischer Nierenerkrankung</h4>
+                            <p>Eine Perspektive auf die Stoffwechseltherapie bei Nierenerkrankungen.</p>
+                            <div class="sci-paper__journal">
+                                <em>Clinical Kidney Journal</em>
+                                <a href="https://doi.org/10.1093/ckj/sfad273" class="sci-link" target="_blank"
+                                    rel="noopener">Lesen ↗</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- <p class="sci-more" data-reveal>Display titles abbreviated for readability.<br>
+                    <a href="ren-nu-resources-pkd-en.html" class="sci-link">Resources →</a>
+                </p> -->
+            </div>
+            <div class="hero-wave-divider paper" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 5 — COMMITMENT TO CLINICAL RESEARCH ============ -->
+
+        <section class="stop" id="commitment">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 05</span>
+                <div class="stop-head" data-reveal>
+                    <span class="eyebrow">Unser Engagement für die klinische Forschung</span>
+                    <h2>Das nächste Kapitel der Evidenz schreiben</h2>
+                    <p class="stop-sub">Die Forschung wird in klinischen Einrichtungen in Japan, den USA und Australien
+                        fortgeführt (die derzeit laufenden klinischen Studien konzentrieren sich auf PKD, eine
+                        genetische Form der CKD).</p>
+                </div>
+
+                <div class="sci-count" data-reveal>
+                    <img class="sci-count__icon" src="images/icons/icon-participants.svg" alt="">
+                    <span class="sci-count__num">300+</span>
+                    <div>
+                        <h3>Teilnehmende – und es werden mehr</h3>
+                        <p>Menschen haben bereits am <span class="sci-nowrap">Ren-Nu</span>-Programm teilgenommen.</p>
+                    </div>
+                </div>
+
+                <div class="sci-studies" data-reveal>
+                    <article class="sci-study">
+                        <img class="sci-study__icon" src="images/icons/icon-university.svg" alt="">
+                        <span class="sci-study__place">Tokio, Japan</span>
+                        <h3>Juntendo-Universität</h3>
+                        <span class="sci-study__type">Kontrollierte Studie</span>
+                        <p>Ein angepasstes Ren-Nu-Programm mit einem Lebensmittel für besondere medizinische Zwecke.</p>
+                        <div class="sci-study__detail">
+                            <strong>Zwischenstand</strong>
+                            <p>75 Teilnehmende &bull; 50 Interventionen &bull; 25 Kontrollen.</p>
+                        </div>
+                        <a href="https://center6.umin.ac.jp/cgi-open-bin/ctr_e/ctr_view.cgi?recptno=R000060368"
+                            class="sci-study__id" target="_blank" rel="noopener">Auf UMIN-CTR ansehen ↗</a>
+                    </article>
+                    <article class="sci-study">
+                        <img class="sci-study__icon" src="images/icons/icon-hospital.svg" alt="">
+                        <span class="sci-study__place">Cleveland, USA</span>
+                        <h3>Cleveland Clinic</h3>
+                        <span class="sci-study__type">Pilotstudie</span>
+                        <p>Eine 16-wöchige Evaluation des Ren-Nu-Programms mit einem Lebensmittel für besondere
+                            medizinische Zwecke.</p>
+                        <div class="sci-study__detail">
+                            <strong>Geplante Teilnehmerzahl</strong>
+                            <p>20 Teilnehmende.</p>
+                        </div>
+                        <a href="https://clinicaltrials.gov/study/NCT07454174" class="sci-study__id" target="_blank"
+                            rel="noopener">ClinicalTrials.gov · NCT07454174 ↗</a>
+                    </article>
+                    <article class="sci-study">
+                        <img class="sci-study__icon" src="images/icons/icon-hospital.svg" alt="">
+                        <span class="sci-study__place">Melbourne, Australien</span>
+                        <h3>Royal Melbourne Hospital</h3>
+                        <span class="sci-study__type">Pilotstudie</span>
+                        <p>Eine 3-monatige Evaluation eines Lebensmittels für besondere medizinische Zwecke ohne
+                            vorgegebene Änderungen der Nahrungsaufnahme.</p>
+                        <div class="sci-study__detail">
+                            <strong>Einarmiges, offenes Studiendesign</strong>
+                        </div>
+                        <a href="https://www.anzctr.org.au/Trial/Registration/TrialReview.aspx?id=389844"
+                            class="sci-study__id" target="_blank" rel="noopener">Auf ANZCTR ansehen ↗</a>
+                    </article>
+                </div>
+
+                <!-- <p class="sci-study-foot" data-reveal>Study summaries based on research updates. Interim
+                    findings are preliminary.</p> -->
+            </div>
+        </section>
+
+        <!-- ============ SECTION 6 — SCIENTIST QUOTE ============ -->
+
+        <!-- <section class="stop blue-lt" id="scientists">
+            <div class="wrap">
+                <span class="section-tag">Section 06</span>
+                <figure class="sci-quote" data-reveal>
+                    <span class="sci-quote__frame">
+                        <img class="sci-quote__photo"
+                            src="https://ren-nu.org/wp-content/uploads/2024/09/Jacob_torres-square-480x480.png"
+                            alt="Portrait of Jacob Torres" loading="lazy">
+                    </span>
+                    <div>
+                        <span class="eyebrow">Based on research from leading scientists</span>
+                        <blockquote>
+                            <p>The Ren-Nu Program is more than a dietary intervention. It's a pathway to empowering
+                                patients with polycystic kidney disease. By incorporating scientifically backed
+                                nutritional strategies like a ketogenic approach, we've seen significant improvements in
+                                kidney function and overall health. This program offers hope and a real chance to slow
+                                the progression of PKD, as demonstrated by both clinical results and participant
+                                outcomes.</p>
+                        </blockquote>
+                        <figcaption class="sci-quote__who">
+                            <strong>Jacob Torres</strong>
+                            Research Scientist at Santa Barbara Nutrients<br>
+                            Associate Project Scientist, University of California, Santa Barbara
+                        </figcaption>
+                        <a href="ren-nu-about-us-pkd-en.html" class="sci-link">More about us →</a>
+                    </div>
+                </figure>
+            </div>
+        </section> -->
+
+        <!-- ============ SECTION 6 — PARTICIPANT VOICES ============ -->
+
+        <section class="stop blue" id="voices">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 06</span>
+                <div class="sci-voices">
+                    <div class="sci-voices__copy" data-reveal>
+                        <span class="eyebrow">Echte Menschen, echte Fortschritte</span>
+                        <h2>Die Wissenschaft, jeden Tag gelebt</h2>
+                        <p class="stop-sub lite">Die Forschung erzählt nur einen Teil der Geschichte – den Rest erzählen
+                            die Teilnehmenden. Hören Sie, wie sie ihre Laborwerte, ihre Energie und ihre Zuversicht im
+                            Umgang mit ADPKD (einer genetischen Form der CKD) verändert haben.</p>
+                        <p class="stop-sub lite">Die Erfahrungen sind individuell verschieden. Ren-Nu ist ein
+                            Schulungsprogramm, das fundierte Lebensstiländerungen unterstützen soll.</p>
+                        <div class="cta-row">
+                            <a href="#" class="btn btn-primary sg-popup-id-850">Warteliste</a>
+                            <a href="https://www.youtube.com/watch?v=1MhdGVuwdOA&list=PL6WqJa5P0mWOq_ubu3twsl8YYkh802DcW"
+                                class="btn btn-outline" target="_blank" rel="noopener">Weitere Geschichten auf YouTube
+                                ↗</a>
+                        </div>
+                    </div>
+                    <div class="carousel video-playlist" data-reveal>
+                        <iframe class="video-playlist-frame" id="participantPlaylist"
+                            src="https://www.youtube.com/playlist?list=PL6WqJa5P0mWOq_ubu3twsl8YYkh802DcW"
+                            data-rotate-delay="2500" title="Ren-Nu Video-Playlist mit Teilnehmenden" loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-wave-divider blue-lt" aria-hidden="true"></div>
+        </section>
+
+        <!-- ============ SECTION 7 — FINAL CTA ============ -->
+
+        <section class="stop blue-lt" id="cta-final">
+            <div class="wrap">
+                <span class="section-tag">Abschnitt 07</span>
+                <div data-reveal>
+                    <h2>Nutzen Sie die Wissenschaft für Ihre Nieren.</h2>
+                    <p class="stop-sub">Werden Sie Teil des Ren-Nu-Programms und beginnen Sie Ihren Weg zu besserer
+                        Nierengesundheit – mit strukturierter Schulung, persönlicher Begleitung und einer Gemeinschaft,
+                        die CKD versteht.</p>
+                    <div class="cta-row">
+                        <a href="#" class="btn btn-primary sg-popup-id-850">Warteliste</a>
+                        <!-- <a href="#" class="btn btn-outline sg-popup-id-850">Join the waitlist</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="section-divider-band section-divider-band--blue-to-paper" aria-hidden="true"></div>
+        <div class="section-divider-band section-divider-band--paper-to-blue" aria-hidden="true"></div> -->
+
+        <!-- CONTENT WRAPPER END -->
+
+        <!-- footer NAVIGATION START -->
+    </main>
+    <footer>
+        <div class="wrap footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <!-- <a href="#hero" class="logo"><img src="Ren-Nu Logo.png" alt="Ren-Nu"></a> -->
+                    <p>Ren-Nu is an educational program and does not provide medical treatment. Always consult
+                        your healthcare provider before making changes to your care plan.</p>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-heading">Social Links</span>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/RenNuRenalNutrition/" target="_blank"
+                                rel="noopener">Facebook</a></li>
+                        <li><a href="https://www.facebook.com/groups/renalnutrition" target="_blank" rel="noopener">Join
+                                our Facebook Community</a></li>
+                        <li><a href="https://www.instagram.com/rennurenalnutrition/" target="_blank"
+                                rel="noopener">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/105193406/" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://x.com/RenNuProgram" target="_blank" rel="noopener">Twitter</a></li>
+                        <li><a href="https://open.spotify.com/show/1wZCftHdQDwNq67XsFeZSf?si=c36b3f6f35754b3c"
+                                target="_blank" rel="noopener">Podcast on Spotify</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-heading">Find Us Here</span>
+                    <address class="footer-address">
+                        <strong>Santa Barbara Nutrients, Inc.</strong><br>
+                        California NanoSystems Institute<br>
+                        University of California, Mail Code 6105<br>
+                        Santa Barbara, CA 93106, USA<br>
+                        Email: <a href="mailto:info@ren-nu.org">info@ren-nu.org</a>
+                    </address>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="https://ren-nu.org/terms-conditions/" target="_blank" rel="noopener">Terms &amp;
+                        Conditions</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="https://ren-nu.org/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+                </div>
+                <p class="copyright">© 2026 Santa Barbara Nutrients.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="sgpb-main-popup-data-container-850">
+        <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-850" data-id="850"
+            data-events="[{&quot;param&quot;:&quot;click&quot;,&quot;operator&quot;:&quot;defaultClickClassName&quot;,&quot;value&quot;:&quot;sg-popup-id-850&quot;,&quot;hiddenOption&quot;:[]}]"
+            data-options="eyJzZ3BiLXR5cGUiOiJodG1sIiwic2dwYi1pcy1wcmV2aWV3IjoiMCIsInNncGItaXMtYWN0aXZlIjoiY2hlY2tlZCIsInNncGItYmVoYXZpb3ItYWZ0ZXItc3BlY2lhbC1ldmVudHMiOltbeyJwYXJhbSI6InNlbGVjdF9ldmVudCJ9XV0sInNncGItY29udGVudC1wYWRkaW5nIjoiMTIiLCJzZ3BiLXBvcHVwLXotaW5kZXgiOiI5OTk5Iiwic2dwYi1wb3B1cC10aGVtZXMiOiJzZ3BiLXRoZW1lLTYiLCJzZ3BiLWRpc2FibGUtYm9yZGVyIjoib24iLCJzZ3BiLW92ZXJsYXktY29sb3IiOiIiLCJzZ3BiLW92ZXJsYXktb3BhY2l0eSI6IjAuNCIsInNncGItY29udGVudC1jdXN0b20tY2xhc3MiOiJzZy1wb3B1cC1jb250ZW50Iiwic2dwYi1iYWNrZ3JvdW5kLWltYWdlLW1vZGUiOiJuby1yZXBlYXQiLCJzZ3BiLWVzYy1rZXkiOiJvbiIsInNncGItZW5hYmxlLWNsb3NlLWJ1dHRvbiI6Im9uIiwic2dwYi1jbG9zZS1idXR0b24tZGVsYXkiOiIwIiwic2dwYi1jbG9zZS1idXR0b24tcG9zaXRpb24iOiJ0b3BSaWdodCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXRvcCI6Ii0xOCIsInNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjoiLTE4Iiwic2dwYi1idXR0b24tcG9zaXRpb24tYm90dG9tIjoiIiwic2dwYi1idXR0b24tcG9zaXRpb24tbGVmdCI6IiIsInNncGItYnV0dG9uLWltYWdlIjoiIiwic2dwYi1idXR0b24taW1hZ2Utd2lkdGgiOiIzMCIsInNncGItYnV0dG9uLWltYWdlLWhlaWdodCI6IjMwIiwic2dwYi1ib3JkZXItY29sb3IiOiIjMDAwMDAwIiwic2dwYi1ib3JkZXItcmFkaXVzIjoiMCIsInNncGItYm9yZGVyLXJhZGl1cy10eXBlIjoiJSIsInNncGItYnV0dG9uLXRleHQiOiJDbG9zZSIsInNncGItb3ZlcmxheS1jbGljayI6Im9uIiwic2dwYi1wb3B1cC1kaW1lbnNpb24tbW9kZSI6InJlc3BvbnNpdmVNb2RlIiwic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjoiNjAiLCJzZ3BiLXdpZHRoIjoiNjQwcHgiLCJzZ3BiLWhlaWdodCI6IjQ4MHB4Iiwic2dwYi1tYXgtd2lkdGgiOiIiLCJzZ3BiLW1heC1oZWlnaHQiOiIiLCJzZ3BiLW1pbi13aWR0aCI6IjUwMHB4Iiwic2dwYi1taW4taGVpZ2h0IjoiMzUwcHgiLCJzZ3BiLW9wZW4tYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItY2xvc2UtYW5pbWF0aW9uLWVmZmVjdCI6Ik5vIGVmZmVjdCIsInNncGItZW5hYmxlLWNvbnRlbnQtc2Nyb2xsaW5nIjoib24iLCJzZ3BiLXBvcHVwLW9yZGVyIjoiMCIsInNncGItcG9wdXAtZGVsYXkiOiIwIiwic2dwYi1wb3N0LWlkIjoiODUwIiwic2dwYi1lbmFibGUtcG9wdXAtb3ZlcmxheSI6Im9uIiwic2dwYi1idXR0b24taW1hZ2UtZGF0YSI6IiIsInNncGItYmFja2dyb3VuZC1pbWFnZS1kYXRhIjoiIiwic2dwYkNvbmRpdGlvbnMiOm51bGx9">
+            <div class="sgpb-popup-builder-content-850 sgpb-popup-builder-content-html">
+                <!-- Content Wrapper for Windmill -->
+                <div class="sgpb-main-html-content-wrapper">
+                    <form id="rennu-prefill-form" class="rennu-prefill-form"
+                        style="max-width:480px;margin:0 auto;padding:12px;">
+                        <p style="margin:0 0 10px;"><label>*First Name<br />
+                                <input type="text" name="first_name" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>*Last Name<br />
+                                <input type="text" name="last_name" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>*Email<br />
+                                <input type="email" name="email" required
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <p style="margin:0 0 10px;"><label>Phone<br />
+                                <input type="tel" name="phone"
+                                    style="width:100%;padding:8px;box-sizing:border-box;" /></label></p>
+                        <button type="submit" disabled
+                            style="padding:10px 20px;background:#9aa5a3;color:#fff;border:none;border-radius:3px;cursor:not-allowed;">Continue</button>
+                    </form>
+                    <!-- <iframe id="rennu-waitlist-iframe" aria-label='Ren-Nu Waitlist' frameborder="0"
+                        style="height:500px;width:99%;border:none;display:none;"
+                        data-base-src='https://forms.zohopublic.com/santabarbaranutrients/form/RenNuWaitlist/formperma/mHBwCq8Mar0AL9JYXktv6hsuiTyJZUY9Mf81ZQzPqP8'></iframe> -->
+                </div>
+                <!-- End of Content Wrapper for Windmill -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- PREVIEW WRAPPER END -->
